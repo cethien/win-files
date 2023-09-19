@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MixData>
+  <mixerTree mixerDeviceType="2" mixerSN="0071211100752" mixerCount="7" fader1LEDColour="-1296579"
+             fader2LEDColour="-1296579" fader3LEDColour="-1296579" fader4LEDColour="-1296579"
+             mixerButton5Colour="-1296579" faderPageLeftLEDColour="-1296579"
+             faderPageRightLEDColour="-1296579" activeFader="0">
+    <mixer0 mixerName="Mic" mixerLockStatus="1" mixerFadersLinked="1" mixerHPLevel="100.0"
+            mixerBroadcastLevel="100.0" mixerHPMute="1" mixerBroadcastMute="1"
+            mixerChatMute="0" mixerVodTrackMute="1" mixerPlaceInOrder="0"
+            mixerSourceCount="0" faderColourBarColour="-8368048" bartonKnobType="1"
+            knobMuteMode="43" muteMode="42" mixerVolumeRatio="1.0" knobMuteState="0"
+            buttonMuteState="0" mixCreateRoutedDeviceCount="1" mixCreateRoutedDevice0="VoiceMeeter Output (VB-Audio VoiceMeeter VAIO)"/>
+    <mixer1 mixerName="Chat" mixerLockStatus="1" mixerFadersLinked="0" mixerHPLevel="100.0"
+            mixerBroadcastLevel="100.0" mixerHPMute="0" mixerBroadcastMute="0"
+            mixerChatMute="1" mixerVodTrackMute="0" mixerPlaceInOrder="1"
+            mixerSourceCount="0" faderColourBarColour="-10983950" bartonKnobType="3"
+            knobMuteMode="44" muteMode="43" mixerVolumeRatio="1.0" knobMuteState="0"
+            buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
+    <mixer2 mixerName="Game" mixerLockStatus="1" mixerFadersLinked="0" mixerHPLevel="47.0"
+            mixerBroadcastLevel="63.0" mixerHPMute="0" mixerBroadcastMute="0"
+            mixerChatMute="1" mixerVodTrackMute="0" mixerPlaceInOrder="2"
+            mixerSourceCount="0" faderColourBarColour="-2293505" bartonKnobType="5"
+            knobMuteMode="44" muteMode="43" mixerVolumeRatio="1.0" knobMuteState="0"
+            buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
+    <mixer3 mixerName="System" mixerLockStatus="0" mixerFadersLinked="1"
+            mixerHPLevel="50.0" mixerBroadcastLevel="50.0" mixerHPMute="0"
+            mixerBroadcastMute="1" mixerChatMute="1" mixerVodTrackMute="1"
+            mixerPlaceInOrder="3" mixerSourceCount="0" faderColourBarColour="-1"
+            bartonKnobType="7" knobMuteMode="42" muteMode="44" mixerVolumeRatio="1.0"
+            knobMuteState="0" buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
+    <listeningDeviceTree topListeningDevice="VoiceMeeter Input (VB-Audio VoiceMeeter VAIO)"
+                         bottomListeningDevice="LG HDR WQHD (NVIDIA High Definition Audio)"
+                         topListeningDeviceSelected="1" topListeningDevicevol="99" bottomListeningDeviceVol="100"/>
+    <broadcastOutputTree broadcastOutputDeviceVolume="50" broadcastMixVolume="100" broadcastOutputDeviceName="Audience Mix"/>
+    <routingTableTreePersonalMix routeMic="0" routeMusic="1" routeChat="1" routeGame="1" routeBrowser="1"
+                                 routeSystem="1" routeAux1="1" routeAux2="1" chatMicRoutedTo=""/>
+    <routingTableTreeAudienceMix routeMic="0" routeMusic="1" routeChat="1" routeGame="1" routeBrowser="1"
+                                 routeSystem="0" routeAux1="1" routeAux2="1" chatMicRoutedTo=""/>
+    <routingTableTreeChatMix routeMic="1" routeMusic="0" routeChat="0" routeGame="0" routeBrowser="0"
+                             routeSystem="0" routeAux1="0" routeAux2="0" chatMicRoutedTo=""/>
+    <routingTableTreeVODMix routeMic="0" routeMusic="0" routeChat="1" routeGame="1" routeBrowser="1"
+                            routeSystem="0" routeAux1="0" routeAux2="1" chatMicRoutedTo=""/>
+    <mixer4 mixerName="Browser" mixerLockStatus="0" mixerFadersLinked="0"
+            mixerHPLevel="64.0" mixerBroadcastLevel="70.0" mixerHPMute="0"
+            mixerBroadcastMute="1" mixerChatMute="1" mixerVodTrackMute="1"
+            mixerPlaceInOrder="4" mixerSourceCount="0" faderColourBarColour="-740352"
+            bartonKnobType="6" knobMuteMode="43" muteMode="44" mixerVolumeRatio="1.0"
+            knobMuteState="1" buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
+    <mixer5 mixerName="Music" mixerLockStatus="0" mixerFadersLinked="0" mixerHPLevel="38.0"
+            mixerBroadcastLevel="44.0" mixerHPMute="0" mixerBroadcastMute="1"
+            mixerChatMute="1" mixerVodTrackMute="1" mixerPlaceInOrder="5"
+            mixerSourceCount="0" faderColourBarColour="-14688412" bartonKnobType="4"
+            knobMuteMode="43" muteMode="44" mixerVolumeRatio="1.0" knobMuteState="1"
+            buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
+    <mixer6 mixerName="Aux 1" mixerLockStatus="0" mixerFadersLinked="0" mixerHPLevel="48.15262603759766"
+            mixerBroadcastLevel="45.0" mixerHPMute="0" mixerBroadcastMute="0"
+            mixerChatMute="1" mixerVodTrackMute="1" mixerPlaceInOrder="6"
+            mixerSourceCount="0" faderColourBarColour="-1" bartonKnobType="8"
+            knobMuteMode="44" muteMode="43" mixerVolumeRatio="1.0" knobMuteState="0"
+            buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
+    <mixer7 mixerName="Music" mixerLockStatus="0" mixerFadersLinked="0" mixerHPLevel="46.0"
+            mixerBroadcastLevel="34.0" mixerHPMute="0" mixerBroadcastMute="1"
+            mixerChatMute="1" mixerVodTrackMute="1" mixerPlaceInOrder="7"
+            mixerSourceCount="0" faderColourBarColour="-14688412" bartonKnobType="4"
+            knobMuteMode="42" muteMode="44" mixerVolumeRatio="1.0" knobMuteState="0"
+            buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
+  </mixerTree>
+  <mixerOSDTree/>
+</MixData>
