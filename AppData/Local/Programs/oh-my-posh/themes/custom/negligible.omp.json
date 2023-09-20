@@ -1,144 +1,110 @@
 {
 	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-	"console_title_template": "{{if .Root}}⚠️ :: {{end}}{{.Shell}} :: {{.Folder}}",
+	"version": 2,
+	"console_title_template": "{{if .Root}}⚠️ {{end}}{{.Shell}} :: {{.Folder}}",
+	"accent_color": "blue",
 	"blocks": [
 		{
 			"alignment": "left",
-			"segments": [
-				{
-					"foreground": "white",
-					"style": "powerline",
-					"template": "{{if .Root}}⚠️ :: {{end}}",
-					"type": "root"
-				},
-				{
-					"foreground_templates": [
-						"{{if contains \"windows\" .OS}}cyan{{end}}",
-						"{{if contains \"ubuntu\" .OS}}git{{end}}"
-					],
-					"style": "powerline",
-					"template": "{{.Icon}}",
-					"type": "os"
-				},
-				{
-					"foreground": "white",
-					"style": "powerline",
-					"type": "text",
-					"template": " :: "
-				},
-				{
-					"foreground": "cyan",
-					"style": "powerline",
-					"template": "{{.Shell}} {{.ShellVersion}}",
-					"type": "shell"
-				}
-			],
-			"type": "prompt"
-		},
-		{
-			"alignment": "right",
 			"type": "prompt",
 			"segments": [
 				{
-					"foreground": "lightGreen",
-					"style": "plain",
-					"template": "{{ .CurrentDate | date .Format }} ",
-					"type": "time"
+					"type": "os",
+					"style": "powerline",
+					"background": "cyan",
+					"foreground": "black",
+					"template": " {{.Icon}}{{ if .WSL }} in WSL{{ end }} "
+				},
+				{
+					"type": "text",
+					"style": "powerline",
+					"foreground": "white",
+					"template": " :: "
+				},
+				{
+					"type": "time",
+					"style": "powerline",
+					"background": "lightGreen",
+					"foreground": "black",
+					"template": " {{ .CurrentDate | date .Format }} "
+				},
+				{
+					"type": "sysinfo",
+					"style": "powerline",
+					"background": "white",
+					"foreground": "black",
+					"template": " \udb80\udf5b {{ round .PhysicalPercentUsed .Precision }}% ({{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB) "
+				},
+				{
+					"type": "battery",
+					"style": "powerline",
+					"properties": {
+						"charged_icon": "\uf00d ",
+						"charging_icon": "\ue234 "
+					},
+					"background": "yellow",
+					"foreground_templates": [
+						"{{if eq \"Charging\" .State.String}}cyan{{end}}",
+						"{{if eq \"Discharging\" .State.String}}darkgreen{{end}}",
+						"{{if eq \"Full\" .State.String}}black{{end}}"
+					],
+					"template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }} \uf295 "
 				}
 			]
 		},
 		{
 			"alignment": "left",
+			"newline": true,
+			"type": "prompt",
 			"segments": [
 				{
-					"foreground": "lightGreen",
-					"foreground_templates": ["{{if .Root}}red{{end}}"],
-					"style": "plain",
 					"type": "session",
+					"style": "powerline",
+					"foreground": "lightGreen",
 					"template": "{{.UserName}}"
 				},
 				{
-					"foreground": "white",
+					"type": "path",
+					"style": "powerline",
 					"properties": {
 						"style": "full"
 					},
-					"style": "plain",
-					"template": " at {{ .Path }} ",
-					"type": "path"
+					"foreground": "white",
+					"template": " at {{ .Path }} "
 				},
 				{
-					"foreground": "#f19d2f",
+					"type": "git",
+					"style": "powerline",
 					"properties": {
 						"fetch_status": true
 					},
-					"style": "plain",
-					"template": ":: {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }} ",
-					"type": "git"
+					"foreground": "#f19d2f",
+					"template": ":: \ue702 {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }} "
 				}
-			],
-			"type": "prompt",
-			"newline": true
+			]
 		},
-		{
-			"alignment": "right",
-			"segments": [
-				{
-					"foreground": "#06A4CE",
-					"style": "powerline",
-					"template": "| \ue798 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-					"type": "dart"
-				},
-				{
-					"foreground": "#6CA35E",
-					"style": "powerline",
-					"template": "| \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
-					"type": "node"
-				},
-				{
-					"foreground": "#4584b6",
-					"properties": {
-						"display_mode": "context",
-						"fetch_virtual_env": true
-					},
-					"style": "plain",
-					"template": "| \ue235 {{ .Venv }} ",
-					"type": "python"
-				},
-				{
-					"foreground_templates": [
-						"{{if eq \"Charging\" .State.String}}#4caf50{{end}}",
-						"{{if eq \"Discharging\" .State.String}}#40c4ff{{end}}",
-						"{{if eq \"Full\" .State.String}}#ff0000{{end}}"
-					],
-					"invert_powerline": true,
-					"properties": {
-						"charged_icon": "\uf00d ",
-						"charging_icon": "\ue234 "
-					},
-					"style": "powerline",
-					"template": "| {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }} \uf295 ",
-					"type": "battery"
-				}
-			],
-			"type": "prompt"
-		},
+
 		{
 			"alignment": "left",
+			"type": "prompt",
 			"newline": true,
 			"segments": [
 				{
-					"foreground": "lightGreen",
-					"foreground_templates": ["{{if .Root}}red{{end}}"],
+					"type": "status",
+					"style": "powerline",
 					"properties": {
 						"always_enabled": true
 					},
-					"style": "powerline",
-					"template": "\u279c ",
-					"type": "status"
+					"foreground": "lightGreen",
+					"foreground_templates": ["{{if .Root}}red{{end}}"],
+					"template": "{{if .Root}}\udb82\udc8f {{end}}{{.Shell}} > "
 				}
-			],
-			"type": "prompt"
+			]
 		}
 	],
-	"version": 2
+	"transient_prompt": {
+		"foreground": "lightGreen",
+		"foreground_templates": ["{{if .Root}}red{{end}}"],
+		"template": "{{if .Root}}\udb82\udc8f {{end}}{{ .Shell }} > "
+	}
 }

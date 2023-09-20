@@ -3,8 +3,11 @@ env:
     value: '{{ env "POSH_THEMES_PATH" }}/custom/negligible.omp.json'
 script:
   - value: |
+      load(io.popen('oh-my-posh init cmd'):read("*a"))()
+    if: match .Shell "cmd"
+  - value: |
       oh-my-posh init {{ .Shell }} --config $env:POSH_THEME | Invoke-Expression
     if: match .Shell "pwsh"
   - value: |
       eval "$(oh-my-posh init {{ .Shell }} --config $POSH_THEME)"
-    if: match .Shell "bash" "zsh" "sh"
+    if: match .Shell "bash" "zsh"
