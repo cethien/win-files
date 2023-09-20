@@ -7,4 +7,4 @@ script:
     if: match .Shell "pwsh"
   - value: |
       eval "$(oh-my-posh init {{ .Shell }} --config $POSH_THEME)"
-    if: match .Shell "bash" "zsh"
+    if: match .Shell "bash" "zsh" "sh"
