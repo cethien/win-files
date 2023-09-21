@@ -40,7 +40,7 @@
 					"style": "powerline",
 					"background": "yellow",
 					"foreground": "black",
-					"template": " {{ if not .Error }}\udb84\udea3 {{ .Percentage }}{{ end }}{{ .Error }} "
+					"template": " {{ if not .Error }}\udb84\udea3 {{ .Percentage }}%{{ end }}{{ .Error }} "
 				}
 			]
 		},
