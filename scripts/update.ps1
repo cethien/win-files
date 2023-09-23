@@ -73,7 +73,7 @@ Write-Host -ForegroundColor DarkMagenta ">> UPDATE APPS VIA WINGET:"
 ExecuteWingetUpdate
 
 Write-Host -ForegroundColor DarkMagenta ">> UPDATE SPICETIFY:"
-spicetify upgrade backup apply
+spicetify backup apply
 
 Write-Host "Done. Press any key to exit"
 Read-Host
