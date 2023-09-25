@@ -11,9 +11,9 @@ $env:Path += ";$env:ProgramFiles\7-Zip"
 set-alias vim nvim
 set-alias vi nvim
 
-Function 7zipA { 7z a }
+Function 7zipA($file) { 7z a $file  }
 set-alias zip 7zipA
-Function 7zipX { 7z x }
+Function 7zipX($file) { 7z x $file }
 set-alias unzip 7zipX
 
 aliae init pwsh | Invoke-Expression
