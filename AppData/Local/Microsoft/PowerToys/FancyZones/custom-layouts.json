@@ -38,6 +38,45 @@
         "spacing": 16,
         "sensitivity-radius": 20
       }
+    },
+    {
+      "uuid": "{CB1CA899-92AA-4984-8418-045E09A5DC57}",
+      "name": "Ultrawide Autism",
+      "type": "grid",
+      "info": {
+        "rows": 3,
+        "columns": 3,
+        "rows-percentage": [
+          1394,
+          7212,
+          1394
+        ],
+        "columns-percentage": [
+          2496,
+          5007,
+          2497
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            3,
+            4
+          ]
+        ],
+        "show-spacing": true,
+        "spacing": 16,
+        "sensitivity-radius": 20
+      }
     }
   ]
 }
