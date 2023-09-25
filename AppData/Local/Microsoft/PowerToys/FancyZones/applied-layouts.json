@@ -2,6 +2,23 @@
   "applied-layouts": [
     {
       "device": {
+        "monitor": "CMN139E",
+        "monitor-instance": "4\u00262a982b33\u00260\u0026UID265988",
+        "monitor-number": 1,
+        "serial-number": "0",
+        "virtual-desktop": "{00000000-0000-0000-0000-000000000000}"
+      },
+      "applied-layout": {
+        "uuid": "{B6FA559B-03C3-455F-A1FD-7E444F34E892}",
+        "type": "blank",
+        "show-spacing": false,
+        "spacing": 0,
+        "zone-count": 0,
+        "sensitivity-radius": 0
+      }
+    },
+    {
+      "device": {
         "monitor": "HPN3693",
         "monitor-instance": "4\u0026273dcadb\u00260\u0026UID49",
         "monitor-number": 1,
