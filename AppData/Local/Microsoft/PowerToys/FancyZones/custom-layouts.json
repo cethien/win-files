@@ -1,0 +1,43 @@
+{
+  "custom-layouts": [
+    {
+      "uuid": "{2099A604-90A2-4D15-A5E6-B00B3AF9A56C}",
+      "name": "Autism",
+      "type": "grid",
+      "info": {
+        "rows": 3,
+        "columns": 3,
+        "rows-percentage": [
+          1317,
+          7357,
+          1326
+        ],
+        "columns-percentage": [
+          1818,
+          6364,
+          1818
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            3,
+            4
+          ]
+        ],
+        "show-spacing": true,
+        "spacing": 16,
+        "sensitivity-radius": 20
+      }
+    }
+  ]
+}
