@@ -2,9 +2,13 @@ alias u := update
 alias r := reload
 alias s := sync
 
-set shell := ["pwsh.exe", "-NoProfile", "-c"]
+set shell := ["pwsh.exe", "-NoLogo", "-NoProfile", "-Command"]
 
-# update machine via script
+[private]
+default:
+	@just --list
+
+# update your stuff
 update:
 	. "$env:USERPROFILE/scripts/update.ps1"
 
