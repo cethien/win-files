@@ -14,4 +14,4 @@ reload:
 
 # sync home directory with remote
 sync:
-	git fetch && git pull
+	git push -u origin main && git fetch && git pull
