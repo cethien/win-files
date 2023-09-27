@@ -4,13 +4,6 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
-# env
-$env:Path += ";$env:ProgramFiles\7-Zip"
-
-# Aliases
-set-alias vim nvim
-set-alias vi nvim
-
 Function Compress-Archive7Zip() {
     [alias("zip")]
     param(

@@ -1,6 +1,47 @@
+alias:
+  - name: vi
+    value: nvim
+  - name: vim
+    value: nvim
+  - name: cat
+    value: bat
+  - name: ls
+    value: 'eza -a --icons --group-directories-first --git'
+  - name: ll
+    value: 'eza -la --icons --group-directories-first --git'
+  - name: npm
+    value: pnpm
+
+  - name: sudo
+    value: 'sudo '
+    if: eq .OS "linux"
+  - name: apt
+    value: nala
+    if: eq .OS "linux"
+  - name: grep
+    value: rg
+    if: eq .OS "linux"
+  - name: tree
+    value: eza -T --icons | less
+    if: eq .OS "linux"
+
+  - name: tree
+    value: eza -T
+    if: eq .OS "windows"
+
+  - name: ignore
+    type: git
+    value: '!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi'
+
+path:
+  - value: |
+      {{ env "ProgramFiles" }}/7-Zip
+    if: eq .OS "windows"
+
 env:
   - name: POSH_THEME
     value: '{{ env "POSH_THEMES_PATH" }}/custom/negligible.omp.json'
+
 script:
   - value: |
       load(io.popen('oh-my-posh init cmd'):read("*a"))()
