@@ -1,5 +1,7 @@
 alias u := update
 alias r := reload
+alias i := install
+alias iau := install-autoupdate
 
 set windows-powershell := true
 
@@ -22,3 +24,16 @@ push:
 # gets latest home directory
 pull:
 	git pull
+
+# install via winget
+install PACKAGE:
+	winget install --source winget --id {{PACKAGE}};
+
+# add to update file (~/.wingetupdate)
+add-to-update PACKAGE:
+	echo "{{PACKAGE}}\n" >> .wingetupdate
+
+# install + add to update file
+install-autoupdate PACKAGE:
+	@just install {{PACKAGE}}
+	@just add-to-autoupdate {{PACKAGE}}
