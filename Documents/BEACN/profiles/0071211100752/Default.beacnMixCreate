@@ -17,7 +17,7 @@
             mixerSourceCount="0" faderColourBarColour="-10983950" bartonKnobType="3"
             knobMuteMode="44" muteMode="43" mixerVolumeRatio="1.0" knobMuteState="0"
             buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
-    <mixer2 mixerName="Game" mixerLockStatus="1" mixerFadersLinked="0" mixerHPLevel="28.0"
+    <mixer2 mixerName="Game" mixerLockStatus="1" mixerFadersLinked="0" mixerHPLevel="62.0"
             mixerBroadcastLevel="63.0" mixerHPMute="0" mixerBroadcastMute="0"
             mixerChatMute="1" mixerVodTrackMute="0" mixerPlaceInOrder="2"
             mixerSourceCount="0" faderColourBarColour="-2293505" bartonKnobType="5"
