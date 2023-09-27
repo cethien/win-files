@@ -1,14 +1,13 @@
 alias u := update
 alias r := reload
-alias s := sync
 
-set shell := ["pwsh.exe", "-NoLogo", "-NoProfile", "-Command"]
+set windows-powershell := true
 
 [private]
 default:
 	@just --list
 
-# update your stuff
+# update your apps
 update:
 	. "$env:USERPROFILE/scripts/update.ps1"
 
@@ -16,6 +15,10 @@ update:
 reload:
 	$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User"); & $profile
 
-# sync home directory with remote
-sync:
-	git push -u origin main && git fetch && git pull
+# pushes commited changes to remote
+push:
+	git push -u origin main
+
+# gets latest home directory
+pull:
+	git pull
