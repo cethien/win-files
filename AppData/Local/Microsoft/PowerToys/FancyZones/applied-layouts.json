@@ -2,6 +2,23 @@
   "applied-layouts": [
     {
       "device": {
+        "monitor": "GSM7756",
+        "monitor-instance": "5\u00263790842\u00260\u0026UID4353",
+        "monitor-number": 1,
+        "serial-number": "202NTCZ7N003",
+        "virtual-desktop": "{B40FE879-E3DA-43E9-8B02-CFE9579CBA8A}"
+      },
+      "applied-layout": {
+        "uuid": "{CB1CA899-92AA-4984-8418-045E09A5DC57}",
+        "type": "custom",
+        "show-spacing": true,
+        "spacing": 16,
+        "zone-count": 3,
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "device": {
         "monitor": "HPN3693",
         "monitor-instance": "4\u0026273dcadb\u00260\u0026UID49",
         "monitor-number": 1,
