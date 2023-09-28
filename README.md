@@ -4,12 +4,8 @@ i'm a nerd :nerd_face:
 
 ## Setup
 
-`stupidly long cuz i want to use arguments`
-
 ```powershell
-# pwsh >= 7 needed
-winget add -s winget --id Microsoft.PowerShell
-&pwsh -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/Cethien/setups/main/setup-windows.ps1'))) <parameters>"
+&powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/cethien/win-home/main/setup.ps1'))) <parameters>"
 ```
 
 | Parameter    | Description                             |
@@ -25,17 +21,17 @@ winget add -s winget --id Microsoft.PowerShell
 
 useful script for backing up folders
 
-1. create a environment variable `BACKUP`
-2. create script for backing up:
-
-```powershell
-iwr https://raw.githubusercontent.com/cethien/scripts/main/create-backup.ps1 | iex
-```
-
-3. (optional): create `.backupignore` file:
+(optional): create `.backupignore` file:
 
 ```plaintext
 folder1\
 folder2\
 config.ini
+```
+
+1. create a environment variable `BACKUP`
+2. create script for backing up:
+
+```powershell
+iwr https://raw.githubusercontent.com/cethien/scripts/main/create-backup.ps1 | iex
 ```
