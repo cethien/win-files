@@ -4,21 +4,21 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
-Function Compress-Archive7Zip() {
+Function Compress-ArchiveNanaZip() {
     [alias("zip")]
     param(
         [string]$Archive,
         [string[]]$Files
     )
-    7z a $Archive $File
+    nanazip a $Archive $File
 }
 
-Function Expand-Archive7Zip() {
+Function Expand-ArchiveNanaZip() {
     [alias("unzip")]
     param(
         [string]$File
     )
-    7z x $File
+    nanazip x $File
 }
 
 aliae init pwsh | Invoke-Expression
