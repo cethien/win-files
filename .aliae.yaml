@@ -33,11 +33,6 @@ alias:
     type: git
     value: '!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi'
 
-path:
-  - value: |
-      {{ env "ProgramFiles" }}/7-Zip
-    if: eq .OS "windows"
-
 env:
   - name: POSH_THEME
     value: '{{ env "POSH_THEMES_PATH" }}/custom/negligible.omp.json'
