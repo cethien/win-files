@@ -1,3 +1,5 @@
+## Creates a zip of a folder. Useful for e.g. Portable apps
+
 # $env:BACKUP is a custom set variable
 $backup = "$env:BACKUP"
 $name = $(Split-Path -Path $pwd -Leaf)

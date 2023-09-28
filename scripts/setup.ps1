@@ -1,3 +1,6 @@
+## setup script
+#Requires -Version 5.1
+
 param (
     [Parameter(HelpMessage = "customization stuff")]
     [switch]$Customizing,
@@ -50,7 +53,7 @@ function ReloadEnv {
     $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "User")
 }
 
-# remove curl alias ­ƒñí
+# remove curl alias 🤡
 Remove-Item alias:curl
 
 # windows settings
@@ -65,17 +68,19 @@ Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\
 Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name OnboardUnpinCortana -Value 1 -Type DWord -Force
 Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name ShowCortanaButton -Value 0 -Type DWord -Force
 
-
 # some tools
-WingetInstall -ItemId Microsoft.WindowsTerminal
-
-WingetInstall -ItemId Git.Git
-WingetInstall -ItemId casey.just
+WingetInstall -ItemId M2Team.NanaZip
 WingetInstall -ItemId Microsoft.PowerToys
 WingetInstall -ItemId GeekUninstaller.GeekUninstaller
-WingetInstall -ItemId 7zip.7zip
+
 WingetInstall -ItemId Microsoft.PowerShell
+WingetInstall -ItemId Git.Git
+WingetInstall -ItemId casey.just
 WingetInstall -ItemId Neovim.Neovim
+WingetInstall -ItemId eza-community.eza
+WingetInstall -ItemId sharkdp.bat
+
+WingetInstall -ItemId Microsoft.WindowsTerminal
 
 if ($Customizing) {
     # oh-my-posh
@@ -87,9 +92,8 @@ if ($Customizing) {
     oh-my-posh font install FiraCode --user
 
     WingetInstall -ItemId Rainmeter.Rainmeter
-    $repo = "Jax-Core/jax-core.github.io"
     $file = "JaxCoreSetup.bat"
-    curl -LO "https://github.com/$repo/releases/latest/download/$file"
+    curl -fsLO "https://github.com/Jax-Core/jax-core.github.io/releases/latest/download/$file"
     Invoke-Expression $file
     Remove-Item -Recurse -Force $file
 }
@@ -126,11 +130,11 @@ if ($Gaming) {
     WingetInstall -ItemId -DontIncludeUpdate Valve.Steam
 
     # Destiny 2
-    start steam://install/1085660
+    Start-Process steam://install/1085660
     # Retroarch
-    start steam://install/1118310
+    Start-Process steam://install/1118310
     # WWZ
-    start steam://install/699130
+    Start-Process steam://install/699130
     # minecraft
     WingetInstall -ItemId PrismLauncher.PrismLauncher
 }
@@ -141,9 +145,3 @@ if ($Streaming) {
     WingetInstall -ItemId Chatty.Chatty
     Start-Process "https://github.com/SAMMISolutions/SAMMI-Official/releases/latest"
 }
-
-git init
-git remote add origin https://github.com/cethien/win-home.git
-git fetch
-git reset --hard origin/main
-git pull origin main
