@@ -5,10 +5,6 @@ alias:
     value: nvim
   - name: cat
     value: bat
-  - name: ls
-    value: 'eza -a --icons --group-directories-first --git'
-  - name: ll
-    value: 'eza -la --icons --group-directories-first --git'
   - name: npm
     value: pnpm
 
@@ -20,6 +16,12 @@ alias:
     if: eq .OS "linux"
   - name: grep
     value: rg
+    if: eq .OS "linux"
+  - name: ls
+    value: 'eza -a --icons --group-directories-first --git'
+    if: eq .OS "linux"
+  - name: ll
+    value: 'eza -la --icons --group-directories-first --git'
     if: eq .OS "linux"
   - name: tree
     value: eza -T --icons | less
@@ -38,9 +40,6 @@ env:
     value: '{{ env "POSH_THEMES_PATH" }}/custom/negligible.omp.json'
 
 script:
-  - value: |
-      load(io.popen('oh-my-posh init cmd'):read("*a"))()
-    if: match .Shell "cmd"
   - value: |
       oh-my-posh init {{ .Shell }} --config $env:POSH_THEME | Invoke-Expression
     if: match .Shell "pwsh"

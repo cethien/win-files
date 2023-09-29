@@ -49,10 +49,6 @@ function WingetInstall {
     Invoke-Expression $cmd
 }
 
-function ReloadEnv {
-    $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "User")
-}
-
 # remove curl alias 🤡
 Remove-Item alias:curl
 
@@ -77,7 +73,6 @@ WingetInstall -ItemId Microsoft.PowerShell
 WingetInstall -ItemId Git.Git
 WingetInstall -ItemId casey.just
 WingetInstall -ItemId Neovim.Neovim
-WingetInstall -ItemId eza-community.eza
 WingetInstall -ItemId sharkdp.bat
 
 WingetInstall -ItemId Microsoft.WindowsTerminal
@@ -86,7 +81,6 @@ if ($Customizing) {
     # oh-my-posh
     WingetInstall -ItemId JanDeDobbeleer.OhMyPosh
     WingetInstall -ItemId JanDeDobbeleer.Aliae
-    WingetInstall -ItemId chrisant996.Clink
 
     oh-my-posh font install CodeNewRoman --user
     oh-my-posh font install FiraCode --user
@@ -103,7 +97,6 @@ WingetInstall -ItemId -DontIncludeUpdate Google.Chrome
 # spotify
 WingetInstall -ItemId -DontIncludeUpdate Spotify.Spotify
 WingetInstall -ItemId -DontIncludeUpdate Spicetify.Spicetify
-ReloadEnv
 spicetify config extensions webnowplaying.js
 spicetify config custom_apps new-releases
 spicetify backup apply
