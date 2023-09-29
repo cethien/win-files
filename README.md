@@ -2,7 +2,9 @@
 
 i'm a nerd :nerd_face:
 
-## Setup
+## Scripts
+
+### Setup
 
 ```powershell
 &powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/cethien/win-home/main/setup.ps1'))) <parameters>"
@@ -17,7 +19,7 @@ i'm a nerd :nerd_face:
 | -Gaming      | games & launchers                       |
 | -Streaming   | streaming stuff                         |
 
-## Create folder backup
+### Create folder backup
 
 useful script for backing up folders
 
