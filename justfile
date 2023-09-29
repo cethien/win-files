@@ -1,4 +1,5 @@
 alias u := update
+alias r := reload
 alias find := search
 alias i := install
 alias in := install-noupdate
@@ -11,6 +12,10 @@ ufile := "$env:USERPROFILE" / ".wingetupdate"
 [private]
 default:
 	@just --list
+
+# reload profile
+reload:
+	@& $PROFILE
 
 # update your apps
 update:
