@@ -1,8 +1,12 @@
 alias u := update
+alias find := search
 alias i := install
 alias in := install-noupdate
+alias rm := remove
 
-set windows-powershell := true
+set shell := ["pwsh", "-NoProfile", "-ExecutionPolicy", "Unrestricted", "-Command"]
+
+ufile := "$env:USERPROFILE" / ".wingetupdate"
 
 [private]
 default:
@@ -10,13 +14,24 @@ default:
 
 # update your apps
 update:
-	. "$env:USERPROFILE/scripts/update.ps1"
+	@. "$env:USERPROFILE/scripts/update.ps1"
+
+# searches package in winget repo
+search PACKAGE:
+	@winget search --source winget -q {{PACKAGE}}
 
 # install without adding to update file
 install-noupdate PACKAGE:
-	winget install --source winget --id {{PACKAGE}};
+	@winget install --source winget --id {{PACKAGE}}
 
 # install a package via winget
 install PACKAGE:
 	@just install-noupdate {{PACKAGE}}
-	echo "{{PACKAGE}}\n" >> .wingetupdate
+	@"{{PACKAGE}}" >> {{ufile}}
+	@Set-Content -Path {{ufile}} -Value $(Get-Content {{ufile}}).Trim()
+
+# removes a winget package
+remove PACKAGE:
+	@winget remove --id {{PACKAGE}}
+	@Set-Content -Path {{ufile}} -Value (Get-Content -Path {{ufile}} | Select-String -Pattern {{PACKAGE}} -NotMatch)
+	@Set-Content -Path {{ufile}} -Value $(Get-Content {{ufile}}).Trim()
