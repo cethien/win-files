@@ -1,3 +1,1 @@
-spicetify update
-spicetify restore backup
-spicetify apply
+spicetify restore backup apply -q
