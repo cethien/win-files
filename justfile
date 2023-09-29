@@ -10,33 +10,33 @@ set shell := ["pwsh", "-NoProfile", "-ExecutionPolicy", "Unrestricted", "-Comman
 ufile := "$env:USERPROFILE" / ".wingetupdate"
 
 [private]
-default:
-	@just --list
+@default:
+	just --list
 
 # reload profile
-reload:
-	@& $PROFILE
+@reload:
+	& $PROFILE
 
 # update your apps
-update:
-	@. "$env:USERPROFILE/scripts/update.ps1"
+@update:
+	. "$env:USERPROFILE/scripts/update.ps1"
 
 # searches package in winget repo
-search PACKAGE:
-	@winget search --source winget -q {{PACKAGE}}
+@search PACKAGE:
+	winget search --source winget -q {{PACKAGE}}
 
 # install without adding to update file
-install-noupdate PACKAGE:
-	@winget install --source winget --id {{PACKAGE}}
+@install-noupdate PACKAGE:
+	winget install --source winget --id {{PACKAGE}}
 
 # install a package via winget
-install PACKAGE:
-	@just install-noupdate {{PACKAGE}}
-	@"{{PACKAGE}}" >> {{ufile}}
-	@Set-Content -Path {{ufile}} -Value $(Get-Content {{ufile}}).Trim()
+@install PACKAGE:
+	just install-noupdate {{PACKAGE}}
+	"{{PACKAGE}}" >> {{ufile}}
+	Set-Content -Path {{ufile}} -Value $(Get-Content {{ufile}}).Trim()
 
 # removes a winget package
-remove PACKAGE:
-	@winget remove --id {{PACKAGE}}
-	@Set-Content -Path {{ufile}} -Value (Get-Content -Path {{ufile}} | Select-String -Pattern {{PACKAGE}} -NotMatch)
-	@Set-Content -Path {{ufile}} -Value $(Get-Content {{ufile}}).Trim()
+@remove PACKAGE:
+	winget remove --id {{PACKAGE}}
+	Set-Content -Path {{ufile}} -Value (Get-Content -Path {{ufile}} | Select-String -Pattern {{PACKAGE}} -NotMatch)
+	Set-Content -Path {{ufile}} -Value $(Get-Content {{ufile}}).Trim()
