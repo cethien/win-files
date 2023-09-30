@@ -1,6 +1,5 @@
 alias u := update
 alias r := reload
-alias find := search
 alias i := install
 alias in := install-noupdate
 alias rm := remove
@@ -21,13 +20,9 @@ ufile := "$env:USERPROFILE" / ".wingetupdate"
 @update:
 	. "$env:USERPROFILE/scripts/update.ps1"
 
-# searches package in winget repo
-@search PACKAGE:
-	winget search --source winget -q {{PACKAGE}}
-
 # install without adding to update file
 @install-noupdate PACKAGE:
-	winget install --source winget --id {{PACKAGE}}
+	winget install --source winget -q {{PACKAGE}}
 
 # install a package via winget
 @install PACKAGE:
