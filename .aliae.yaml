@@ -7,6 +7,12 @@ alias:
     value: bat
   - name: npm
     value: pnpm
+  - name: ls
+    value: 'eza -a --icons --group-directories-first --git'
+  - name: ll
+    value: 'eza -la --icons --group-directories-first --git'
+  - name: tree
+    value: 'eza -T --icons'
 
   - name: sudo
     value: 'sudo '
@@ -17,19 +23,6 @@ alias:
   - name: grep
     value: rg
     if: eq .OS "linux"
-  - name: ls
-    value: 'eza -a --icons --group-directories-first --git'
-    if: eq .OS "linux"
-  - name: ll
-    value: 'eza -la --icons --group-directories-first --git'
-    if: eq .OS "linux"
-  - name: tree
-    value: eza -T --icons | less
-    if: eq .OS "linux"
-
-  - name: tree
-    value: eza -T
-    if: eq .OS "windows"
 
   - name: ignore
     type: git
@@ -41,10 +34,13 @@ env:
 
 script:
   - value: |
+      load(io.popen('oh-my-posh init cmd --config %POSH_THEME%'):read("*a"))()
+    if: match .Shell "cmd"
+  - value: |
       Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
       Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
       Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
-      oh-my-posh init {{ .Shell }} --config $env:POSH_THEME | Invoke-Expression
+      oh-my-posh init pwsh --config $env:POSH_THEME | Invoke-Expression
     if: match .Shell "pwsh"
   - value: |
       eval "$(oh-my-posh init {{ .Shell }} --config $POSH_THEME)"
