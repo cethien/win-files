@@ -8,6 +8,3 @@ local function up_if_blank_line()
 end
 
 clink.oninject(up_if_blank_line)
-
--- load(io.popen('aliae init cmd'):read("*a"))()
-load(io.popen('aliae init cmd'):read("*a"))()
