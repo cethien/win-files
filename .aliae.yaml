@@ -47,3 +47,7 @@ script:
     if: match .Shell "bash" "zsh"
   - value: |
       git fetch --quiet
+    if: match .Shell "bash" "zsh" "pwsh"
+  - value: |
+      os.execute("git fetch --quiet")
+    if: match .Shell "cmd"
