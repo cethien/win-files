@@ -24,6 +24,10 @@ alias:
     value: rg
     if: eq .OS "linux"
 
+  - name: zip
+    value: nanazipc
+    if: eq .OS "windows"
+
   - name: ignore
     type: git
     value: '!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi'
@@ -45,9 +49,3 @@ script:
   - value: |
       eval "$(oh-my-posh init {{ .Shell }} --config $POSH_THEME)"
     if: match .Shell "bash" "zsh"
-  - value: |
-      git fetch --quiet
-    if: match .Shell "bash" "zsh" "pwsh"
-  - value: |
-      os.execute("git fetch --quiet")
-    if: match .Shell "cmd"
