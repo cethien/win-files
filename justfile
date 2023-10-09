@@ -4,13 +4,13 @@ alias r := reload
 set shell := ["bash", "-c"]
 
 [private]
-default:
-	@just --list
+@default:
+	just --list
 
 # update your packages
-update:
-	sudo nala update && sudo nala upgrade -y
+@update:
+	$HOME/scripts/update.sh
 
 # reloads the terminal profile
-reload:
+@reload:
 	source ~/.bashrc
