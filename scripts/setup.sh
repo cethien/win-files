@@ -1,13 +1,14 @@
 #!/bin/bash
 
-## install script to setup a debian(-based) distro
+## setup debian in wsl
 
-printf '\n' >> $HOME/.bashrc
+WIN_USER_DIR=/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" | sed -e 's/\r//g')
 
 mkdir $HOME/.local $HOME/.local/bin $HOME/.config
 export PATH=$PATH:$HOME/.local/bin
-printf 'export PATH=$PATH:$HOME/.local/bin
-\n' >> $HOME/.bashrc
+BASHRC+=('export PATH=$PATH:$HOME/.local/bin')
+
+ln -s $WIN_USER_DIR/.gitconfig $HOME/.gitconfig
 
 # install nala
 sudo apt update && \
@@ -22,8 +23,9 @@ wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | \
 sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
 echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | \
 sudo tee /etc/apt/sources.list.d/gierens.list > /dev/null
-sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
-PACKAGES+=' eza bat ripgrep neovim'
+sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list && \
+PACKAGES+=' eza bat ripgrep neovim' && \
+ln -s $WIN_USER_DIR/AppData/Local/nvim $HOME/.config/nvim
 
 # just command runner
 wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | \
@@ -49,107 +51,72 @@ wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/package
 sudo dpkg -i packages-microsoft-prod.deb && \
 rm packages-microsoft-prod.deb && \
 PACKAGES+=' powershell'
+ln -s $WIN_USER_DIR/Documents/PowerShell/ $HOME/.config/powershell/
 
 # update distro & install packages
 sudo nala update && \
 sudo nala upgrade -y && \
 sudo nala install -y $PACKAGES
 
+# bat needs this when installed with apt
+ln -s /usr/bin/batcat $HOME/.local/bin/bat
+
 # oh my posh / aliae
 curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.local/bin && \
-curl -fsSL https://aliae.dev/install.sh | bash -s -- -d $HOME/.local/bin
+curl -fsSL https://aliae.dev/install.sh | bash -s -- -d $HOME/.local/bin && \
+POSH_THEMES_PATH="$WIN_USER_DIR/AppData/Local/Programs/oh-my-posh/themes" && \
+ln -s $WIN_USER_DIR/.aliae.yaml $HOME/.aliae.yaml && \
+BASHRC+=(
+    "export POSH_THEMES_PATH="$POSH_THEMES_PATH""
+    'eval "$(aliae init bash)"'
+    )
 
-# node, yarn, pnpm, bun
-curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash -s && \
-printf '\n' >> $HOME/.bashrc && \
-export NVM_DIR="$HOME/.nvm" && \
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && \
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" && \
-nvm install node --lts && \
-corepack enable && \
-pnpm setup && \
-export PNPM_HOME="/home/cethien/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac && \
-pnpm install -g bun
+# node
+curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts && \
+npm install -g n && \
+n latest && \
+corepack enable
 
 # go
+GO_TOOLS=(
+    'golang.org/x/tools/gopls@latest'
+    'github.com/ramya-rao-a/go-outline@latest'
+    'github.com/go-delve/delve/cmd/dlv@latest'
+    'honnef.co/go/tools/cmd/staticcheck@latest'
+)
+
 curl -fsSL https://s.id/golang-linux | bash -s && \
 rm -rf go*.tar.gz && \
-printf '\n
-export GOROOT="$HOME/go"
-export GOPATH="$HOME/go/packages"
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-\n' >> $HOME/.bashrc && \
 export GOROOT="$HOME/go" && \
 export GOPATH="$HOME/go/packages" && \
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin && \
-go install -v golang.org/x/tools/gopls@latest && \
-go install -v github.com/ramya-rao-a/go-outline@latest && \
-go install -v github.com/go-delve/delve/cmd/dlv@latest && \
-go install -v honnef.co/go/tools/cmd/staticcheck@latest
+(
+    for tool in ${GO_TOOLS[@]}; do
+        go install $tool
+    done
+) && \
+BASHRC+=(
+    'export GOROOT="$HOME/go"'
+    'export GOPATH="$HOME/go/packages"'
+    'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin'
+    )
 
 # dotnet
 curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel STS && \
 curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel LTS && \
-printf 'export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
-\n' >> $HOME/.bashrc
+BASHRC+=(
+    'export DOTNET_ROOT=$HOME/.dotnet'
+    'export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools'
+    )
 
-if [[ "$(< /proc/sys/kernel/osrelease)" == *WSL* ]]; then
-    # wsl
-    echo 'wsl setup'
-    WIN_USER_DIR=/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" | sed -e 's/\r//g') && \
+# remove sudo pw prompt
+echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER > /dev/null
 
-    ln -s $WIN_USER_DIR/.gitconfig $HOME/.gitconfig && \
-
-    POSH_THEMES_PATH="$WIN_USER_DIR/AppData/Local/Programs/oh-my-posh/themes" && \
-    ln -s $WIN_USER_DIR/.aliae.yaml $HOME/.aliae.yaml
-
-    mkdir $HOME/.ssh && \
-    cp $WIN_USER_DIR/.ssh/id_* $HOME/.ssh && \
-    chmod 700 $HOME/.ssh && \
-    chmod 600 $HOME/.ssh/id_* && \
-    chmod 644 $HOME/.ssh/id_*.pub && \
-    ln -s $WIN_USER_DIR/.ssh/known_hosts $HOME/.ssh/known_hosts
-
-    ln -s $WIN_USER_DIR/Documents/PowerShell/ $HOME/.config/powershell/
-
-    ln -s $WIN_USER_DIR/AppData/Local/nvim $HOME/.config/nvim
-
-    # remove sudo pw prompt
-    echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER > /dev/null
-    continue
-else
-    # native Linux
-    echo 'linux setup'
-
-    ssh-keygen -q -b 2048 -t ed25519 -f $HOME/.ssh/id_ed25519 -N '' -q
-
-    git config --global user.name $USER && \
-    git config --global core.eol lf && \
-    git config --global init.defaultBranch main && \
-    git config --global core.autocrlf input && \
-    git config --global alias.ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
-
-    POSH_THEMES_PATH=$HOME/.cache/oh-my-posh/themes
-    continue
-fi
-
-# bat needs this when installed with apt
-ln -s /usr/bin/batcat ~/.local/bin/bat
-
-printf "export POSH_THEMES_PATH=\"$POSH_THEMES_PATH\"
-\n" >> $HOME/.bashrc
-printf 'eval "$(aliae init bash)"
-\n' >> $HOME/.bashrc
-
-git init
-git remote add origin https://github.com/cethien/ubuntu-home.git
-git fetch
-git reset --hard origin/main
-git pull origin main
+# setup ~/.bashrc
+echo "/n" >> $HOME/.bashrc
+for ((i = 0; i < ${#BASHRC[@]}; i++))
+do
+    echo "${BASHRC[$i]}" >> $HOME/.bashrc
+done
 
 sudo reboot
