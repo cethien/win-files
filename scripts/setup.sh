@@ -78,14 +78,8 @@ curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel STS &&
     )
 
 # node
-export N_PREFIX=$HOME/.n &&
-    curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts &&
+curl -L https://bit.ly/n-install | bash -s &&
     npm install -g n &&
-    BASHRC+=(
-        "\n",
-        'export N_PREFIX=$HOME/.n',
-        'export PATH=$PATH:$HOME/.n'
-        ) &&
     corepack enable
 
 # go
