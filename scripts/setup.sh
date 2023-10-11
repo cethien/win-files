@@ -2,6 +2,17 @@
 
 ## setup debian in wsl
 
+## stop on WSLENV error
+if [[ -z "${WSLENV}" ]]; then
+    echo "WSLENV could no be loaded. exiting script"
+    return
+fi
+
+if [ -z "${USERPROFILE}" ] || [ -z "${POSH_THEMES_PATH}" ]; then
+    echo "needed variables from WSLENV could no be loaded. exiting script"
+    return
+fi
+
 mkdir $HOME/.local $HOME/.local/bin $HOME/.config
 export PATH=$PATH:$HOME/.local/bin
 BASHRC+=('export PATH=$PATH:$HOME/.local/bin')
