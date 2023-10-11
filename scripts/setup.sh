@@ -72,6 +72,7 @@ curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
     )
 
 # node
+N_PREFIX=$HOME/.local/n
 curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts &&
     npm install -g n &&
     n latest &&
