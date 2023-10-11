@@ -3,13 +3,8 @@
 ## setup debian in wsl
 
 ## stop on WSLENV error
-if [[ -z "${WSLENV}" ]]; then
-    echo "WSLENV could no be loaded. exiting script"
-    return
-fi
-
-if [ -z "${USERPROFILE}" ] || [ -z "${POSH_THEMES_PATH}" ]; then
-    echo "needed variables from WSLENV could no be loaded. exiting script"
+if [ -z "${WSLENV}" ] || [ -z "${USERPROFILE}" ] || [ -z "${POSH_THEMES_PATH}" ]; then
+    echo "WSLENV / needed variables from WSLENV could no be loaded. exiting script"
     return
 fi
 
@@ -59,8 +54,8 @@ https://cli.github.com/packages stable main" |
 wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb" &&
     sudo dpkg -i packages-microsoft-prod.deb &&
     rm packages-microsoft-prod.deb &&
-    PACKAGES+=' powershell'
-ln -s $USERPROFILE/Documents/PowerShell/ $HOME/.config/powershell/
+    PACKAGES+=' powershell' &&
+    ln -s $USERPROFILE/Documents/PowerShell/ $HOME/.config/powershell/
 
 # update distro & install packages
 sudo nala update &&
@@ -70,19 +65,23 @@ sudo nala update &&
 # bat needs this when installed with apt
 ln -s /usr/bin/batcat $HOME/.local/bin/bat
 
-# oh my posh / aliae
-curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
-    curl -fsSL https://aliae.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
-    ln -s $USERPROFILE/.aliae.yaml $HOME/.aliae.yaml &&
-    BASHRC+=('eval "$(aliae init bash)"')
+# dotnet
+curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel STS &&
+    curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel LTS &&
+    BASHRC+=(
+        'export DOTNET_ROOT=$HOME/.dotnet'
+        'export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools'
+    )
 
 # node
-export N_PREFIX=$HOME/.local
+export N_PREFIX=$HOME/.n
 curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts &&
-    curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s latest &&
     npm install -g n &&
     corepack enable &&
-    BASHRC+=('export N_PREFIX=$HOME/.local')
+    BASHRC+=(
+        'export N_PREFIX=$HOME/.n',
+        'export PATH=$PATH:$HOME/.n'
+        )
 
 # go
 GO_TOOLS=(
@@ -108,13 +107,11 @@ curl -fsSL https://s.id/golang-linux | bash -s &&
         'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin'
     )
 
-# dotnet
-curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel STS &&
-    curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel LTS &&
-    BASHRC+=(
-        'export DOTNET_ROOT=$HOME/.dotnet'
-        'export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools'
-    )
+# oh my posh / aliae
+curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
+    curl -fsSL https://aliae.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
+    ln -s $USERPROFILE/.aliae.yaml $HOME/.aliae.yaml &&
+    BASHRC+=('eval "$(aliae init bash)"')
 
 # remove sudo pw prompt
 echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER >/dev/null
