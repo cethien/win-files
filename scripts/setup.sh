@@ -11,7 +11,7 @@ fi
 mkdir $HOME/.local $HOME/.local/bin $HOME/.config
 export PATH=$PATH:$HOME/.local/bin
 BASHRC+=(
-    "\n",
+    ''
     'export PATH=$PATH:$HOME/.local/bin'
     )
 
@@ -72,7 +72,7 @@ ln -s /usr/bin/batcat $HOME/.local/bin/bat
 curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel STS &&
     curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel LTS &&
     BASHRC+=(
-        "\n",
+        ''
         'export DOTNET_ROOT=$HOME/.dotnet'
         'export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools'
     )
@@ -101,7 +101,7 @@ curl -fsSL https://s.id/golang-linux | bash -s &&
         done
     ) &&
     BASHRC+=(
-        "\n"
+        ''
         'export GOROOT="$HOME/go"'
         'export GOPATH="$HOME/go/packages"'
         'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin'
@@ -112,7 +112,7 @@ curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
     curl -fsSL https://aliae.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
     ln -s $USERPROFILE/.aliae.yaml $HOME/.aliae.yaml &&
     BASHRC+=(
-        "\n",
+        ''
         'eval "$(aliae init bash)"'
         )
 
