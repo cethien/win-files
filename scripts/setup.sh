@@ -125,7 +125,7 @@ curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
 echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER >/dev/null
 
 # setup ~/.bashrc
-echo "/n" >>$HOME/.bashrc
+echo "\n" >>$HOME/.bashrc
 for ((i = 0; i < ${#BASHRC[@]}; i++)); do
     echo "${BASHRC[$i]}" >>$HOME/.bashrc
 done
