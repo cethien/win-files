@@ -10,7 +10,10 @@ fi
 
 mkdir $HOME/.local $HOME/.local/bin $HOME/.config
 export PATH=$PATH:$HOME/.local/bin
-BASHRC+=('export PATH=$PATH:$HOME/.local/bin')
+BASHRC+=(
+    "\n",
+    'export PATH=$PATH:$HOME/.local/bin'
+    )
 
 ln -s $USERPROFILE/.gitconfig $HOME/.gitconfig
 
@@ -69,6 +72,7 @@ ln -s /usr/bin/batcat $HOME/.local/bin/bat
 curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel STS &&
     curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel LTS &&
     BASHRC+=(
+        "\n",
         'export DOTNET_ROOT=$HOME/.dotnet'
         'export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools'
     )
@@ -87,6 +91,7 @@ export N_PREFIX=$HOME/.n &&
     ) &&
     pnpm install -g n &&
     BASHRC+=(
+        "\n",
         'export N_PREFIX=$HOME/.n',
         'export PATH=$PATH:$HOME/.n'
         )
@@ -110,6 +115,7 @@ curl -fsSL https://s.id/golang-linux | bash -s &&
         done
     ) &&
     BASHRC+=(
+        "\n"
         'export GOROOT="$HOME/go"'
         'export GOPATH="$HOME/go/packages"'
         'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin'
@@ -119,13 +125,15 @@ curl -fsSL https://s.id/golang-linux | bash -s &&
 curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
     curl -fsSL https://aliae.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
     ln -s $USERPROFILE/.aliae.yaml $HOME/.aliae.yaml &&
-    BASHRC+=('eval "$(aliae init bash)"')
+    BASHRC+=(
+        "\n",
+        'eval "$(aliae init bash)"'
+        )
 
 # remove sudo pw prompt
 echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER >/dev/null
 
 # setup ~/.bashrc
-echo "\n" >>$HOME/.bashrc
 for ((i = 0; i < ${#BASHRC[@]}; i++)); do
     echo "${BASHRC[$i]}" >>$HOME/.bashrc
 done
