@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ## setup debian in wsl
-
-WIN_USER_DIR=/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" | sed -e 's/\r//g')
+## setup via WSLENV (https://devblogs.microsoft.com/commandline/share-environment-vars-between-wsl-and-windows/)
+WIN_USER_DIR=/mnt/c/Users/$USERNAME
 
 mkdir $HOME/.local $HOME/.local/bin $HOME/.config
 export PATH=$PATH:$HOME/.local/bin
