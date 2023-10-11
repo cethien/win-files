@@ -79,9 +79,10 @@ curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
 # node
 export N_PREFIX=$HOME/.local
 curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts &&
+    curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s latest &&
     npm install -g n &&
-    n latest &&
-    corepack enable
+    corepack enable &&
+    BASHRC+=('export N_PREFIX=$HOME/.local')
 
 # go
 GO_TOOLS=(
