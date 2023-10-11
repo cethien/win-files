@@ -1,14 +1,12 @@
 #!/bin/bash
 
 ## setup debian in wsl
-## setup via WSLENV (https://devblogs.microsoft.com/commandline/share-environment-vars-between-wsl-and-windows/)
-WIN_USER_DIR=$USERPROFILE
 
 mkdir $HOME/.local $HOME/.local/bin $HOME/.config
 export PATH=$PATH:$HOME/.local/bin
 BASHRC+=('export PATH=$PATH:$HOME/.local/bin')
 
-ln -s $WIN_USER_DIR/.gitconfig $HOME/.gitconfig
+ln -s $USERPROFILE/.gitconfig $HOME/.gitconfig
 
 # install nala
 sudo apt update &&
@@ -25,7 +23,7 @@ echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable
     sudo tee /etc/apt/sources.list.d/gierens.list >/dev/null
 sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list &&
     PACKAGES+=' eza bat ripgrep neovim' &&
-    ln -s $WIN_USER_DIR/AppData/Local/nvim $HOME/.config/nvim
+    ln -s $USERPROFILE/AppData/Local/nvim $HOME/.config/nvim
 
 # just command runner
 wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' |
@@ -51,7 +49,7 @@ wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/package
     sudo dpkg -i packages-microsoft-prod.deb &&
     rm packages-microsoft-prod.deb &&
     PACKAGES+=' powershell'
-ln -s $WIN_USER_DIR/Documents/PowerShell/ $HOME/.config/powershell/
+ln -s $USERPROFILE/Documents/PowerShell/ $HOME/.config/powershell/
 
 # update distro & install packages
 sudo nala update &&
@@ -64,12 +62,8 @@ ln -s /usr/bin/batcat $HOME/.local/bin/bat
 # oh my posh / aliae
 curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
     curl -fsSL https://aliae.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
-    POSH_THEMES_PATH="$WIN_USER_DIR/AppData/Local/Programs/oh-my-posh/themes" &&
-    ln -s $WIN_USER_DIR/.aliae.yaml $HOME/.aliae.yaml &&
-    BASHRC+=(
-        "export POSH_THEMES_PATH="$POSH_THEMES_PATH""
-        'eval "$(aliae init bash)"'
-    )
+    ln -s $USERPROFILE/.aliae.yaml $HOME/.aliae.yaml &&
+    BASHRC+=('eval "$(aliae init bash)"')
 
 # node
 N_PREFIX=$HOME/.local/n
