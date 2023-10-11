@@ -2,7 +2,7 @@
 
 ## setup debian in wsl
 ## setup via WSLENV (https://devblogs.microsoft.com/commandline/share-environment-vars-between-wsl-and-windows/)
-WIN_USER_DIR=/mnt/c/Users/$USERNAME
+WIN_USER_DIR=$USERPROFILE
 
 mkdir $HOME/.local $HOME/.local/bin $HOME/.config
 export PATH=$PATH:$HOME/.local/bin
