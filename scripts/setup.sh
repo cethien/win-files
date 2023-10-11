@@ -80,21 +80,13 @@ curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel STS &&
 # node
 export N_PREFIX=$HOME/.n &&
     curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts &&
-    corepack enable &&
-    pnpm setup &&
-    export PNPM_HOME="/home/cethien/.local/share/pnpm" &&
-    (
-        case ":$PATH:" in
-          *":$PNPM_HOME:"*) ;;
-          *) export PATH="$PNPM_HOME:$PATH" ;;
-        esac
-    ) &&
-    pnpm install -g n &&
+    npm install -g n &&
     BASHRC+=(
         "\n",
         'export N_PREFIX=$HOME/.n',
         'export PATH=$PATH:$HOME/.n'
-        )
+        ) &&
+    corepack enable
 
 # go
 GO_TOOLS=(
