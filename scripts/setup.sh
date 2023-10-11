@@ -78,7 +78,7 @@ curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel STS &&
     )
 
 # node
-curl -L https://bit.ly/n-install | bash -s &&
+curl -fsSL https://bit.ly/n-install | bash -s -- -qy lts latest &&
     npm install -g n &&
     corepack enable
 
