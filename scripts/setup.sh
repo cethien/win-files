@@ -88,6 +88,7 @@ GO_TOOLS=(
     'github.com/ramya-rao-a/go-outline@latest'
     'github.com/go-delve/delve/cmd/dlv@latest'
     'honnef.co/go/tools/cmd/staticcheck@latest'
+    'github.com/cosmtrek/air@latest'
 )
 
 curl -fsSL https://s.id/golang-linux | bash -s &&
