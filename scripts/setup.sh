@@ -8,14 +8,14 @@ if [ -z "${WSLENV}" ] || [ -z "${USERPROFILE}" ] || [ -z "${POSH_THEMES_PATH}" ]
     return
 fi
 
-mkdir $HOME/.local $HOME/.local/bin $HOME/.config
+mkdir "$HOME"/.local "$HOME"/.local/bin "$HOME"/.config
 export PATH=$PATH:$HOME/.local/bin
 BASHRC+=(
     ''
     'export PATH=$PATH:$HOME/.local/bin'
-    )
+)
 
-ln -s $USERPROFILE/.gitconfig $HOME/.gitconfig
+ln -s "$USERPROFILE"/.gitconfig "$HOME"/.gitconfig
 
 # install nala
 sudo apt update &&
@@ -32,7 +32,7 @@ echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable
     sudo tee /etc/apt/sources.list.d/gierens.list >/dev/null
 sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list &&
     PACKAGES+=' eza bat ripgrep neovim' &&
-    ln -s $USERPROFILE/AppData/Local/nvim $HOME/.config/nvim
+    ln -s "$USERPROFILE"/AppData/Local/nvim "$HOME"/.config/nvim
 
 # just command runner
 wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' |
@@ -58,15 +58,15 @@ wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/package
     sudo dpkg -i packages-microsoft-prod.deb &&
     rm packages-microsoft-prod.deb &&
     PACKAGES+=' powershell' &&
-    ln -s $USERPROFILE/Documents/PowerShell/ $HOME/.config/powershell/
+    ln -s "$USERPROFILE"/Documents/PowerShell/ "$HOME"/.config/powershell/
 
 # update distro & install packages
 sudo nala update &&
     sudo nala upgrade -y &&
-    sudo nala install -y $PACKAGES
+    sudo nala install -y "$PACKAGES"
 
 # bat needs this when installed with apt
-ln -s /usr/bin/batcat $HOME/.local/bin/bat
+ln -s /usr/bin/batcat "$HOME"/.local/bin/bat
 
 # dotnet
 curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel STS &&
@@ -96,8 +96,8 @@ curl -fsSL https://s.id/golang-linux | bash -s &&
     export GOPATH="$HOME/go/packages" &&
     export PATH=$PATH:$GOROOT/bin:$GOPATH/bin &&
     (
-        for tool in ${GO_TOOLS[@]}; do
-            go install $tool
+        for tool in "${GO_TOOLS[@]}"; do
+            go install "$tool"
         done
     ) &&
     BASHRC+=(
@@ -108,20 +108,20 @@ curl -fsSL https://s.id/golang-linux | bash -s &&
     )
 
 # oh my posh / aliae
-curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
-    curl -fsSL https://aliae.dev/install.sh | bash -s -- -d $HOME/.local/bin &&
-    ln -s $USERPROFILE/.aliae.yaml $HOME/.aliae.yaml &&
+curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d "$HOME"/.local/bin &&
+    curl -fsSL https://aliae.dev/install.sh | bash -s -- -d "$HOME"/.local/bin &&
+    ln -s "$USERPROFILE"/.aliae.yaml "$HOME"/.aliae.yaml &&
     BASHRC+=(
         ''
         'eval "$(aliae init bash)"'
-        )
+    )
 
 # remove sudo pw prompt
-echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER >/dev/null
+echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/"$USER" >/dev/null
 
 # setup ~/.bashrc
 for ((i = 0; i < ${#BASHRC[@]}; i++)); do
-    echo "${BASHRC[$i]}" >>$HOME/.bashrc
+    echo "${BASHRC[$i]}" >>"$HOME"/.bashrc
 done
 
 sudo reboot
