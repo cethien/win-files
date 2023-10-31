@@ -60,6 +60,9 @@ wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/package
     PACKAGES+=' powershell' &&
     ln -s "$USERPROFILE"/Documents/PowerShell/ "$HOME"/.config/powershell/
 
+# hugo
+PACKAGES+=' hugo'
+
 # update distro & install packages
 sudo nala update &&
     sudo nala upgrade -y &&
