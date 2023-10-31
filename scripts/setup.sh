@@ -68,15 +68,6 @@ sudo nala update &&
 # bat needs this when installed with apt
 ln -s /usr/bin/batcat "$HOME"/.local/bin/bat
 
-# dotnet
-curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel STS &&
-    curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel LTS &&
-    BASHRC+=(
-        ''
-        'export DOTNET_ROOT=$HOME/.dotnet'
-        'export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools'
-    )
-
 # node
 curl -fsSL https://bit.ly/n-install | bash -s -- -qy lts latest &&
     npm install -g n &&
