@@ -115,6 +115,8 @@ ssh-keygen -q -b 2048 -t ed25519 -f $env:USERPROFILE/.ssh/id_ed25519 -N '' -q
 
 if ($Development) {
     WingetInstall -Interactive -ItemId Microsoft.VisualStudioCode
+    
+    [Environment]::SetEnvironmentVariable("WSLENV", $env:WSLENV + ":USERPROFILE/p:POSH_THEMES_PATH/p", "USER")
     wsl --install Ubuntu
     WingetInstall -Interactive -ItemId Docker.DockerDesktop
 }
