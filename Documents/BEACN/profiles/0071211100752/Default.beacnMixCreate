@@ -17,11 +17,11 @@
             mixerSourceCount="0" faderColourBarColour="-10983950" bartonKnobType="3"
             knobMuteMode="44" muteMode="43" mixerVolumeRatio="1.0" knobMuteState="0"
             buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
-    <mixer2 mixerName="Game" mixerLockStatus="1" mixerFadersLinked="0" mixerHPLevel="59.0"
-            mixerBroadcastLevel="63.0" mixerHPMute="0" mixerBroadcastMute="0"
+    <mixer2 mixerName="Game" mixerLockStatus="1" mixerFadersLinked="0" mixerHPLevel="48.0"
+            mixerBroadcastLevel="63.0" mixerHPMute="1" mixerBroadcastMute="0"
             mixerChatMute="1" mixerVodTrackMute="0" mixerPlaceInOrder="2"
             mixerSourceCount="0" faderColourBarColour="-2293505" bartonKnobType="5"
-            knobMuteMode="44" muteMode="43" mixerVolumeRatio="1.0" knobMuteState="0"
+            knobMuteMode="44" muteMode="43" mixerVolumeRatio="1.0" knobMuteState="1"
             buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
     <mixer3 mixerName="System" mixerLockStatus="0" mixerFadersLinked="1"
             mixerHPLevel="50.0" mixerBroadcastLevel="50.0" mixerHPMute="0"
@@ -47,18 +47,18 @@
             mixerSourceCount="0" faderColourBarColour="-1" bartonKnobType="8"
             knobMuteMode="44" muteMode="43" mixerVolumeRatio="1.0" knobMuteState="0"
             buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
-    <mixer5 mixerName="Music" mixerLockStatus="0" mixerFadersLinked="0" mixerHPLevel="28.0"
+    <mixer5 mixerName="Browser" mixerLockStatus="0" mixerFadersLinked="0"
+            mixerHPLevel="58.0" mixerBroadcastLevel="70.0" mixerHPMute="0"
+            mixerBroadcastMute="1" mixerChatMute="1" mixerVodTrackMute="1"
+            mixerPlaceInOrder="5" mixerSourceCount="0" faderColourBarColour="-740352"
+            bartonKnobType="6" knobMuteMode="43" muteMode="44" mixerVolumeRatio="1.0"
+            knobMuteState="1" buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
+    <mixer6 mixerName="Music" mixerLockStatus="0" mixerFadersLinked="0" mixerHPLevel="24.0"
             mixerBroadcastLevel="44.0" mixerHPMute="0" mixerBroadcastMute="1"
-            mixerChatMute="1" mixerVodTrackMute="1" mixerPlaceInOrder="5"
+            mixerChatMute="1" mixerVodTrackMute="1" mixerPlaceInOrder="6"
             mixerSourceCount="0" faderColourBarColour="-14688412" bartonKnobType="4"
             knobMuteMode="43" muteMode="44" mixerVolumeRatio="1.0" knobMuteState="1"
             buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
-    <mixer6 mixerName="Browser" mixerLockStatus="0" mixerFadersLinked="0"
-            mixerHPLevel="64.0" mixerBroadcastLevel="70.0" mixerHPMute="0"
-            mixerBroadcastMute="1" mixerChatMute="1" mixerVodTrackMute="1"
-            mixerPlaceInOrder="6" mixerSourceCount="0" faderColourBarColour="-740352"
-            bartonKnobType="6" knobMuteMode="43" muteMode="44" mixerVolumeRatio="1.0"
-            knobMuteState="1" buttonMuteState="0" mixCreateRoutedDeviceCount="0"/>
     <mixer7 mixerName="Music" mixerLockStatus="0" mixerFadersLinked="0" mixerHPLevel="46.0"
             mixerBroadcastLevel="34.0" mixerHPMute="0" mixerBroadcastMute="1"
             mixerChatMute="1" mixerVodTrackMute="1" mixerPlaceInOrder="7"
