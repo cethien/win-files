@@ -5,8 +5,6 @@ alias:
     value: nvim
   - name: cat
     value: bat
-  - name: npm
-    value: pnpm
   - name: ls
     value: 'eza -a --icons --group-directories-first --git'
   - name: ll
