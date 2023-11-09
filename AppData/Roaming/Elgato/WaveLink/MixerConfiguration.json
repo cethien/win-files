@@ -1,0 +1,160 @@
+{
+    "configuration": {
+        "bufferSetting": {
+            "audioFilterBuffer": 10,
+            "inputBuffer": 30,
+            "mixerBuffer": 30,
+            "outputBuffer": 30
+        },
+        "inputs": [
+            {
+                "color": "#1817B8",
+                "identifier": "PCM_OUT_01_V_00_SD2",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.microphoneFX",
+                    "com.elgato.mix.stream"
+                ],
+                "name": "Wave Link System",
+                "nodeType": 2,
+                "volumes": {
+                    "com.elgato.mix.local": 0.5,
+                    "com.elgato.mix.microphoneFX": 1.0
+                }
+            },
+            {
+                "color": "#23DEC0",
+                "identifier": "ROOT#UNNAMED_DEVICE#0000#{6994AD04-93EF-11D0-A3CC-00A0C9223196}\\RTXWAVE13",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.local",
+                    "com.elgato.mix.stream"
+                ],
+                "name": "Mikrofon (NVIDIA Broadcast)",
+                "nodeType": 1,
+                "volumes": {
+                    "com.elgato.mix.microphoneFX": 1.0
+                }
+            },
+            {
+                "color": "#FF6C3E",
+                "identifier": "PCM_OUT_01_V_08_SD6",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.stream"
+                ],
+                "name": "Wave Link SFX",
+                "nodeType": 2,
+                "volumes": {
+                    "com.elgato.mix.local": 0.63,
+                    "com.elgato.mix.microphoneFX": 0.63,
+                    "com.elgato.mix.stream": 0.63
+                },
+                "volumesLinked": true
+            },
+            {
+                "color": "#23DE63",
+                "identifier": "PCM_OUT_01_V_12_SD8",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.microphoneFX",
+                    "com.elgato.mix.stream"
+                ],
+                "name": "Aux 1",
+                "nodeType": 2,
+                "userProvidedName": "OBS Monitoring",
+                "volumes": {
+                    "com.elgato.mix.local": 0.4,
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 0.0
+                }
+            },
+            {
+                "color": "#CFD924",
+                "identifier": "PCM_OUT_01_V_06_SD5",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.microphoneFX"
+                ],
+                "name": "Wave Link Voice Chat",
+                "nodeType": 2,
+                "volumes": {
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 0.7
+                }
+            },
+            {
+                "color": "#F2315B",
+                "identifier": "PCM_OUT_01_V_10_SD7",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.microphoneFX"
+                ],
+                "name": "Wave Link Game",
+                "nodeType": 2,
+                "volumes": {
+                    "com.elgato.mix.local": 0.47,
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 0.6
+                }
+            },
+            {
+                "color": "#FF00E8",
+                "identifier": "PCM_OUT_01_V_02_SD3",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.microphoneFX",
+                    "com.elgato.mix.stream"
+                ],
+                "name": "Wave Link Music",
+                "nodeType": 2,
+                "volumes": {
+                    "com.elgato.mix.local": 0.15,
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 0.0
+                }
+            },
+            {
+                "color": "#B521FF",
+                "identifier": "PCM_OUT_01_V_04_SD4",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.microphoneFX",
+                    "com.elgato.mix.stream"
+                ],
+                "name": "Wave Link Browser",
+                "nodeType": 2,
+                "volumes": {
+                    "com.elgato.mix.local": 0.5,
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 0.5
+                }
+            }
+        ],
+        "outputs": [
+            {
+                "identifier": "BTHENUM#{0000110B-0000-1000-8000-00805F9B34FB}_LOCALMFG&005D#8&1DA27C2A&0&AC122FC80AF2_C00000000#{6994AD04-93EF-11D0-A3CC-00A0C9223196}\\SRC",
+                "mixerID": "com.elgato.mix.local",
+                "muted": false,
+                "name": "Kopfhörer (Soundcore Life Q30)",
+                "nodeType": 1,
+                "systemDefaultDevice": false,
+                "terminalType": 1,
+                "volume": 1.0
+            },
+            {
+                "identifier": "PCM_IN_01_V_00_SD2",
+                "mixerID": "com.elgato.mix.stream",
+                "muted": false,
+                "name": "Stream Output",
+                "nodeType": 2,
+                "systemDefaultDevice": false,
+                "terminalType": 0,
+                "volume": 1.0
+            },
+            {
+                "identifier": "PCM_IN_01_V_20_SD4",
+                "mixerID": "com.elgato.mix.microphoneFX",
+                "muted": false,
+                "name": "Microphone FX",
+                "nodeType": 2,
+                "systemDefaultDevice": false,
+                "terminalType": 0,
+                "volume": 1.0
+            }
+        ]
+    },
+    "version": 2
+}

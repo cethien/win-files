@@ -109,13 +109,16 @@ if ($Personal) {
     WingetInstall -ItemId Logitech.GHUB
     WingetInstall -ItemId Nvidia.GeForceExperience
     WingetInstall -ItemId Nvidia.Broadcast
+
+    WingetInstall -ItemId Elgato.Elgato.StreamDeck
+    WingetInstall -ItemId Elgato.WaveLink
 }
 
 ssh-keygen -q -b 2048 -t ed25519 -f $env:USERPROFILE/.ssh/id_ed25519 -N '' -q
 
 if ($Development) {
     WingetInstall -Interactive -ItemId Microsoft.VisualStudioCode
-    
+
     [Environment]::SetEnvironmentVariable("WSLENV", $env:WSLENV + ":USERPROFILE/p:POSH_THEMES_PATH/p", "USER")
     wsl --install Ubuntu
     WingetInstall -Interactive -ItemId Docker.DockerDesktop
@@ -138,5 +141,4 @@ if ($Streaming) {
     WingetInstall -ItemId -DontIncludeUpdate OBSProject.OBSStudio
     WingetInstall -ItemId Iriun.IriunWebcam
     WingetInstall -ItemId Chatty.Chatty
-    Start-Process "https://github.com/SAMMISolutions/SAMMI-Official/releases/latest"
 }

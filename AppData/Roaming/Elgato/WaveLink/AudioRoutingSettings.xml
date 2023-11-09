@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<audioRoutingSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AudioRouting AppExeName="C:\Users\boris\AppData\Roaming\Spotify\Spotify.exe" WaveLinkChannel="Music" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" WaveLinkChannel="Browser" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Destiny 2\destiny2.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Users\boris\apps\soundux\soundux-0.2.7-windows-portable.exe" WaveLinkChannel="SFX" />
+  <AudioRouting AppExeName="C:\Program Files\Google\Chrome\Application\chrome.exe" WaveLinkChannel="Browser" />
+</audioRoutingSettings>
