@@ -1,5 +1,6 @@
 alias u := update
 alias r := reload
+alias ug := update-go
 
 set shell := ["bash", "-c"]
 
@@ -10,6 +11,10 @@ set shell := ["bash", "-c"]
 # update your packages
 @update:
 	$HOME/scripts/update.sh
+
+# update go
+@update-go:
+	$HOME/scripts/update-go.sh
 
 # reloads the terminal profile
 @reload:
