@@ -3,6 +3,7 @@ alias r := reload
 alias i := install
 alias in := install-noupdate
 alias rm := remove
+alias b := backup
 
 set shell := ["pwsh", "-NoProfile", "-ExecutionPolicy", "Unrestricted", "-Command"]
 
@@ -19,6 +20,10 @@ ufile := "$env:USERPROFILE" / ".wingetupdate"
 # update your apps
 @update:
 	. "$env:USERPROFILE/scripts/update.ps1"
+
+# execute backup script in folder
+@backup *FOLDERS:
+	$fs = "{{FOLDERS}}" -split " "; . "$env:USERPROFILE/scripts/backup-folders.ps1" -Folders $fs
 
 # install without adding to update file
 @install-noupdate PACKAGE:

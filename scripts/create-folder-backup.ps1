@@ -1,6 +1,11 @@
 ## Creates a zip of a folder. Useful for e.g. Portable apps
 
 # $env:BACKUP is a custom set variable
+if (!(Test-Path -Path Env:BACKUP)) {
+    Write-Error 'env variable "BACKUP" not set. exiting'
+    Exit 1
+}
+
 $backup = "$env:BACKUP"
 $name = $(Split-Path -Path $pwd -Leaf)
 $tmp = "$env:TMP\$name"
@@ -30,5 +35,3 @@ Write-Host "done!"
 Write-Host -NoNewline "deleting temp folder... "
 Remove-Item -r -force $tmp
 Write-Host "done!"
-
-Read-Host "Press any Key to Exit"
