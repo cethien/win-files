@@ -31,7 +31,8 @@
                 "name": "Mikrofon (NVIDIA Broadcast)",
                 "nodeType": 1,
                 "volumes": {
-                    "com.elgato.mix.microphoneFX": 1.0
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 1.0
                 }
             },
             {
@@ -43,9 +44,9 @@
                 "name": "Wave Link SFX",
                 "nodeType": 2,
                 "volumes": {
-                    "com.elgato.mix.local": 0.63,
-                    "com.elgato.mix.microphoneFX": 0.63,
-                    "com.elgato.mix.stream": 0.63
+                    "com.elgato.mix.local": 0.55,
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 0.55
                 },
                 "volumesLinked": true
             },
@@ -60,7 +61,7 @@
                 "nodeType": 2,
                 "userProvidedName": "OBS Monitoring",
                 "volumes": {
-                    "com.elgato.mix.local": 0.4,
+                    "com.elgato.mix.local": 0.35,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.0
                 }
@@ -87,7 +88,7 @@
                 "name": "Wave Link Game",
                 "nodeType": 2,
                 "volumes": {
-                    "com.elgato.mix.local": 0.47,
+                    "com.elgato.mix.local": 0.37,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.6
                 }
@@ -102,7 +103,7 @@
                 "name": "Wave Link Music",
                 "nodeType": 2,
                 "volumes": {
-                    "com.elgato.mix.local": 0.15,
+                    "com.elgato.mix.local": 0.24,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.0
                 }
@@ -117,7 +118,7 @@
                 "name": "Wave Link Browser",
                 "nodeType": 2,
                 "volumes": {
-                    "com.elgato.mix.local": 0.5,
+                    "com.elgato.mix.local": 0.6,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.5
                 }
