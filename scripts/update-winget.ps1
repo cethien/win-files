@@ -13,23 +13,23 @@ if ($tested -eq $false) {
 
 $packages = Get-Content $file
 if ($packages.Length -gt 0) {
-    $packages | ForEach-Object {
+    $packages | ForEach-Object -Parallel {
         $package = $_
 
         $output = winget update $package
 
         if ($output -like "*No available upgrade found*") {
-            $results.Latest += $package
+            $($using:results).Latest += $package
             Write-Host -NoNewline "skipped:`t"
             Write-Host -ForegroundColor Cyan $package
         }
         elseif ($output -like "*No installed package found matching input criteria*") {
-            $results.Missing += $package
+            $($using:results).Missing += $package
             Write-Host -NoNewline "missing:`t"
             Write-Host -ForegroundColor Red $package
         }
         else {
-            $results.Updated += $package
+            $($using:results).Updated += $package
             Write-Host -NoNewline "updated:`t"
             Write-Host -ForegroundColor Green $package
         }
