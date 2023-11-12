@@ -39,9 +39,6 @@ script:
       load(io.popen('oh-my-posh init {{ .Shell }} --config %POSH_THEME%'):read("*a"))()
     if: match .Shell "cmd"
   - value: |
-      Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-      Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
-      Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
       oh-my-posh init {{ .Shell }} --config $env:POSH_THEME | Invoke-Expression
     if: match .Shell "pwsh"
   - value: |

@@ -69,8 +69,11 @@ WingetInstall -ItemId M2Team.NanaZip
 WingetInstall -ItemId Microsoft.PowerToys
 WingetInstall -ItemId GeekUninstaller.GeekUninstaller
 
+#pwsh
 WingetInstall -ItemId Microsoft.PowerShell
+
 WingetInstall -ItemId Git.Git
+Install-Module posh-git -Scope CurrentUser
 WingetInstall -ItemId casey.just
 WingetInstall -ItemId Neovim.Neovim
 WingetInstall -ItemId sharkdp.bat
@@ -122,6 +125,7 @@ if ($Development) {
     [Environment]::SetEnvironmentVariable("WSLENV", $env:WSLENV + ":USERPROFILE/p:POSH_THEMES_PATH/p", "USER")
     wsl --install Ubuntu
     WingetInstall -Interactive -ItemId Docker.DockerDesktop
+    Install-Module posh-docker -Scope CurrentUser
 }
 
 if ($Gaming) {
