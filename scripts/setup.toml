@@ -35,13 +35,19 @@ WingetPackage = "Git.Git"
 PSModule      = "posh-git"
 
 [[actions]]
-WingetPackage = "casey.just"
+WingetPackage = "Casey.Just"
 
 [[actions]]
 WingetPackage = "Neovim.Neovim"
 
 [[actions]]
 WingetPackage = "sharkdp.bat"
+
+[[actions]]
+WingetPackage = "chrisant996.Clink"
+
+[[actions]]
+WingetPackage = "dotPDNLLC.paintdotnet"
 
 [[actions]]
 WingetPackage = "Microsoft.VisualStudioCode"
