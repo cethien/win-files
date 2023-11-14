@@ -1,153 +1,38 @@
-## setup script
-#Requires -Version 5.1
+#Requires -Version 7
+#Requires -Modules PSToml
 
 param (
-    [Parameter(HelpMessage = "customization stuff")]
-    [switch]$Customizing,
-
-    [Parameter(HelpMessage = "some stuff on a personal desktop")]
-    [switch]$Personal,
-
-    [Parameter(HelpMessage = "generate a new ssh key. uses ssh-keygen")]
-    [switch]$Ssh,
-
-    [Parameter(HelpMessage = "development stuff")]
-    [switch]$Development,
-
-    [Parameter(HelpMessage = "games & launchers")]
-    [switch]$Gaming,
-
-    [Parameter(HelpMessage = "streaming stuff")]
-    [switch]$Streaming
+    [Parameter(HelpMessage = "profiles")]
+    [string[]]$Profiles
 )
 
-function WingetInstall {
-    param (
-        # add winget id here
-        [Parameter(Mandatory)]
-        [string]$ItemId,
+$actions = $(Get-Content "./setup.toml" | ConvertFrom-Toml).actions |
+Where-Object {
+    $($_.Profile -eq $null) -or $($Profiles -match $_.Profile)
+}
 
-        # tell, if the installation should be interactive
-        # dafault: false
-        [switch]$Interactive,
+$actions | Foreach-Object -ThrottleLimit 10 -Parallel {
+    $a = $PSItem
 
-        # do not include in update file for "just update"
-        # dafault: false
-        [switch]$DontIncludeUpdate
-    )
-
-    $cmd = "winget install --accept-source-agreements --accept-package-agreements --source winget --id $ItemId"
-
-    if ($Interactive -eq $true) {
-        $cmd += " --interactive"
+    if ($a.PreScript) {
+        $a.PreScript | Invoke-Expression
     }
 
-    if ($DontIncludeUpdate -eq $false) {
-        Add-Content $env:USERPROFILE/.wingetupdate "$ItemId`n"
+    if ($a.WingetPackage) {
+        $cmd = "winget install --accept-source-agreements --accept-package-agreements --source winget --Package $($a.WingetPackage)"
+        if ($a.WingetFlags) {
+            $cmd += " $($a.WingetFlags)"
+        }
+
+        if ($a.DontIncludeUpdate -eq $null) {
+            Add-Content $env:USERPROFILE/.wingetupdate "$($a.WingetPackage)`n"
+        }
+        Write-Output $cmd
     }
 
-    Invoke-Expression $cmd
-}
+    if ($a.Script) {
+        $a.Script | Invoke-Expression
+    }
 
-# remove curl alias 🤡
-Remove-Item alias:curl
-
-# windows settings
-# dark mode 🌙
-Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
-
-# task bar
-Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search -Name SearchBoxTaskbarMode -Value 0 -Type DWord -Force
-Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds -Name ShellFeedsTaskbarOpenOnHover -Value 0 -Type DWord -Force
-Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name Hidden -Value 1 -Type DWord -Force
-Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name HideIcons -Value 1 -Type DWord -Force
-Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name OnboardUnpinCortana -Value 1 -Type DWord -Force
-Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name ShowCortanaButton -Value 0 -Type DWord -Force
-
-# accessibility
-Set-ItemProperty -Path "HKCU:\Control Panel\Accessibility\StickyKeys" -Name "Flags" -Type String -Value "506"
-Set-ItemProperty -Path "HKCU:\Control Panel\Accessibility\ToggleKeys" -Name "Flags" -Type String -Value "58"
-Set-ItemProperty -Path "HKCU:\Control Panel\Accessibility\Keyboard Response" -Name "Flags" -Type String -Value "122"
-
-# some tools
-WingetInstall -ItemId M2Team.NanaZip
-WingetInstall -ItemId Microsoft.PowerToys
-WingetInstall -ItemId GeekUninstaller.GeekUninstaller
-
-#pwsh
-WingetInstall -ItemId Microsoft.PowerShell
-
-WingetInstall -ItemId Git.Git
-Install-Module posh-git -Scope CurrentUser
-WingetInstall -ItemId casey.just
-WingetInstall -ItemId Neovim.Neovim
-WingetInstall -ItemId sharkdp.bat
-
-WingetInstall -ItemId Microsoft.WindowsTerminal
-
-if ($Customizing) {
-    # oh-my-posh
-    WingetInstall -ItemId JanDeDobbeleer.OhMyPosh
-    WingetInstall -ItemId JanDeDobbeleer.Aliae
-
-    oh-my-posh font install CodeNewRoman --user
-    oh-my-posh font install FiraCode --user
-
-    WingetInstall -ItemId Rainmeter.Rainmeter
-    $file = "JaxCoreSetup.bat"
-    curl -fsLO "https://github.com/Jax-Core/jax-core.github.io/releases/latest/download/$file"
-    Invoke-Expression $file
-    Remove-Item -Recurse -Force $file
-}
-
-WingetInstall -ItemId -DontIncludeUpdate Google.Chrome
-
-# spotify
-WingetInstall -ItemId -DontIncludeUpdate Spotify.Spotify
-WingetInstall -ItemId -DontIncludeUpdate Spicetify.Spicetify
-spicetify config extensions webnowplaying.js
-spicetify config custom_apps new-releases
-spicetify backup apply
-
-if ($Personal) {
-    WingetInstall -ItemId -DontIncludeUpdate Discord.Discord
-
-    WingetInstall -ItemId Google.Drive
-
-    WingetInstall -ItemId Logitech.GHUB
-    WingetInstall -ItemId Nvidia.GeForceExperience
-    WingetInstall -ItemId Nvidia.Broadcast
-
-    WingetInstall -ItemId Elgato.Elgato.StreamDeck
-    WingetInstall -ItemId Elgato.WaveLink
-}
-
-ssh-keygen -q -b 2048 -t ed25519 -f $env:USERPROFILE/.ssh/id_ed25519 -N '' -q
-
-if ($Development) {
-    WingetInstall -Interactive -ItemId Microsoft.VisualStudioCode
-
-    [Environment]::SetEnvironmentVariable("WSLENV", $env:WSLENV + ":USERPROFILE/p:POSH_THEMES_PATH/p", "USER")
-    wsl --install Ubuntu
-    WingetInstall -Interactive -ItemId Docker.DockerDesktop
-    Install-Module posh-docker -Scope CurrentUser
-}
-
-if ($Gaming) {
-    WingetInstall -ItemId -DontIncludeUpdate Valve.Steam
-
-    # Destiny 2
-    Start-Process steam://install/1085660
-    # Retroarch
-    Start-Process steam://install/1118310
-    # WWZ
-    Start-Process steam://install/699130
-    # minecraft
-    WingetInstall -ItemId PrismLauncher.PrismLauncher
-}
-
-if ($Streaming) {
-    WingetInstall -ItemId -DontIncludeUpdate OBSProject.OBSStudio
-    WingetInstall -ItemId Iriun.IriunWebcam
-    WingetInstall -ItemId Chatty.Chatty
+    Write-Output "`n"
 }
