@@ -2,9 +2,9 @@
     "configuration": {
         "bufferSetting": {
             "audioFilterBuffer": 10,
-            "inputBuffer": 30,
+            "inputBuffer": 60,
             "mixerBuffer": 30,
-            "outputBuffer": 30
+            "outputBuffer": 60
         },
         "inputs": [
             {
@@ -61,9 +61,38 @@
                 "nodeType": 2,
                 "userProvidedName": "OBS Monitoring",
                 "volumes": {
-                    "com.elgato.mix.local": 0.35,
+                    "com.elgato.mix.local": 1.0,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.0
+                }
+            },
+            {
+                "color": "#F2315B",
+                "identifier": "PCM_OUT_01_V_10_SD7",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.microphoneFX"
+                ],
+                "name": "Wave Link Game",
+                "nodeType": 2,
+                "volumes": {
+                    "com.elgato.mix.local": 0.2,
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 0.6
+                }
+            },
+            {
+                "color": "#B521FF",
+                "identifier": "PCM_OUT_01_V_04_SD4",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.microphoneFX",
+                    "com.elgato.mix.stream"
+                ],
+                "name": "Wave Link Browser",
+                "nodeType": 2,
+                "volumes": {
+                    "com.elgato.mix.local": 1.0,
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 0.5
                 }
             },
             {
@@ -80,48 +109,20 @@
                 }
             },
             {
-                "color": "#F2315B",
-                "identifier": "PCM_OUT_01_V_10_SD7",
-                "mutedMixerIDs": [
-                    "com.elgato.mix.microphoneFX"
-                ],
-                "name": "Wave Link Game",
-                "nodeType": 2,
-                "volumes": {
-                    "com.elgato.mix.local": 0.37,
-                    "com.elgato.mix.microphoneFX": 1.0,
-                    "com.elgato.mix.stream": 0.6
-                }
-            },
-            {
                 "color": "#FF00E8",
                 "identifier": "PCM_OUT_01_V_02_SD3",
                 "mutedMixerIDs": [
-                    "com.elgato.mix.microphoneFX",
-                    "com.elgato.mix.stream"
+                    "com.elgato.mix.microphoneFX"
                 ],
                 "name": "Wave Link Music",
                 "nodeType": 2,
+                "userProvidedName": "Stream Music",
                 "volumes": {
-                    "com.elgato.mix.local": 0.24,
+                    "com.elgato.mix.local": 0.08,
                     "com.elgato.mix.microphoneFX": 1.0,
-                    "com.elgato.mix.stream": 0.0
-                }
-            },
-            {
-                "color": "#B521FF",
-                "identifier": "PCM_OUT_01_V_04_SD4",
-                "mutedMixerIDs": [
-                    "com.elgato.mix.microphoneFX",
-                    "com.elgato.mix.stream"
-                ],
-                "name": "Wave Link Browser",
-                "nodeType": 2,
-                "volumes": {
-                    "com.elgato.mix.local": 0.6,
-                    "com.elgato.mix.microphoneFX": 1.0,
-                    "com.elgato.mix.stream": 0.5
-                }
+                    "com.elgato.mix.stream": 0.08
+                },
+                "volumesLinked": true
             }
         ],
         "outputs": [
