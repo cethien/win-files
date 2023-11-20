@@ -1,65 +1,45 @@
-$results = @{
-    Latest  = @()
-    Missing = @()
-    Updated = @()
-}
-
 $file = "$env:USERPROFILE\.wingetupdate"
 
 $tested = Test-Path $file
 if ($tested -eq $false) {
     New-Item $file
+    Write-Host "no file found. New file been created. Exiting"
+    Exit 0
 }
 
 $packages = Get-Content $file
-if ($packages.Length -gt 0) {
-    $packages | ForEach-Object -Parallel {
-        $package = $_
+if ($packages.Length -eq 0) {
+    Write-Host "no packages found. Exiting"
+    Exit 0
+}
 
-        $output = winget update $package
+$results = @{
+    updated = @()
+}
 
-        if ($output -like "*No available upgrade found*") {
-            $($using:results).Latest += $package
-            Write-Host -NoNewline "skipped:`t"
-            Write-Host -ForegroundColor Cyan $package
-        }
-        elseif ($output -like "*No installed package found matching input criteria*") {
-            $($using:results).Missing += $package
-            Write-Host -NoNewline "missing:`t"
-            Write-Host -ForegroundColor Red $package
-        }
-        else {
-            $($using:results).Updated += $package
-            Write-Host -NoNewline "updated:`t"
-            Write-Host -ForegroundColor Green $package
-        }
+Write-Host "updating winget packages"
+$packages | ForEach-Object -Parallel {
+    $package = $PSItem
+    $output = winget update $package
+
+    if ($output -like "*No available upgrade found*") {
+        Write-Host -ForegroundColor Green -NoNewline "no change:`t"; Write-Host $package
+    }
+    elseif ($output -like "*No installed package found matching input criteria*") {
+        Write-Host -ForegroundColor Orange -NoNewline "not found:`t"; Write-Host $package
+    }
+    else {
+        $($using:results).updated += $package
+        Write-Host -ForegroundColor Cyan -NoNewline "updated:`t"; Write-Host $package
     }
 }
-else {
-    Write-Host -NoNewline "no packages defined in "
-    Write-Host -ForegroundColor Cyan $file
-}
-
 # summary
+if ($results.updated.Length -eq 0) {
+    Write-Host -ForegroundColor Green "no packages were updated"
+    Exit 0
+}
+
 Write-Host "`nsummary:"
-if ($results.Updated.Length -gt 0) {
-    $output = $results.Updated -join "`n`t"
-    Write-Host "following packages were updated: "
-    Write-Host -ForegroundColor Green "`t$output"
-}
-else {
-    Write-Host "no packages were updated"
-}
-
-if ($results.Latest.Length -gt 0) {
-    $output = $results.Latest -join "`n`t"
-    Write-Host "`nfollowing packages were already on the latest version:"
-    Write-Host -ForegroundColor Cyan "`t$output"
-}
-
-
-if ($results.Missing.Length -gt 0) {
-    $output = $results.Missing -join "`n`t"
-    Write-Host "`nfollowing packages were not found:"
-    Write-Host -ForegroundColor Red "`t$output"
-}
+$output = $results.updated -join "`n`t"
+Write-Host "following packages were updated: "
+Write-Host -ForegroundColor Cyan "`t$output"
