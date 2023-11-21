@@ -73,7 +73,6 @@ ln -s /usr/bin/batcat "$HOME"/.local/bin/bat
 
 # node
 curl -fsSL https://bit.ly/n-install | bash -s -- -qy lts latest &&
-    npm install -g n &&
     corepack enable
 
 # go
@@ -100,6 +99,14 @@ curl -fsSL https://s.id/golang-linux | bash -s &&
         'export GOROOT="$HOME/go"'
         'export GOPATH="$HOME/go/packages"'
         'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin'
+    )
+
+# dotnet
+curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --version latest &&
+    BASHRC+=(
+        ''
+        'export DOTNET_ROOT=$HOME/.dotnet'
+        'export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools'
     )
 
 # oh my posh / aliae
