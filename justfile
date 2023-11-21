@@ -1,6 +1,7 @@
-alias u := update
 alias r := reload
+alias u := update
 alias ug := update-go
+alias ud := update-dotnet
 
 set shell := ["bash", "-c"]
 
@@ -15,6 +16,10 @@ set shell := ["bash", "-c"]
 # update go
 @update-go:
 	$HOME/scripts/update-go.sh
+
+# update dotnet
+@update-dotnet:
+	$HOME/scripts/update-dotnet.sh
 
 # reloads the terminal profile
 @reload:
