@@ -9,7 +9,7 @@ if ($tested -eq $false) {
     Exit 0
 }
 
-$packages = Get-Content $file
+$packages = Get-Content $file | Where-Object { $_.trim() -ne "" }
 if ($packages.Length -eq 0) {
     Write-Host "no packages found. Exiting"
     Exit 0
