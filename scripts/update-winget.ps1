@@ -1,3 +1,5 @@
+#Requires -Version 5.1
+
 $file = "$env:USERPROFILE\.wingetupdate"
 
 $tested = Test-Path $file
@@ -26,7 +28,7 @@ $packages | ForEach-Object -Parallel {
         Write-Host -ForegroundColor Green -NoNewline "no change:`t"; Write-Host $package
     }
     elseif ($output -like "*No installed package found matching input criteria*") {
-        Write-Host -ForegroundColor Orange -NoNewline "not found:`t"; Write-Host $package
+        Write-Host -ForegroundColor Red -NoNewline "not found:`t"; Write-Host $package
     }
     else {
         $($using:results).updated += $package

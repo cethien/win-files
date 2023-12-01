@@ -1,4 +1,5 @@
 ## Creates a zip of a folder. Useful for e.g. Portable apps
+#Requires -Version 5.1
 
 # $env:BACKUP is a custom set variable
 if (!(Test-Path -Path Env:BACKUP)) {

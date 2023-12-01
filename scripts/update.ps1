@@ -1,3 +1,5 @@
+#Requires -Version 5.1
+
 $actions = @()
 
 $actions += '. "$env:USERPROFILE/scripts/update-winget.ps1"'
