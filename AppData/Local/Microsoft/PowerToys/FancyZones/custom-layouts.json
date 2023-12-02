@@ -44,11 +44,12 @@
       "name": "Ultrawide Autism",
       "type": "grid",
       "info": {
-        "rows": 3,
+        "rows": 4,
         "columns": 3,
         "rows-percentage": [
           1394,
-          7212,
+          3606,
+          3606,
           1394
         ],
         "columns-percentage": [
@@ -59,18 +60,23 @@
         "cell-child-map": [
           [
             0,
-            1,
-            4
-          ],
-          [
-            0,
             2,
-            4
+            5
           ],
           [
             0,
             3,
-            4
+            5
+          ],
+          [
+            1,
+            3,
+            6
+          ],
+          [
+            1,
+            4,
+            6
           ]
         ],
         "show-spacing": true,

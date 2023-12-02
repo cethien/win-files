@@ -88,6 +88,13 @@ alias:
   - name: gr
     value: git reset --hard --HEAD
 
+  # projects init
+  - name: init-go-web
+    type: function
+    if: eq .OS "linux"
+    value: |
+      . {{ .Home }}/scripts/init-go-web.sh
+
 env:
   - name: POSH_THEME
     value: '{{ env "POSH_THEMES_PATH" }}/custom/negligible.omp.json'

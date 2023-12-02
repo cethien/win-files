@@ -31,6 +31,7 @@
                 "name": "Mikrofon (NVIDIA Broadcast)",
                 "nodeType": 1,
                 "volumes": {
+                    "com.elgato.mix.local": 1.0,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 1.0
                 }
@@ -75,7 +76,7 @@
                 "name": "Wave Link Game",
                 "nodeType": 2,
                 "volumes": {
-                    "com.elgato.mix.local": 0.2,
+                    "com.elgato.mix.local": 0.3,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.6
                 }
@@ -105,7 +106,7 @@
                 "nodeType": 2,
                 "volumes": {
                     "com.elgato.mix.microphoneFX": 1.0,
-                    "com.elgato.mix.stream": 0.7
+                    "com.elgato.mix.stream": 1.0
                 }
             },
             {
@@ -118,9 +119,9 @@
                 "nodeType": 2,
                 "userProvidedName": "Stream Music",
                 "volumes": {
-                    "com.elgato.mix.local": 0.08,
+                    "com.elgato.mix.local": 0.1,
                     "com.elgato.mix.microphoneFX": 1.0,
-                    "com.elgato.mix.stream": 0.08
+                    "com.elgato.mix.stream": 0.1
                 },
                 "volumesLinked": true
             }
