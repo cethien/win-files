@@ -34,15 +34,6 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
     PACKAGES+=' eza bat ripgrep neovim' &&
     ln -s "$USERPROFILE"/AppData/Local/nvim "$HOME"/.config/nvim
 
-# just command runner
-wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' |
-    gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg >/dev/null &&
-    echo \
-        "deb [arch=all,$(dpkg --print-architecture) signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] \
-https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" |
-    sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list >/dev/null &&
-    PACKAGES+=' just'
-
 # github cli
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg |
     sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg &&
