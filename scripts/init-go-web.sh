@@ -17,8 +17,8 @@ go mod init $1 &&
         scripts.build:js="bun run base:js -- --minify --outfile=public/js/main.min.js" \
         scripts.dev:js="bun run base:js -- --watch --outfile=public/js/main.js" \
         scripts.base:css="tailwindcss -i web/css/styles.css" \
-        scripts.build:css="bun run base:css-- --minify -o ./public/css/main.min.css" \
-        scripts.dev:css="bun run base:css-- --watch -o ./public/css/main.css" &&
+        scripts.build:css="bun run base:css -- --minify -o ./public/css/main.min.css" \
+        scripts.dev:css="bun run base:css -- --watch -o ./public/css/main.css" &&
     echo "module.exports = {extends: ['@commitlint/config-conventional']}" >commitlint.config.js &&
     cp -rT $HOME/scripts/templates/go-web . &&
     touch README.md &&
