@@ -13,22 +13,80 @@ alias:
     value: 'eza -T --icons'
 
   - name: sudo
+    if: eq .OS "linux"
     value: 'sudo '
-    if: eq .OS "linux"
   - name: apt
+    if: eq .OS "linux"
     value: nala
-    if: eq .OS "linux"
   - name: grep
-    value: rg
     if: eq .OS "linux"
+    value: rg
 
   - name: zip
-    value: nanazipc
     if: eq .OS "windows"
+    value: nanazipc
 
+  # commands
+  - name: reload
+    if: eq .OS "pwsh"
+    value: |
+      & $PROFILE
+
+  - name: reload
+    if: eq .OS "linux"
+    value: |
+      source ~/.bashrc
+
+  - name: update
+    if: eq .OS "windows"
+    value: |
+      . "$env:USERPROFILE/scripts/update.ps1"
+
+  - name: update
+    if: eq .OS "linux"
+    value: |
+      sudo nala update && \
+      sudo nala upgrade -y && \
+      curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d {{ .Home }}/.local/bin && \
+      curl -fsSL https://aliae.dev/install.sh | bash -s -- -d {{ .Home }}/.local/bin
+
+  - name: update-spotify
+    if: eq .OS "windows"
+    value: |
+      spicetify update
+      spicetify restore backup apply -q
+
+  - name: update-dotnet
+    if: eq .OS "linux"
+    value: |
+      curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --version latest
+
+  - name: update-go
+    if: eq .OS "linux"
+    value: |
+      (cd {{ .Home }} && \
+      curl -fsSL https://s.id/golang-linux | bash -s && \
+      rm -rf go*.tar.gz)
+
+  # git
   - name: ignore
     type: git
     value: '!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi'
+
+  - name: ga
+    value: git add
+
+  - name: gaf
+    value: git add -f
+
+  - name: gc
+    value: git commit -m
+
+  - name: gf
+    value: git fetch
+
+  - name: gr
+    value: git reset --hard --HEAD
 
 env:
   - name: POSH_THEME

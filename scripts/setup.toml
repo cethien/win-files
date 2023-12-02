@@ -35,9 +35,6 @@ WingetPackage = "Git.Git"
 PSModule      = "posh-git"
 
 [[actions]]
-WingetPackage = "Casey.Just"
-
-[[actions]]
 WingetPackage = "Neovim.Neovim"
 
 [[actions]]
