@@ -86,7 +86,7 @@ alias:
     value: git fetch
 
   - name: gr
-    value: git reset --hard --HEAD
+    value: git reset --hard
 
   # projects init
   - name: init-go-web
