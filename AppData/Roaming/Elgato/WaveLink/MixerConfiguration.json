@@ -76,7 +76,7 @@
                 "name": "Wave Link Game",
                 "nodeType": 2,
                 "volumes": {
-                    "com.elgato.mix.local": 0.3,
+                    "com.elgato.mix.local": 0.4,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.6
                 }
@@ -105,6 +105,7 @@
                 "name": "Wave Link Voice Chat",
                 "nodeType": 2,
                 "volumes": {
+                    "com.elgato.mix.local": 1.0,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 1.0
                 }
