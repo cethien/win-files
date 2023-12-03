@@ -28,19 +28,17 @@ alias:
 
   # commands
   - name: reload
-    if: eq .OS "pwsh"
+    if: eq .Shell "pwsh"
     value: |
-      & $PROFILE
+      . $profile
 
   - name: reload
     if: eq .OS "linux"
-    value: |
-      source ~/.bashrc
+    value: source ~/.bashrc
 
   - name: update
-    if: eq .OS "windows"
-    value: |
-      . "$env:USERPROFILE/scripts/update.ps1"
+    if: eq .Shell "pwsh"
+    value: . "{{ env "USERPROFILE" }}/scripts/update.ps1"
 
   - name: update
     if: eq .OS "linux"
@@ -68,32 +66,21 @@ alias:
       curl -fsSL https://s.id/golang-linux | bash -s && \
       rm -rf go*.tar.gz)
 
+  - name: backup-folders
+    if: eq .Shell "pwsh"
+    value: . "{{ env "USERPROFILE" }}/scripts/backup-folders.ps1" -Folders
+
   # git
   - name: ignore
     type: git
     value: '!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi'
 
-  - name: ga
-    value: git add
-
-  - name: gaf
-    value: git add -f
-
-  - name: gc
-    value: git commit -m
-
-  - name: gf
-    value: git fetch
-
-  - name: gr
-    value: git reset --hard
-
   # projects init
-  - name: init-go-web
+  - name: init-goweb
     type: function
-    if: eq .OS "linux"
+    if: eq .Shell "bash"
     value: |
-      . {{ .Home }}/scripts/init-go-web.sh
+      . {{ .Home }}/scripts/init/goweb/init.sh
 
 env:
   - name: POSH_THEME
