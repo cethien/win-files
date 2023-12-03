@@ -1,0 +1,34 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+	button:has(span) {
+		@apply flex items-center;
+	}
+
+	header {
+		& button {
+			@apply text-3xl;
+		}
+	}
+
+	main {
+		& h1 {
+			@apply mb-2 text-3xl font-semibold;
+		}
+
+		article {
+			& h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p {
+				@apply mb-2;
+			}
+		}
+	}
+}
+
