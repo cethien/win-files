@@ -24,4 +24,6 @@ go mod init $MODULE &&
         scripts.build:css="bun run base:css -- --minify -o ./public/css/main.min.css" \
         scripts.dev:css="bun run base:css -- --watch -o ./public/css/main.css" &&
     make clean install &&
-    git add .
+    git add . &&
+    git commit -m "perf: init"
+
