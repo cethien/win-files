@@ -25,12 +25,57 @@
 			></script>
 		</head>
 		<body
-			class="select-none antialiased dark:bg-black dark:text-white"
+			class="grid h-screen select-none grid-rows-[auto_1fr_auto] gap-4 p-2 antialiased dark:bg-black dark:text-white"
 		>
-        <main>
-            {{ template "page" . }}
-        </main>
+			<header>
+				{{ template "header" . }}
+			</header>
+			<main>
+				{{ template "page" . }}
+			</main>
+			<footer>
+				{{ template "footer" . }}
+			</footer>
 		</body>
 	</html>
 {{ end }}
 
+{{ define "header" }}
+	{{ if dev }}
+		<div
+			class="bg-red-300 text-center text-lg font-semibold uppercase italic text-red-900"
+		>
+			development
+		</div>
+	{{ end }}
+	<div class="flex flex-row items-center justify-between py-2">
+		<a
+			href="/"
+			class="text-3xl font-extrabold"
+		>
+			{{ AppName }}
+		</a>
+
+		<nav class="flex flex-row gap-4">
+			{{ template "nav-item" (arr "Home" "/") }}
+			{{ template "nav-item" (arr "About" "/about") }}
+		</nav>
+	</div>
+{{ end }}
+
+{{ define "nav-item" }}
+	{{ $title := index . 0 }}
+	{{ $href := index . 1 }}
+	<a
+		href="{{ $href }}"
+		class="font-semibold uppercase hover:underline"
+	>
+		{{ $title }}
+	</a>
+{{ end }}
+
+{{ define "footer" }}
+	<div class="items-center justify-evenly p-2">
+		<div>&copy; cethien 2023</div>
+	</div>
+{{ end }}

@@ -13,4 +13,5 @@ COPY --from=builder /src/dist/ ./
 COPY --from=builder /src/public ./public
 
 ENTRYPOINT /app/app
+LABEL Name=example.com/template Version=alpha-0.0.0
 EXPOSE 80
