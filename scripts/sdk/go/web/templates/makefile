@@ -3,7 +3,9 @@ include .env
 export
 endif
 
-.PHONY: default clean install format build docker dev
+.PHONY: default clean install format \
+	build docker \
+	dev
 
 default: clean install
 
@@ -25,6 +27,21 @@ build:
 
 docker:
 	docker build .
+
+export GOOSE_DRIVER=sqlite3
+export GOOSE_DBSTRING=${DB_URL}
+
+migrate-create:
+	goose -dir ./migrations create $(name) sql
+
+migrate-up:
+	goose -dir ./migrations up-by-one
+
+migrate-down:
+	goose -dir ./migrations down
+
+migrate-redo:
+	goose -dir ./migrations redo
 
 dev: export APP_ENV=development
 dev: export PORT=9876

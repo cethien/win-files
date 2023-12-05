@@ -4,12 +4,13 @@ import (
 	"log/slog"
 	"net/http"
 
+	"example.com/template/sqlite"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	slogchi "github.com/samber/slog-chi"
 )
 
-func NewHandler() (*Handler, error) {
+func NewHandler(store *sqlite.Store) (*Handler, error) {
 	tmpls, err := generateTemplatesFromFiles()
 	if err != nil {
 		return nil, err
@@ -18,6 +19,7 @@ func NewHandler() (*Handler, error) {
 	h := &Handler{
 		Mux:     chi.NewMux(),
 		TmplMap: tmpls,
+		Store:   store,
 	}
 
 	h.Use(middleware.Recoverer)
@@ -37,4 +39,5 @@ type Handler struct {
 	*chi.Mux
 
 	*TmplMap
+	*sqlite.Store
 }

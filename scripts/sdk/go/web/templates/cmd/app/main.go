@@ -7,6 +7,7 @@ import (
 	"os/signal"
 	"strconv"
 
+	"example.com/template/sqlite"
 	"example.com/template/web"
 
 	"os"
@@ -20,7 +21,19 @@ func handleFatal(err error) {
 func main() {
 	defer os.Exit(0)
 
-	handler, err := web.NewHandler()
+	url, err := getDbUrl()
+	if err != nil {
+		slog.Error(err.Error())
+		os.Exit(1)
+	}
+
+	store, err := sqlite.NewStore(url)
+	if err != nil {
+		slog.Error(err.Error())
+		os.Exit(1)
+	}
+
+	handler, err := web.NewHandler(store)
 	if err != nil {
 		slog.Error(err.Error())
 		os.Exit(1)
@@ -47,6 +60,15 @@ func main() {
 	signal.Notify(stop, os.Interrupt)
 	<-stop
 	slog.Info("shutting down")
+}
+
+func getDbUrl() (string, error) {
+	dbUrlEnv, ok := os.LookupEnv("DB_URL")
+	if !ok {
+		return "", fmt.Errorf("env 'DB_URL' not found")
+	}
+
+	return dbUrlEnv, nil
 }
 
 func getPort() int {
