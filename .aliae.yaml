@@ -29,8 +29,7 @@ alias:
   # commands
   - name: reload
     if: eq .Shell "pwsh"
-    value: |
-      . $profile
+    value: . $profile
 
   - name: reload
     if: eq .OS "linux"
@@ -38,15 +37,11 @@ alias:
 
   - name: update
     if: eq .Shell "pwsh"
-    value: . "{{ env "USERPROFILE" }}/scripts/update.ps1"
+    value: . {{ .Home }}/scripts/update.ps1
 
   - name: update
     if: eq .OS "linux"
-    value: |
-      sudo nala update && \
-      sudo nala upgrade -y && \
-      curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d {{ .Home }}/.local/bin && \
-      curl -fsSL https://aliae.dev/install.sh | bash -s -- -d {{ .Home }}/.local/bin
+    value: . {{ .Home }}/scripts/update.sh
 
   - name: update-spotify
     if: eq .OS "windows"
@@ -54,21 +49,17 @@ alias:
       spicetify update
       spicetify restore backup apply -q
 
-  - name: update-dotnet
+  - name: update-sdk
     if: eq .OS "linux"
-    value: |
-      curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --version latest
+    value: . {{ .Home }}/scripts/update-sdk.sh
 
-  - name: update-go
-    if: eq .OS "linux"
-    value: |
-      (cd {{ .Home }} && \
-      curl -fsSL https://s.id/golang-linux | bash -s && \
-      rm -rf go*.tar.gz)
+  - name: init
+    if: eq .Shell "bash"
+    value: . {{ .Home }}/scripts/init.sh
 
   - name: backup-folders
     if: eq .Shell "pwsh"
-    value: . "{{ env "USERPROFILE" }}/scripts/backup-folders.ps1" -Folders
+    value: . {{ .Home }}/scripts/backup-folders.ps1 -Folders
 
   # git
   - name: ignore
@@ -78,13 +69,6 @@ alias:
   - name: gh-new
     if: eq .OS "linux"
     value: gh repo create $1 --private --source . --push
-
-  # projects init
-  - name: init-goweb
-    type: function
-    if: eq .Shell "bash"
-    value: |
-      . {{ .Home }}/scripts/init/goweb/init.sh
 
 env:
   - name: POSH_THEME
