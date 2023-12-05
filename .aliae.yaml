@@ -43,16 +43,6 @@ alias:
     if: eq .OS "linux"
     value: . {{ .Home }}/scripts/update.sh
 
-  - name: update-spotify
-    if: eq .OS "windows"
-    value: |
-      spicetify update
-      spicetify restore backup apply -q
-
-  - name: update-sdk
-    if: eq .OS "linux"
-    value: . {{ .Home }}/scripts/update-sdk.sh
-
   - name: init
     if: eq .Shell "bash"
     value: . {{ .Home }}/scripts/init.sh
