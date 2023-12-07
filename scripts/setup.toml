@@ -101,6 +101,10 @@ WingetPackage = "Google.Drive"
 
 [[actions]]
 Profile       = "home"
+WingetPackage = "Rclone.Rclone"
+
+[[actions]]
+Profile       = "home"
 WingetPackage = "Logitech.GHUB"
 
 [[actions]]
