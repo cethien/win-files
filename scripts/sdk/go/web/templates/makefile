@@ -3,49 +3,56 @@ include .env
 export
 endif
 
-.PHONY: default clean install format \
+.PHONY: default clean pre-build install update format \
 	build docker \
+	migrate-create migrate-up migrate-down \
 	dev
 
 default: clean install
 
+setup: clean pre-build update install format
+
 clean:
-	rm -rf dist/ node_modules/ public/css/ public/js/
+	@rm -rf dist/ node_modules/ public/**/*.js public/**/*.css templates/**/*_templ.go
+
+pre-build:
+	@templ generate
 
 install:
-	go mod tidy && \
+	@go mod tidy && \
 	go get -v ./... && \
 	bun install
 
+update:
+	@go get -u ./... & bun update
+
 format:
-	gofmt -s -l -w ./ && \
+	@gofmt -s -l -w ./ && \
 	bun run format
 
 build:
-	bun run build && \
+	@bun run build && \
+	templ generate && \
 	go build -o ./dist/app -v ./cmd/app/...
 
 docker:
-	docker build .
+	@docker build .
 
-export GOOSE_DRIVER=sqlite3
-export GOOSE_DBSTRING=${DB_URL}
+migrate-up: export DB_URL=sqlite://data.db
+migrate-down: export DB_URL=sqlite://data.db
 
 migrate-create:
-	goose -dir ./migrations create $(name) sql
+	@migrate create -dir sqlite/migrations -ext sql $(name)
 
 migrate-up:
-	goose -dir ./migrations up-by-one
+	@migrate -path sqlite/migrations -database ${DB_URL} up 1
 
 migrate-down:
-	goose -dir ./migrations down
-
-migrate-redo:
-	goose -dir ./migrations redo
+	@migrate -path sqlite/migrations -database ${DB_URL} down 1
 
 dev: export APP_ENV=development
 dev: export PORT=9876
 dev:
-	air & \
-	bun run dev:js & \
-	bun run dev:css
+	@bun run dev & \
+	templ generate -watch & \
+	wgo run ./cmd/app/main.go

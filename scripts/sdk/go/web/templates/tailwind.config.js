@@ -1,8 +1,8 @@
-const { addDynamicIconSelectors } = require('@iconify/tailwind');
+const { addDynamicIconSelectors } = require('@iconify/tailwind')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./web/templates/**/*.html'],
+	content: ['./views/**/*.{ts,css,templ}'],
 	darkMode: 'class',
 	theme: {
 		extend: {}
@@ -10,8 +10,8 @@ module.exports = {
 	plugins: [
 		addDynamicIconSelectors(),
 		function ({ addVariant }) {
-			addVariant('child', '& > *');
-			addVariant('child-hover', '& > *:hover');
+			addVariant('child', '& > *')
+			addVariant('child-hover', '& > *:hover')
 		}
 	]
-};
+}

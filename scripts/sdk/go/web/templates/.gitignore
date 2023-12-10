@@ -24,6 +24,7 @@ dist/
 *.env
 !*.example.env
 node_modules/
-public/js
-public/css
+*_templ.go
+public/**/*.js
+public/**/*.css
 *.db

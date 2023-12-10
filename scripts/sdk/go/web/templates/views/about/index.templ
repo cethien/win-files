@@ -1,16 +1,24 @@
-{{ define "page" }}
+package about
+
+import "example.com/template/views/layouts"
+
+templ Page() {
+	{! layouts.PageLayout("About", content()) }
+}
+
+templ content() {
 	<h1>About</h1>
 	<article>
+		<p>
+			Tempora cum accusantium cumque adipisci, in aspernatur? Suscipit saepe
+			autem aut libero vitae, quae sed, itaque architecto incidunt magnam ipsam
+			est maxime quod ducimus omnis quos asperiores harum praesentium illo!
+		</p>
 		<p>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, ea? Quos,
 			nulla eius dignissimos explicabo commodi quia ex corrupti distinctio
 			quasi, error ipsum odio unde inventore quidem excepturi. Molestiae,
 			beatae!
-		</p>
-		<p>
-			Tempora cum accusantium cumque adipisci, in aspernatur? Suscipit saepe
-			autem aut libero vitae, quae sed, itaque architecto incidunt magnam ipsam
-			est maxime quod ducimus omnis quos asperiores harum praesentium illo!
 		</p>
 		<p>
 			Iusto labore officiis, aperiam ipsa ullam fuga consequuntur asperiores?
@@ -19,4 +27,4 @@
 			pariatur?
 		</p>
 	</article>
-{{ end }}
+}

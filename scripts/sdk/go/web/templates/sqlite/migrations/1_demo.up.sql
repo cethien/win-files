@@ -1,7 +1,3 @@
--- +goose Up
-
--- +goose StatementBegin
-
 CREATE TABLE
     IF NOT EXISTS Users (
         user_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -18,15 +14,3 @@ CREATE TABLE
         author INTEGER NOT NULL,
         FOREIGN KEY(author) REFERENCES artist(user_id)
     );
-
--- +goose StatementEnd
-
--- +goose Down
-
--- +goose StatementBegin
-
-DROP TABLE Users;
-
-DROP TABLE Posts;
-
--- +goose StatementEnd

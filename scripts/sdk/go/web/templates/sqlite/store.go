@@ -5,11 +5,11 @@ import (
 	"fmt"
 
 	"example.com/template/domain"
-	_ "github.com/mattn/go-sqlite3"
+	_ "modernc.org/sqlite"
 )
 
 func NewStore(dbUrl string) (*Store, error) {
-	db, err := sql.Open("sqlite3", dbUrl)
+	db, err := sql.Open("sqlite", dbUrl)
 	if err != nil {
 		return nil, fmt.Errorf("unable to open database: %v", err.Error())
 	}

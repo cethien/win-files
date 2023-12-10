@@ -7,8 +7,8 @@ import (
 	"os/signal"
 	"strconv"
 
+	"example.com/template/handler"
 	"example.com/template/sqlite"
-	"example.com/template/web"
 
 	"os"
 )
@@ -33,7 +33,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	handler, err := web.NewHandler(store)
+	handler, err := handler.NewHandler(store)
 	if err != nil {
 		slog.Error(err.Error())
 		os.Exit(1)

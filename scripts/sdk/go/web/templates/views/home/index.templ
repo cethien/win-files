@@ -1,4 +1,12 @@
-{{ define "page" }}
+package home
+
+import "example.com/template/views/layouts"
+
+templ Page() {
+	{! layouts.PageLayout("Home", content()) }
+}
+
+templ content() {
 	<h1>Hello</h1>
 	<article>
 		<p>
@@ -19,4 +27,4 @@
 			pariatur?
 		</p>
 	</article>
-{{ end }}
+}

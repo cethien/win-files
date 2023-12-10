@@ -1,25 +1,22 @@
-package web
+package handler
 
 import (
 	"log/slog"
 	"net/http"
 
 	"example.com/template/sqlite"
+	"example.com/template/views/about"
+	"example.com/template/views/home"
+	"github.com/a-h/templ"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	slogchi "github.com/samber/slog-chi"
 )
 
 func NewHandler(store *sqlite.Store) (*Handler, error) {
-	tmpls, err := generateTemplatesFromFiles()
-	if err != nil {
-		return nil, err
-	}
-
 	h := &Handler{
-		Mux:     chi.NewMux(),
-		TmplMap: tmpls,
-		Store:   store,
+		Mux:   chi.NewMux(),
+		Store: store,
 	}
 
 	h.Use(middleware.Recoverer)
@@ -30,7 +27,8 @@ func NewHandler(store *sqlite.Store) (*Handler, error) {
 	fs := http.FileServer(http.Dir("public"))
 	h.Handle("/*", http.StripPrefix("/", fs))
 
-	h.Get("/", h.RenderIndexPage())
+	h.Get("/", h.RenderHomePage())
+	h.Get("/about", h.RenderAboutPage())
 
 	return h, nil
 }
@@ -38,6 +36,13 @@ func NewHandler(store *sqlite.Store) (*Handler, error) {
 type Handler struct {
 	*chi.Mux
 
-	*TmplMap
 	*sqlite.Store
+}
+
+func (h *Handler) RenderHomePage() http.HandlerFunc {
+	return templ.Handler(home.Page()).ServeHTTP
+}
+
+func (h *Handler) RenderAboutPage() http.HandlerFunc {
+	return templ.Handler(about.Page()).ServeHTTP
 }
