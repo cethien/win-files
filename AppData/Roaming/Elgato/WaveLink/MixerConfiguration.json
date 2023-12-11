@@ -8,20 +8,30 @@
         },
         "inputs": [
             {
-                "color": "#23DE63",
-                "identifier": "PCM_OUT_01_V_12_SD8",
+                "color": "#23DEC0",
+                "identifier": "ROOT#UNNAMED_DEVICE#0000#{6994AD04-93EF-11D0-A3CC-00A0C9223196}\\RTXWAVE13",
                 "mutedMixerIDs": [
-                    "com.elgato.mix.microphoneFX",
-                    "com.elgato.mix.stream"
+                    "com.elgato.mix.stream",
+                    "com.elgato.mix.local"
                 ],
-                "name": "Aux 1",
-                "nodeType": 2,
-                "userProvidedName": "OBS Monitoring",
+                "name": "Mikrofon (NVIDIA Broadcast)",
+                "nodeType": 1,
                 "volumes": {
-                    "com.elgato.mix.local": 1.0,
-                    "com.elgato.mix.microphoneFX": 1.0,
-                    "com.elgato.mix.stream": 0.0
+                    "com.elgato.mix.microphoneFX": 1.0
                 }
+            },
+            {
+                "color": "#FF6C3E",
+                "identifier": "PCM_OUT_01_V_08_SD6",
+                "mutedMixerIDs": [],
+                "name": "Wave Link SFX",
+                "nodeType": 2,
+                "volumes": {
+                    "com.elgato.mix.local": 0.6,
+                    "com.elgato.mix.microphoneFX": 0.9500000000000002,
+                    "com.elgato.mix.stream": 0.6
+                },
+                "volumesLinked": true
             },
             {
                 "color": "#F2315B",
@@ -32,7 +42,7 @@
                 "name": "Wave Link Game",
                 "nodeType": 2,
                 "volumes": {
-                    "com.elgato.mix.local": 0.4,
+                    "com.elgato.mix.local": 0.65,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.6
                 }
@@ -77,10 +87,26 @@
                 "userProvidedName": "Stream Music",
                 "volumes": {
                     "com.elgato.mix.local": 0.12,
-                    "com.elgato.mix.microphoneFX": 1.02,
+                    "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.12
                 },
                 "volumesLinked": true
+            },
+            {
+                "color": "#23DE63",
+                "identifier": "PCM_OUT_01_V_12_SD8",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.microphoneFX",
+                    "com.elgato.mix.stream"
+                ],
+                "name": "Aux 1",
+                "nodeType": 2,
+                "userProvidedName": "OBS Monitoring",
+                "volumes": {
+                    "com.elgato.mix.local": 1.0,
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 0.0
+                }
             }
         ],
         "outputs": [
