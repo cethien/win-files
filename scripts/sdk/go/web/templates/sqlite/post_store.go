@@ -1,6 +1,6 @@
 package sqlite
 
-import "example.com/template/domain"
+import "github.com/cethien/go-web-template/domain"
 
 type PostStore struct {
 	*store

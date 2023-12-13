@@ -4,9 +4,9 @@ import (
 	"log/slog"
 	"net/http"
 
-	"example.com/template/sqlite"
-	"example.com/template/views/about"
-	"example.com/template/views/home"
+	"github.com/cethien/go-web-template/sqlite"
+	"github.com/cethien/go-web-template/views/about"
+	"github.com/cethien/go-web-template/views/home"
 	"github.com/a-h/templ"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"

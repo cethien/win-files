@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	"example.com/template/domain"
+	"github.com/cethien/go-web-template/domain"
 	_ "modernc.org/sqlite"
 )
 

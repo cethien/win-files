@@ -10,21 +10,20 @@ endif
 
 default: clean install
 
-setup: clean pre-build update install format
+setup: clean install update format
 
 clean:
 	@rm -rf dist/ node_modules/ public/**/*.js public/**/*.css templates/**/*_templ.go
 
-pre-build:
-	@templ generate
-
 install:
-	@go mod tidy && \
+	@templ generate && \
 	go get -v ./... && \
+	go mod tidy && \
 	bun install
 
 update:
-	@go get -u ./... & bun update
+	@go get -u ./... & \
+	bun update
 
 format:
 	@gofmt -s -l -w ./ && \
@@ -38,16 +37,15 @@ build:
 docker:
 	@docker build .
 
-migrate-up: export DB_URL=sqlite://data.db
-migrate-down: export DB_URL=sqlite://data.db
-
 migrate-create:
 	@migrate create -dir sqlite/migrations -ext sql $(name)
 
-migrate-up:
+migrate: export DB_URL=sqlite://data.db
+
+migrate-up: migrate
 	@migrate -path sqlite/migrations -database ${DB_URL} up 1
 
-migrate-down:
+migrate-down: migrate
 	@migrate -path sqlite/migrations -database ${DB_URL} down 1
 
 dev: export APP_ENV=development

@@ -7,8 +7,8 @@ import (
 	"os/signal"
 	"strconv"
 
-	"example.com/template/handler"
-	"example.com/template/sqlite"
+	"github.com/cethien/go-web-template/handler"
+	"github.com/cethien/go-web-template/sqlite"
 
 	"os"
 )

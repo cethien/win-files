@@ -69,9 +69,10 @@ curl -fsSL https://bit.ly/n-install | bash -s -- -qy lts latest &&
 # go
 GO_TOOLS=(
     'golang.org/x/tools/gopls@latest'
-    'github.com/ramya-rao-a/go-outline@latest'
-    'github.com/go-delve/delve/cmd/dlv@latest'
     'honnef.co/go/tools/cmd/staticcheck@latest'
+    'github.com/go-delve/delve/cmd/dlv@latest'
+    'github.com/ramya-rao-a/go-outline@latest'
+    'github.com/josharian/impl@latest'
     'github.com/cosmtrek/air@latest'
 )
 
