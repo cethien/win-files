@@ -1,17 +1,16 @@
 #Requires -Version 5.1
-#Requires -Modules PSToml
 
 param (
     [Parameter(HelpMessage = "profiles")]
     [string[]]$Profiles
 )
 
-$actions = $(Get-Content "./setup.toml" | ConvertFrom-Toml).actions |
+$actions = $(Get-Content "$PSScriptRoot/setup.json" | ConvertFrom-Json).actions |
 Where-Object {
     $($_.Profile -eq $null) -or $($Profiles -match $_.Profile)
 }
 
-$actions | Foreach-Object -ThrottleLimit 10 -Parallel {
+$actions | Foreach-Object {
     $a = $PSItem
 
     if ($a.PreScript) {
@@ -27,7 +26,7 @@ $actions | Foreach-Object -ThrottleLimit 10 -Parallel {
         if ($a.DontIncludeUpdate -eq $null) {
             Add-Content $env:USERPROFILE/.wingetupdate "$($a.WingetPackage)`n"
         }
-        Write-Output $cmd
+        $cmd | Invoke-Expression
     }
 
     if ($a.Script) {

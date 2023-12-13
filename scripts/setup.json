@@ -1,0 +1,114 @@
+{
+	"actions": [
+		{
+			"Script": "Remove-Item alias:curl Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value 0 Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search -Name SearchBoxTaskbarMode -Value 0 -Type DWord -Force Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Feeds -Name ShellFeedsTaskbarOpenOnHover -Value 0 -Type DWord -Force Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced -Name Hidden -Value 1 -Type DWord -Force Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced -Name HideIcons -Value 1 -Type DWord -Force Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced -Name OnboardUnpinCortana -Value 1 -Type DWord -Force Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced -Name ShowCortanaButton -Value 0 -Type DWord -Force Set-ItemProperty -Path \"HKCU:\\Control Panel\\Accessibility\\StickyKeys\" -Name \"Flags\" -Type String -Value \"506\" Set-ItemProperty -Path \"HKCU:\\Control Panel\\Accessibility\\ToggleKeys\" -Name \"Flags\" -Type String -Value \"58\" Set-ItemProperty -Path \"HKCU:\\Control Panel\\Accessibility\\Keyboard Response\" -Name \"Flags\" -Type String -Value \"122\""
+		},
+		{
+			"Script": "ssh-keygen -q -b 2048 -t ed25519 -f $env:USERPROFILE/.ssh/id_ed25519 -N '' -q"
+		},
+		{
+			"WingetPackage": "M2Team.NanaZip"
+		},
+		{
+			"WingetPackage": "Microsoft.PowerToys"
+		},
+		{
+			"WingetPackage": "GeekUninstaller.GeekUninstaller"
+		},
+		{
+			"WingetPackage": "Microsoft.PowerShell"
+		},
+		{
+			"WingetPackage": "Git.Git",
+			"PSModule": "posh-git"
+		},
+		{
+			"WingetPackage": "Neovim.Neovim"
+		},
+		{
+			"WingetPackage": "sharkdp.bat"
+		},
+		{
+			"WingetPackage": "chrisant996.Clink"
+		},
+		{
+			"WingetPackage": "dotPDNLLC.paintdotnet"
+		},
+		{
+			"WingetPackage": "Microsoft.VisualStudioCode",
+			"WingetFlags": "--interactive"
+		},
+		{
+			"WingetPackage": "Google.Chrome",
+			"DontIncludeUpdate": true
+		},
+		{
+			"WingetPackage": "Spotify.Spotify",
+			"DontIncludeUpdate": true
+		},
+		{
+			"WingetPackage": "Spicetify.Spicetify",
+			"DontIncludeUpdate": true,
+			"Script": "spicetify config extensions webnowplaying.js spicetify config custom_apps new-releases spicetify backup apply"
+		},
+		{
+			"Profile": "customizing",
+			"WingetPackage": "JanDeDobbeleer.OhMyPosh",
+			"Script": "oh-my-posh font install CodeNewRoman --user oh-my-posh font install FiraCode --user"
+		},
+		{
+			"Profile": "customizing",
+			"WingetPackage": "JanDeDobbeleer.Aliae"
+		},
+		{
+			"Profile": "home",
+			"WingetPackage": "Discord.Discord",
+			"DontIncludeUpdate": true
+		},
+		{
+			"Profile": "home",
+			"WingetPackage": "Google.Drive"
+		},
+		{
+			"Profile": "home",
+			"WingetPackage": "Rclone.Rclone"
+		},
+		{
+			"Profile": "home",
+			"WingetPackage": "Logitech.GHUB"
+		},
+		{
+			"Profile": "home",
+			"WingetPackage": "Nvidia.GeForceExperience"
+		},
+		{
+			"Profile": "home",
+			"WingetPackage": "Nvidia.Broadcast"
+		},
+		{
+			"Profile": "home",
+			"WingetPackage": "Elgato.StreamDeck"
+		},
+		{
+			"Profile": "home",
+			"WingetPackage": "Elgato.WaveLink"
+		},
+		{
+			"Profile": "home",
+			"WingetPackage": "Iriun.IriunWebcam"
+		},
+		{
+			"Profile": "dev",
+			"WingetPackage": "Docker.DockerDesktop",
+			"WingetFlags": "--interactive",
+			"PSModule": "posh-docker",
+			"PreScript": "[Environment]::SetEnvironmentVariable(\"WSLENV\", $env:WSLENV + \":USERPROFILE/p:POSH_THEMES_PATH/p\", \"USER\") wsl --install Ubuntu"
+		},
+		{
+			"Profile": "gaming",
+			"WingetPackage": "Valve.Steam",
+			"DontIncludeUpdate": true,
+			"Script": "Start-Process steam://install/1085660 Start-Process steam://install/1118310 Start-Process steam://install/699130"
+		}
+	]
+}
