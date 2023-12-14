@@ -8,9 +8,9 @@ type Post struct {
 }
 
 type PostStore interface {
-	Create(u *User) error
-	GetMany() ([]*User, error)
-	Get(id int) (*User, error)
-	Update(u *User) error
-	Delete(u *User) error
+	Create(u *Post) error
+	GetMany() ([]*Post, error)
+	Get(id int) (*Post, error)
+	Update(u *Post) error
+	Delete(u *Post) error
 }

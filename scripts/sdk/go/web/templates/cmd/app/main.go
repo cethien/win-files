@@ -1,25 +1,23 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"log/slog"
 	"net/http"
 	"os/signal"
 	"strconv"
 
-	"github.com/cethien/go-web-template/handler"
-	"github.com/cethien/go-web-template/sqlite"
+	"github.com/cethien/go-template/handler"
+	"github.com/cethien/go-template/postgres"
 
 	"os"
 )
 
-func handleFatal(err error) {
-	slog.Error(err.Error())
-	os.Exit(1)
-}
-
 func main() {
 	defer os.Exit(0)
+	defer slog.Info("bye!")
+	slog.Info("launching...")
 
 	url, err := getDbUrl()
 	if err != nil {
@@ -27,11 +25,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	store, err := sqlite.NewStore(url)
+	store, err := postgres.NewStore(url)
 	if err != nil {
 		slog.Error(err.Error())
 		os.Exit(1)
 	}
+	defer store.DB.Close()
+	slog.Info("connected to database")
 
 	handler, err := handler.NewHandler(store)
 	if err != nil {
@@ -41,34 +41,35 @@ func main() {
 
 	port := getPort()
 	addr := fmt.Sprintf(":%v", port)
-	http := &http.Server{
+	httpSrv := &http.Server{
 		Addr:    addr,
 		Handler: handler,
 	}
-	defer http.Close()
 
 	go func() {
-		if err := http.ListenAndServe(); err != nil {
-			handleFatal(fmt.Errorf("unable to start http server: %v", err.Error()))
-			os.Exit(1)
-		}
+		err = httpSrv.ListenAndServe()
 	}()
+	if err != nil {
+		if !errors.Is(err, http.ErrServerClosed) {
+			err = fmt.Errorf("unable to start http server: %v", err)
+			slog.Error(err.Error())
+		}
+	}
 	slog.Info(fmt.Sprintf("http server running on http://localhost:%v", port))
 
 	stop := make(chan os.Signal, 1)
-	slog.Info("Press Ctrl+C to exit")
 	signal.Notify(stop, os.Interrupt)
+	slog.Info("Press Ctrl+C to exit")
 	<-stop
-	slog.Info("shutting down")
 }
 
 func getDbUrl() (string, error) {
-	dbUrlEnv, ok := os.LookupEnv("DB_URL")
+	env, ok := os.LookupEnv("DB_URL")
 	if !ok {
-		return "", fmt.Errorf("env 'DB_URL' not found")
+		return "", fmt.Errorf("environment variable 'DB_URL' not found")
 	}
 
-	return dbUrlEnv, nil
+	return env, nil
 }
 
 func getPort() int {

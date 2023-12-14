@@ -1,9 +1,13 @@
-package sqlite
+package postgres
 
-import "github.com/cethien/go-web-template/domain"
+import (
+	"database/sql"
+
+	"github.com/cethien/go-template/domain"
+)
 
 type UserStore struct {
-	*store
+	*sql.DB
 }
 
 func (s *UserStore) Create(u *domain.User) error {
