@@ -51,6 +51,10 @@ alias:
     if: eq .Shell "pwsh"
     value: . {{ .Home }}/scripts/backup-folders.ps1 -Folders
 
+  - name: install
+    if: eq .Shell "pwsh"
+    value: . {{ .Home }}/scripts/install.ps1
+
   # git
   - name: ignore
     type: git
