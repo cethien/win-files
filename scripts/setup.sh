@@ -51,9 +51,6 @@ wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/package
     PACKAGES+=' powershell' &&
     ln -s "$USERPROFILE"/Documents/PowerShell/ "$HOME"/.config/powershell/
 
-# hugo
-PACKAGES+=' hugo'
-
 # update distro & install packages
 sudo nala update &&
     sudo nala upgrade -y &&
@@ -61,45 +58,6 @@ sudo nala update &&
 
 # bat needs this when installed with apt
 ln -s /usr/bin/batcat "$HOME"/.local/bin/bat
-
-# node
-curl -fsSL https://bit.ly/n-install | bash -s -- -qy lts latest &&
-    corepack enable
-
-# go
-GO_TOOLS=(
-    'golang.org/x/tools/gopls@latest'
-    'honnef.co/go/tools/cmd/staticcheck@latest'
-    'github.com/go-delve/delve/cmd/dlv@latest'
-    'github.com/ramya-rao-a/go-outline@latest'
-    'github.com/josharian/impl@latest'
-    'github.com/cosmtrek/air@latest'
-)
-
-curl -fsSL https://s.id/golang-linux | bash -s &&
-    rm -rf go*.tar.gz &&
-    export GOROOT="$HOME/go" &&
-    export GOPATH="$HOME/go/packages" &&
-    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin &&
-    (
-        for tool in "${GO_TOOLS[@]}"; do
-            go install "$tool"
-        done
-    ) &&
-    BASHRC+=(
-        ''
-        'export GOROOT="$HOME/go"'
-        'export GOPATH="$HOME/go/packages"'
-        'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin'
-    )
-
-# dotnet
-curl -fsSL https://dot.net/v1/dotnet-install.sh | bash -s -- --version latest &&
-    BASHRC+=(
-        ''
-        'export DOTNET_ROOT=$HOME/.dotnet'
-        'export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools'
-    )
 
 # oh my posh / aliae
 curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d "$HOME"/.local/bin &&
@@ -109,6 +67,11 @@ curl -fsSL https://ohmyposh.dev/install.sh | bash -s -- -d "$HOME"/.local/bin &&
         ''
         'eval "$(aliae init bash)"'
     )
+
+# setup sdks
+for s in "$HOME"/scripts/sdk/**/setup.sh; do
+    . "$s"
+done
 
 # remove sudo pw prompt
 echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/"$USER" >/dev/null
