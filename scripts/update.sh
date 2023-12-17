@@ -15,7 +15,7 @@ if [[ $COMMAND == "sdk" ]]; then
     SDK=$ARG
 
     if [[ -z $SDK ]]; then
-        for s in "$HOME"/scripts/sdk/**/*.sh; do
+        for s in "$HOME"/scripts/sdk/**/update.sh; do
             . "$s"
         done
         return
