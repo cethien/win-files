@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/cethien/go-template/domain"
+	"github.com/cethien/go-web-template/domain"
 	_ "github.com/lib/pq"
 )
 

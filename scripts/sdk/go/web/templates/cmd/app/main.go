@@ -8,8 +8,8 @@ import (
 	"os/signal"
 	"strconv"
 
-	"github.com/cethien/go-template/handler"
-	"github.com/cethien/go-template/postgres"
+	"github.com/cethien/go-web-template/handler"
+	"github.com/cethien/go-web-template/postgres"
 
 	"os"
 )

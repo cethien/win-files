@@ -3,7 +3,7 @@ package postgres
 import (
 	"database/sql"
 
-	"github.com/cethien/go-template/domain"
+	"github.com/cethien/go-web-template/domain"
 )
 
 type PostStore struct {

@@ -1,4 +1,4 @@
-const { addDynamicIconSelectors } = require('@iconify/tailwind')
+import { addDynamicIconSelectors } from ( '@iconify/tailwind' )
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,9 +9,5 @@ module.exports = {
 	},
 	plugins: [
 		addDynamicIconSelectors(),
-		function ({ addVariant }) {
-			addVariant('child', '& > *')
-			addVariant('child-hover', '& > *:hover')
-		}
 	]
 }

@@ -14,11 +14,11 @@ folder="$PWD/$folder_name"
 
 (mkdir $folder &&
     cd $folder &&
-    go mod init "$MODULE" &&
-    git init &&
     cp -rT "$SCRIPT_DIR"/templates . &&
     find ./ -type f -exec sed -i "s|github.com/cethien/go-web-template|$MODULE|g" {} \; &&
-    make setup &&
+    go mod init "$MODULE" &&
+    git init &&
+    make clean update format &&
     git add . &&
     git commit -m "perf: init")
 

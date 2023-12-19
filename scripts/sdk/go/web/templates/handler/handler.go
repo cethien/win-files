@@ -5,9 +5,9 @@ import (
 	"net/http"
 
 	"github.com/a-h/templ"
-	"github.com/cethien/go-template/postgres"
-	"github.com/cethien/go-template/views/about"
-	"github.com/cethien/go-template/views/home"
+	"github.com/cethien/go-web-template/postgres"
+	"github.com/cethien/go-web-template/views/about"
+	"github.com/cethien/go-web-template/views/home"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	slogchi "github.com/samber/slog-chi"

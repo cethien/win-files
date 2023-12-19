@@ -11,8 +11,6 @@ endif
 
 default: clean format
 
-setup: clean update format
-
 clean:
 	@rm -rf dist/ node_modules/ \
 	public/*.js public/*.css \
@@ -25,12 +23,16 @@ update:
 	@go get -u ./... & \
 	bun update
 
+commitlint:
+	@bun commitlint --edit $(msg)
+
 format:
-	@gofmt -s -l -w ./ && \
+	@gofmt -s -l -w . && \
 	bun run format
 
 build:
-	@bun run build && \
+	@bun build --target=browser views/layouts/index.ts --outfile=public/main.min.js --minify && \
+	bun tailwindcss -i views/layouts/styles.css -o ./public/main.min.css --minify && \
 	templ generate && \
 	go build -o ./dist/app ./cmd/app/
 
@@ -40,7 +42,8 @@ docker:
 dev: export APP_ENV=development
 dev: export PORT=9876
 dev:
-	@bun run dev & \
+	@bun build --target=browser views/layouts/index.ts --outfile=public/main.js --watch & \
+	bun tailwindcss -i views/layouts/styles.css --watch -o ./public/main.css & \
 	templ generate -watch & \
 	wgo run ./cmd/app/main.go
 

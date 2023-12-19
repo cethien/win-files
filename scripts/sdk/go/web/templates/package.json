@@ -1,4 +1,7 @@
 {
+	"scripts": {
+		"prepare": "husky install"
+	},
 	"dependencies": {
 		"@alpinejs/persist": "^3.13.3",
 		"alpinejs": "^3.13.3",
@@ -12,22 +15,10 @@
 		"@types/alpinejs": "^3.13.5",
 		"@types/alpinejs__persist": "^3.13.3",
 		"autoprefixer": "^10.4.16",
-		"concurrently": "^8.2.2",
 		"husky": "^8.0.3",
 		"postcss": "^8.4.32",
 		"prettier": "^3.1.0",
-		"prettier-plugin-go-template": "^0.0.15",
 		"prettier-plugin-tailwindcss": "^0.5.8",
 		"tailwindcss": "^3.3.6"
-	},
-	"scripts": {
-		"commitlint": "commitlint --edit",
-		"format": "prettier -w .",
-		"build:js": "bun build --target=browser views/layouts/index.ts --minify --outfile=public/main.min.js",
-		"dev:js": "bun build --target=browser views/layouts/index.ts --watch --outfile=public/main.js",
-		"build:css": "tailwind -i views/layouts/styles.css --minify -o ./public/main.min.css",
-		"dev:css": "tailwind -i views/layouts/styles.css --watch -o ./public/main.css",
-		"build": "bun run build:js && bun run build:css",
-		"dev": "concurrently \"bun run dev:js\" \"bun run dev:css\""
 	}
 }
