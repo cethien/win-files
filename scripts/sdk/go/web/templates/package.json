@@ -1,6 +1,12 @@
 {
 	"scripts": {
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"commitlint": "commitlint --edit ${1}",
+		"format": "prettier --write ./**/*.{js,ts,css,json,md}",
+		"build:js": "bun build --target=browser views/layouts/index.ts --outfile=public/main.min.js --minify",
+		"build:css": "tailwindcss -i views/layouts/styles.css -o ./public/main.min.css --minify",
+		"dev:js": "bun build --target=browser views/layouts/index.ts --outfile=public/main.js --watch",
+		"dev:css": "tailwindcss -i views/layouts/styles.css -o ./public/main.css --watch"
 	},
 	"dependencies": {
 		"@alpinejs/persist": "^3.13.3",
@@ -15,10 +21,12 @@
 		"@types/alpinejs": "^3.13.5",
 		"@types/alpinejs__persist": "^3.13.3",
 		"autoprefixer": "^10.4.16",
+		"concurrently": "^8.2.2",
 		"husky": "^8.0.3",
 		"postcss": "^8.4.32",
-		"prettier": "^3.1.0",
-		"prettier-plugin-tailwindcss": "^0.5.8",
-		"tailwindcss": "^3.3.6"
+		"prettier": "^3.1.1",
+		"prettier-plugin-tailwindcss": "^0.5.9",
+		"tailwindcss": "^3.3.6",
+		"typescript": "^5.3.3"
 	}
 }

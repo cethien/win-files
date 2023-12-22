@@ -1,10 +1,10 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
-	button:has(span) {
-		@apply flex items-center;
+	button {
+		@apply has-[span]:flex has-[span]:items-center;
 	}
 
 	header {

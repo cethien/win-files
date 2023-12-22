@@ -1,13 +1,8 @@
-import { addDynamicIconSelectors } from ( '@iconify/tailwind' )
+const { addDynamicIconSelectors } = require('@iconify/tailwind')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./views/**/*.{ts,css,templ}'],
 	darkMode: 'class',
-	theme: {
-		extend: {}
-	},
-	plugins: [
-		addDynamicIconSelectors(),
-	]
+	plugins: [addDynamicIconSelectors()]
 }

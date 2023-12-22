@@ -1,4 +1,7 @@
-**/.vscode/
+**/.git
+**/.github
+**/.husky
+**/.vscode
 **/node_modules/
 **/public/
 docker-compose*.yml
