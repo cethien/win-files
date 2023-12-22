@@ -17,6 +17,5 @@ go install -tags 'sqlite' github.com/golang-migrate/migrate/v4/cmd/migrate@lates
 run:
 
 ```bash
-    make
-    make dev
+    make default env dev
 ```

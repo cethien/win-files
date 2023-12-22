@@ -47,10 +47,10 @@ dev:
 	"templ generate -watch" \
 	"wgo run ./cmd/app/main.go"
 
-db-up:
+env:
 	@docker compose -f docker-compose.yml up -d
 
-db-down:
+env-down:
 	@docker compose -f docker-compose.yml down
 
 migrate-create:

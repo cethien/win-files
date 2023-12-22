@@ -2,8 +2,10 @@ version: '3.4'
 
 volumes:
   postgres-data:
+  mailpit-data:
 
 services:
+
   postgres:
     image: postgres:16
     restart: always
@@ -13,3 +15,12 @@ services:
       - postgres-data:/var/lib/postgresql/data
     env_file:
       - .env
+
+  mailpit:
+    image: axllent/mailpit:latest
+    restart: always
+    ports:
+      - 5000:8025
+      - 1025:1025
+    volumes:
+      - mailpit-data:/data
