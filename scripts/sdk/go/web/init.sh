@@ -1,7 +1,5 @@
 #!/bin/bash
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-
 MODULE=$1
 
 if [ -z "$MODULE" ]; then
@@ -9,14 +7,14 @@ if [ -z "$MODULE" ]; then
     return 1
 fi
 
-folder_name=$(echo $MODULE | rev | cut -d/ -f1 | rev)
+folder_name=$(echo "$MODULE" | rev | cut -d/ -f1 | rev)
 folder="$PWD/$folder_name"
+template=github.com/cethien/go-template-web
 
-(mkdir $folder &&
-    cd $folder &&
-    cp -rT "$SCRIPT_DIR"/templates . &&
-    find ./ -type f -exec sed -i "s|github.com/cethien/go-web-template|$MODULE|g" {} \; &&
-    go mod init "$MODULE" &&
+(gonew $template "$MODULE" "$folder_name"
+    cd "$folder" &&
+    find ./ -type f -exec sed -i "s|$template|$MODULE|g" {} \; &&
+    cp .example.env .env
     git init &&
     make clean update format &&
     git add . &&
