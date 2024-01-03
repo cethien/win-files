@@ -10,11 +10,14 @@ sudo apt update &&
 sudo nala update &&
     sudo nala upgrade -y
 
-# nix
+# nix + home manager
 sh <(curl -L https://nixos.org/nix/install) --no-daemon &&
     mkdir -p $HOME/.config/nix &&
 	echo "experimental-features = nix-command flakes" >> $HOME/.config/nix/nix.conf &&
-    . $HOME/.nix-profile/etc/profile.d/nix.sh
+    . $HOME/.nix-profile/etc/profile.d/nix.sh &&
+
+    nix build .config/home-manager#homeConfigurations.cethien.activationPackage &&
+    home-manager switch
 
 # remove sudo pw prompt
 echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/"$USER" >/dev/null
