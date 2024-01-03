@@ -40,6 +40,9 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
+    bashrcExtra = ''
+      . ~/.bashrc_default
+    '';
     shellAliases = {
       ll = "eza -la --icons --group-directories-first --git";
       ls = "eza -a --icons --group-directories-first --git";
@@ -60,6 +63,4 @@
       eval "$(oh-my-posh init bash --config $POSH_THEMES_PATH/custom/negligible.omp.json)"
     '';
   };
-
-
 }
