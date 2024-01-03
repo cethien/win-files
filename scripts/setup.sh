@@ -15,8 +15,8 @@ sh <(curl -fsSL https://nixos.org/nix/install) --no-daemon &&
     mkdir -p $HOME/.config/nix &&
 	echo "experimental-features = nix-command flakes" >> $HOME/.config/nix/nix.conf &&
     . $HOME/.nix-profile/etc/profile.d/nix.sh &&
-
-    rm -f $HOME/.bashrc $HOME/.profile &&
+    mv $HOME/.bashrc $HOME/.bashrc_default &&
+    mv $HOME/.profile $HOME/.profile_default &&
     nix build .config/home-manager#homeConfigurations.cethien.activationPackage &&
     result/activate &&
     home-manager switch
