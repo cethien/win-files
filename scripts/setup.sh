@@ -11,12 +11,13 @@ sudo nala update &&
     sudo nala upgrade -y
 
 # nix + home manager
-sh <(curl -L https://nixos.org/nix/install) --no-daemon &&
+sh <(curl -fsSL https://nixos.org/nix/install) --no-daemon &&
     mkdir -p $HOME/.config/nix &&
 	echo "experimental-features = nix-command flakes" >> $HOME/.config/nix/nix.conf &&
     . $HOME/.nix-profile/etc/profile.d/nix.sh &&
-
     nix build .config/home-manager#homeConfigurations.cethien.activationPackage &&
+    result/activate &&
+    rm -f $HOME/.bashrc $HOME/.profile &&
     home-manager switch
 
 # remove sudo pw prompt
