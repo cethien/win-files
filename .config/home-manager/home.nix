@@ -42,6 +42,7 @@
     enableCompletion = true;
     bashrcExtra = ''
       . ~/.bashrc_default
+      . ~/.profile_default
     '';
     shellAliases = {
       ll = "eza -la --icons --group-directories-first --git";
