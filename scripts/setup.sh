@@ -15,12 +15,13 @@ sh <(curl -fsSL https://nixos.org/nix/install) --no-daemon &&
     mkdir -p $HOME/.config/nix &&
 	echo "experimental-features = nix-command flakes" >> $HOME/.config/nix/nix.conf &&
     . $HOME/.nix-profile/etc/profile.d/nix.sh &&
+
+    rm -f $HOME/.bashrc $HOME/.profile &&
     nix build .config/home-manager#homeConfigurations.cethien.activationPackage &&
     result/activate &&
-    rm -f $HOME/.bashrc $HOME/.profile &&
     home-manager switch
 
 # remove sudo pw prompt
 echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/"$USER" >/dev/null
 
-# sudo reboot
+sudo reboot
