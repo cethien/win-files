@@ -16,7 +16,7 @@
     symlinkToWindows = lib.hm.dag.entryAfter ["writeBoundary"] ''
       if [ -n "$USERPROFILE" ] && [ -n "$HOME" ]; then
         ln -sf "$USERPROFILE"/.gitconfig "$HOME"/.gitconfig
-        ln -sf "$USERPROFILE"/AppData/Local/nvim "$HOME"/.config/nvim
+        ln -s "$USERPROFILE"/AppData/Local/nvim "$HOME"/.config/nvim
       fi
     '';
   };
@@ -32,6 +32,18 @@
     pkgs.gh
     pkgs.direnv
     pkgs.oh-my-posh
+
+    # go
+    pkgs.go
+    pkgs.delve
+    pkgs.gopls
+    pkgs.go-tools
+    pkgs.impl
+    pkgs.wgo
+    pkgs.go-migrate
+
+    # js
+    pkgs.bun
   ];
 
   # Let Home Manager install and manage itself.
@@ -42,8 +54,8 @@
     enableCompletion = true;
     bashrcExtra = ''
       . ~/.bashrc_default
-      . ~/.profile_default
     '';
+
     shellAliases = {
       ll = "eza -la --icons --group-directories-first --git";
       ls = "eza -a --icons --group-directories-first --git";
@@ -60,6 +72,7 @@
       update = ". $HOME/scripts/update.sh";
       reload = "home-manager switch && . $HOME/.bashrc";
     };
+
     initExtra = ''
       eval "$(oh-my-posh init bash --config $POSH_THEMES_PATH/custom/negligible.omp.json)"
     '';
