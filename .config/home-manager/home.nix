@@ -34,6 +34,11 @@
     pkgs.neovim
     pkgs.gh
     pkgs.oh-my-posh
+
+    # basic dev stuff
+    pkgs.direnv
+    pkgs.go
+    pkgs.bun
   ];
 
   # Let Home Manager install and manage itself.
