@@ -14,9 +14,12 @@
     '';
 
     symlinkToWindows = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      if [ -n "$USERPROFILE" ] && [ -n "$HOME" ]; then
-        ln -sf "$USERPROFILE"/.gitconfig "$HOME"/.gitconfig
-        ln -s "$USERPROFILE"/AppData/Local/nvim "$HOME"/.config/nvim
+      if [ ! -e "$HOME"/.gitconfig ]; then
+        ln -s "$USERPROFILE"/.gitconfig "$HOME"/.gitconfig;
+      fi
+
+      if [ ! -e "$HOME"/.config/nvim ]; then
+        ln -s "$USERPROFILE"/AppData/Local/nvim "$HOME"/.config/nvim;
       fi
     '';
   };
@@ -30,8 +33,8 @@
     pkgs.ripgrep
     pkgs.neovim
     pkgs.gh
-    pkgs.direnv
     pkgs.oh-my-posh
+    pkgs.gnumake
 
     # go
     pkgs.go
@@ -40,7 +43,6 @@
     pkgs.go-tools
     pkgs.impl
     pkgs.wgo
-    pkgs.go-migrate
 
     # js
     pkgs.bun
@@ -71,8 +73,8 @@
     };
 
     profileExtra = ''
-      if [ -e /home/cethien/.nix-profile/etc/profile.d/nix.sh ]; then
-        . /home/cethien/.nix-profile/etc/profile.d/nix.sh;
+      if [ -e "$HOME"/.nix-profile/etc/profile.d/nix.sh ]; then
+        . "$HOME"/.nix-profile/etc/profile.d/nix.sh;
       fi
     '';
 

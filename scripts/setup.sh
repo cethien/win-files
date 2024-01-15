@@ -12,12 +12,13 @@ sudo nala update &&
 
 # nix + home manager
 sh <(curl -fsSL https://nixos.org/nix/install) --no-daemon &&
-    . $HOME/.nix-profile/etc/profile.d/nix.sh &&
     mv $HOME/.bashrc $HOME/.bashrc_default &&
     mv $HOME/.profile $HOME/.profile_default &&
+    . $HOME/.nix-profile/etc/profile.d/nix.sh &&
     nix build .config/home-manager#homeConfigurations.cethien.activationPackage &&
     result/activate &&
-    home-manager switch
+    home-manager switch &&
+    rm -rf result
 
 # remove sudo pw prompt
 echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/"$USER" >/dev/null
