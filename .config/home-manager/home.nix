@@ -52,9 +52,6 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    bashrcExtra = ''
-      . ~/.bashrc_default
-    '';
 
     shellAliases = {
       ll = "eza -la --icons --group-directories-first --git";
@@ -72,6 +69,12 @@
       update = ". $HOME/scripts/update.sh";
       reload = "home-manager switch && . $HOME/.bashrc";
     };
+
+    profileExtra = ''
+      if [ -e /home/cethien/.nix-profile/etc/profile.d/nix.sh ]; then
+        . /home/cethien/.nix-profile/etc/profile.d/nix.sh;
+      fi
+    '';
 
     initExtra = ''
       eval "$(oh-my-posh init bash --config $POSH_THEMES_PATH/custom/negligible.omp.json)"
