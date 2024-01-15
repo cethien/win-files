@@ -2,4 +2,4 @@
 
 sudo nala update &&
     sudo nala upgrade -y &&
-    sudo nala auto-remove -y
+    sudo nala autoremove -y
