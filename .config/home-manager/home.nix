@@ -32,12 +32,14 @@
     pkgs.eza
     pkgs.ripgrep
     pkgs.neovim
-    pkgs.gh
     pkgs.oh-my-posh
 
-    # basic dev stuff
+    # dev
     pkgs.direnv
+    pkgs.gnumake
     pkgs.go
+    pkgs.wgo
+    pkgs.gopls
     pkgs.bun
   ];
 
