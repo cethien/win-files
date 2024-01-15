@@ -34,18 +34,6 @@
     pkgs.neovim
     pkgs.gh
     pkgs.oh-my-posh
-    pkgs.gnumake
-
-    # go
-    pkgs.go
-    pkgs.delve
-    pkgs.gopls
-    pkgs.go-tools
-    pkgs.impl
-    pkgs.wgo
-
-    # js
-    pkgs.bun
   ];
 
   # Let Home Manager install and manage itself.
