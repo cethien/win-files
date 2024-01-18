@@ -34,12 +34,15 @@
     pkgs.neovim
     pkgs.oh-my-posh
 
-    # dev
     pkgs.direnv
     pkgs.gnumake
+
     pkgs.go
     pkgs.wgo
     pkgs.gopls
+    pkgs.go-tools
+    pkgs.dlv
+
     pkgs.bun
   ];
 
