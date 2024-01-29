@@ -41,7 +41,6 @@
     pkgs.wgo
     pkgs.gopls
     pkgs.go-tools
-    pkgs.dlv
 
     pkgs.bun
   ];
@@ -67,13 +66,17 @@
 
       init = ". $HOME/scripts/init.sh";
       update = ". $HOME/scripts/update.sh";
-      reload = "home-manager switch && . $HOME/.bashrc";
+      reload = "home-manager switch && . $HOME/.profile";
     };
 
     profileExtra = ''
       if [ -e "$HOME"/.nix-profile/etc/profile.d/nix.sh ]; then
         . "$HOME"/.nix-profile/etc/profile.d/nix.sh;
       fi
+
+      export GOPATH=$HOME/go
+      export GOBIN=$GOPATH/bin
+      export PATH=$PATH:$GOPATH/bin
     '';
 
     initExtra = ''
