@@ -26,6 +26,8 @@
 
   home.packages = [
     pkgs.curl
+    pkgs.zip
+    pkgs.unzip
     pkgs.git
     pkgs.wget
     pkgs.bat
