@@ -42,9 +42,17 @@
     pkgs.go
     pkgs.wgo
     pkgs.gopls
+    pkgs.delve
     pkgs.go-tools
 
+    pkgs.cobra-cli
+    pkgs.hugo
+    pkgs.go-migrate
+
     pkgs.bun
+
+    pkgs.pinta
+    pkgs.inkscape
   ];
 
   # Let Home Manager install and manage itself.
