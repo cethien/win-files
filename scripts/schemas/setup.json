@@ -6,6 +6,7 @@
             "type": "array",
             "items": {
                 "type": "object",
+                "minProperties": 1, // At least one property is required
                 "properties": {
                     "profiles": {
                         "type": "array",
