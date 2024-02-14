@@ -32,6 +32,7 @@
     pkgs.wget
     pkgs.bat
     pkgs.eza
+    pkgs.fd
     pkgs.ripgrep
     pkgs.neovim
     pkgs.oh-my-posh
@@ -67,7 +68,8 @@
       ls = "eza -a --icons --group-directories-first --git";
       tree = "eza -T --icons";
       grep = "rg";
-      cat = "bat";
+      cat = "bat -p";
+      find = "fd";
       vi = "nvim";
       vim = "nvim";
 
@@ -76,7 +78,8 @@
 
       init = ". $HOME/scripts/init.sh";
       update = ". $HOME/scripts/update.sh";
-      reload = "home-manager switch && . $HOME/.profile";
+      reload = ". $HOME/.profile";
+      sync = "git pull && home-manager switch";
     };
 
     profileExtra = ''
