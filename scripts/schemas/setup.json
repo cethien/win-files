@@ -6,28 +6,32 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "minProperties": 1, // At least one property is required
+                "minProperties": 1,
                 "properties": {
                     "profiles": {
                         "type": "array",
+                        "minItems": 1,
                         "items": {
                             "type": "string"
                         }
                     },
                     "prepare_script": {
                         "type": "array",
+                        "minItems": 1,
                         "items": {
                             "type": "string"
                         }
                     },
                     "exec_script": {
                         "type": "array",
+                        "minItems": 1,
                         "items": {
                             "type": "string"
                         }
                     },
                     "winget_packages": {
                         "type": "array",
+                        "minItems": 1,
                         "items": {
                             "type": "object",
                             "properties": {
@@ -52,12 +56,14 @@
                     },
                     "pwsh_modules": {
                         "type": "array",
+                        "minItems": 1,
                         "items": {
                             "type": "string"
                         }
                     },
                     "post_install_script": {
                         "type": "array",
+                        "minItems": 1,
                         "items": {
                             "type": "string"
                         }
