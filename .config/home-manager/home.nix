@@ -52,8 +52,9 @@
 
     pkgs.bun
 
-    pkgs.pinta
+    pkgs.gimp
     pkgs.inkscape
+    # pkgs.ocenaudio
   ];
 
   # Let Home Manager install and manage itself.
