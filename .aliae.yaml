@@ -4,7 +4,9 @@ alias:
   - name: vim
     value: nvim
   - name: cat
-    value: bat
+    value: 'bat -p'
+  - name: find
+    value: fd
   - name: ls
     value: 'eza -a --icons --group-directories-first --git'
   - name: ll
@@ -12,40 +14,22 @@ alias:
   - name: tree
     value: 'eza -T --icons'
 
-  - name: sudo
-    if: eq .OS "linux"
-    value: 'sudo '
-  - name: apt
-    if: eq .OS "linux"
-    value: nala
-  - name: grep
-    if: eq .OS "linux"
-    value: rg
-
   - name: zip
     if: eq .OS "windows"
     value: nanazipc
 
   # commands
+  - name: sync
+    if: eq .OS "windows"
+    value: git pull
+
   - name: reload
     if: eq .Shell "pwsh"
     value: . $profile
 
-  - name: reload
-    if: eq .OS "linux"
-    value: source ~/.bashrc
-
   - name: update
     if: eq .Shell "pwsh"
     value: . {{ .Home }}/scripts/update.ps1
-
-  - name: update
-    if: eq .OS "linux"
-    value: . {{ .Home }}/scripts/update.sh
-
-  - name: init
-    if: eq .Shell "bash"
-    value: . {{ .Home }}/scripts/init.sh
 
   - name: backup-folders
     if: eq .Shell "pwsh"
