@@ -52,6 +52,8 @@
 
     pkgs.bun
 
+    pkgs.lua
+
     pkgs.gimp
     pkgs.inkscape
     # pkgs.ocenaudio
