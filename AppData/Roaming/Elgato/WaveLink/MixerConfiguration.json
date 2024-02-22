@@ -9,6 +9,50 @@
         "inputs": [
             {
                 "color": "#23DEC0",
+                "filterConfigurations": [
+                    {
+                        "activeMixerIDs": [
+                            "com.elgato.mix.local",
+                            "com.elgato.mix.stream"
+                        ],
+                        "filterConfigID": "2B226511-2372-4817-82D2-818FD69D6684",
+                        "filterSettings": "VkMyIRcBAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJRWRpdENvbnRyb2xsZXI+MTI0Li4uLi5mUHdOTS5ELi4uLi4uLi5MLkEuLi4uLi4uLkNQLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uNysuLi4uLi4uLi4rTy4uLi4uLi4uUC5ELi4uLi4uLi5JLkEuLi4uLi4uLi4uLi4uLi4uLi5ILkQuLi4uLi4uLlQuQS4uLi4uLi5uQVAuLi4uLi48L0lFZGl0Q29udHJvbGxlcj48L1ZTVDNQbHVnaW5TdGF0ZT4A",
+                        "pluginCategory": "Tools",
+                        "pluginDisplayName": "Lisp",
+                        "pluginID": "f8028c1e",
+                        "pluginOriginalName": "Lisp",
+                        "pluginURL": "",
+                        "pluginVendor": "Sleepy-Time DSP"
+                    },
+                    {
+                        "activeMixerIDs": [
+                            "com.elgato.mix.local",
+                            "com.elgato.mix.stream"
+                        ],
+                        "filterConfigID": "52EE02B7-362F-4909-9939-CFC2DCE39682",
+                        "filterSettings": "VkMyIV8DAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjU3MC5WTWpMZ1RlLi4uLk8rZldhckFoY2tJMmJvOGxhOEhSTHQuaUhmVGxhaThGWW80MVk4SFJVVFlUSzNIeE85LkJPUkkwTHgua2JrTVdZellUWnJVRkh2SVdZeVVGY05FVmFrMGlIRFVsWWdVR2F6SUJIdndWY21rbGFWVWxieWsxYXQwaUh5M1JMdC5pSGZUV1pXa0ZZemdWT2hEU0x4VGlIZlRXWkhVVlptZ0ZjOEh4TDJUaUg5dkNUZ0lXWHNVRmNrSTJiOXZDVEFJVVBNQVJaajBpSHZIQkgxRUZhMFVWT2hIQ0x0LmlIdTNDT1BFalRBMERIb1FWT2hEaUhmWFdYclVXWThIQkx0LmlIdTNDT1BFalRBMERIb1FWT2hEQ0xoLmhjZ3dWY2swaUh3M0JMaDdoTzcuVVBSRVRTZmpGWThIaExoLmhjZ3dWY2swaUh2M0JMaDdoTzcuVVBSRVRTZmpGWThIeExoLmhjZ3dWY2swaUh5M0JNM2ZpTDBEQ016YmlNMmJpTXdIaUh1M0NPUEVqVEEwREhvUVZPaFBpSGZYV1hyVVdZOEhCTTEzeE00alNONFRDTXhIeUwxTGlMM0h4Szl2Q1RBSVVQTUFSWmowaUgwSEJIMUVGYTBVVk9oSFNNdjNCTGg3aE83LlVQUkVUU2ZqRlk4SGhNaC5oY2d3VmNrMGlIMDNCTGg3aE83LlVQUkVUU2ZqRlk4SHhNaC5oY2d3VmNrMGlIdy5DTHQuaUh1M0NPUEVqVEEwREhvUVZPaGZpSGZYV1hyVVdZOEhCTHQuaUh1M0NPUEVqVEEwREhvUVZPaGppSGZYV1hyVVdZOEhCTHQuaUh1M0NPdS5VWHhFVmFrUVdZeE1tTzc3aFRSTWlMUElXWXlVRmNGa0ZhazRDLi4uLi4uLi4uLi5mUlVNVFFQSVdaMUVGY2tRVFh6RUYuQURmUDRBV1h5TUcuQUR2Li56QS4uLi4uLi4uLkpVMFBFQWtib1lXWHpVRlFnUVdYPC9JQ29tcG9uZW50PjwvVlNUM1BsdWdpblN0YXRlPgA=",
+                        "pluginCategory": "Dynamics|Stereo",
+                        "pluginDisplayName": "RoughRider3",
+                        "pluginID": "e4022018",
+                        "pluginOriginalName": "RoughRider3",
+                        "pluginURL": "",
+                        "pluginVendor": "Audio Damage, Inc."
+                    },
+                    {
+                        "activeMixerIDs": [
+                            "com.elgato.mix.local",
+                            "com.elgato.mix.stream"
+                        ],
+                        "filterConfigID": "0DA285E4-3E73-4E90-BB04-941B4CA10AC9",
+                        "filterSettings": "VkMyIXwAAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjE2Li4uLmYrLi4uLjlDLi4uLi4uLi4uLi48L0lDb21wb25lbnQ+PC9WU1QzUGx1Z2luU3RhdGU+AA==",
+                        "pluginCategory": "Dynamics",
+                        "pluginDisplayName": "LoudMax",
+                        "pluginID": "9e4ed9f9",
+                        "pluginOriginalName": "LoudMax",
+                        "pluginURL": "",
+                        "pluginVendor": "Thomas Mundt"
+                    }
+                ],
                 "identifier": "ROOT#UNNAMED_DEVICE#0000#{6994AD04-93EF-11D0-A3CC-00A0C9223196}\\RTXWAVE13",
                 "mutedMixerIDs": [
                     "com.elgato.mix.stream",
@@ -16,6 +60,7 @@
                 ],
                 "name": "Mikrofon (NVIDIA Broadcast)",
                 "nodeType": 1,
+                "userProvidedName": "Mikrofon (NVIDIA Broadcast)",
                 "volumes": {
                     "com.elgato.mix.microphoneFX": 1.0
                 }
@@ -23,15 +68,17 @@
             {
                 "color": "#FF6C3E",
                 "identifier": "PCM_OUT_01_V_08_SD6",
-                "mutedMixerIDs": [],
-                "name": "Wave Link SFX",
+                "mutedMixerIDs": [
+                    "com.elgato.mix.microphoneFX"
+                ],
+                "name": "SFX",
                 "nodeType": 2,
+                "userProvidedName": "SFX / Music",
                 "volumes": {
-                    "com.elgato.mix.local": 0.6,
-                    "com.elgato.mix.microphoneFX": 0.9500000000000002,
-                    "com.elgato.mix.stream": 0.6
-                },
-                "volumesLinked": true
+                    "com.elgato.mix.local": 0.5,
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 0.0
+                }
             },
             {
                 "color": "#F2315B",
@@ -42,7 +89,7 @@
                 "name": "Wave Link Game",
                 "nodeType": 2,
                 "volumes": {
-                    "com.elgato.mix.local": 0.65,
+                    "com.elgato.mix.local": 0.3,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.6
                 }
@@ -57,13 +104,29 @@
                 "name": "Wave Link Browser",
                 "nodeType": 2,
                 "volumes": {
-                    "com.elgato.mix.local": 1.0,
+                    "com.elgato.mix.local": 0.7,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.7
                 }
             },
             {
                 "color": "#CFD924",
+                "filterConfigurations": [
+                    {
+                        "activeMixerIDs": [
+                            "com.elgato.mix.local",
+                            "com.elgato.mix.stream"
+                        ],
+                        "filterConfigID": "52C9F302-F4D4-4376-B8D9-2B7A9B53E925",
+                        "filterSettings": "VkMyIXwAAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjE2Li4uLmYrLi4uLjlDLi4uLi4uLi4uLi48L0lDb21wb25lbnQ+PC9WU1QzUGx1Z2luU3RhdGU+AA==",
+                        "pluginCategory": "Dynamics",
+                        "pluginDisplayName": "LoudMax",
+                        "pluginID": "9e4ed9f9",
+                        "pluginOriginalName": "LoudMax",
+                        "pluginURL": "",
+                        "pluginVendor": "Thomas Mundt"
+                    }
+                ],
                 "identifier": "PCM_OUT_01_V_06_SD5",
                 "mutedMixerIDs": [
                     "com.elgato.mix.microphoneFX"
@@ -80,17 +143,17 @@
                 "color": "#FF00E8",
                 "identifier": "PCM_OUT_01_V_02_SD3",
                 "mutedMixerIDs": [
-                    "com.elgato.mix.microphoneFX"
+                    "com.elgato.mix.microphoneFX",
+                    "com.elgato.mix.stream"
                 ],
                 "name": "Wave Link Music",
                 "nodeType": 2,
-                "userProvidedName": "Stream Music",
+                "userProvidedName": "OBS Music",
                 "volumes": {
-                    "com.elgato.mix.local": 0.12,
+                    "com.elgato.mix.local": 0.52,
                     "com.elgato.mix.microphoneFX": 1.0,
-                    "com.elgato.mix.stream": 0.12
-                },
-                "volumesLinked": true
+                    "com.elgato.mix.stream": 0.0
+                }
             },
             {
                 "color": "#23DE63",
@@ -99,24 +162,23 @@
                     "com.elgato.mix.microphoneFX",
                     "com.elgato.mix.stream"
                 ],
-                "name": "Aux 1",
+                "name": "Wave Link Aux 1",
                 "nodeType": 2,
-                "userProvidedName": "OBS Monitoring",
+                "userProvidedName": "OBS Monitor",
                 "volumes": {
-                    "com.elgato.mix.local": 1.0,
-                    "com.elgato.mix.microphoneFX": 1.0,
-                    "com.elgato.mix.stream": 0.0
+                    "com.elgato.mix.local": 0.07,
+                    "com.elgato.mix.microphoneFX": 1.0
                 }
             }
         ],
         "outputs": [
             {
-                "identifier": "BTHENUM#{0000110B-0000-1000-8000-00805F9B34FB}_LOCALMFG&005D#8&1DA27C2A&0&AC122FC80AF2_C00000000#{6994AD04-93EF-11D0-A3CC-00A0C9223196}\\SRC",
+                "identifier": "BTHENUM#{0000110B-0000-1000-8000-00805F9B34FB}_LOCALMFG&005D#8&1DA27C2A&0&AC122FC80AF2_C00000000#{6994AD04-93EF-11D0-A3CC-00A0C9223196}\\SRC@@SystemDefaultDevice@@",
                 "mixerID": "com.elgato.mix.local",
                 "muted": false,
                 "name": "Kopfhörer (Soundcore Life Q30)",
                 "nodeType": 1,
-                "systemDefaultDevice": false,
+                "systemDefaultDevice": true,
                 "terminalType": 1,
                 "volume": 1.0
             },
@@ -124,10 +186,10 @@
                 "identifier": "PCM_IN_01_V_00_SD2",
                 "mixerID": "com.elgato.mix.stream",
                 "muted": false,
-                "name": "Stream Output",
+                "name": "No Additional Output Device",
                 "nodeType": 2,
                 "systemDefaultDevice": false,
-                "terminalType": 0,
+                "terminalType": 1,
                 "volume": 1.0
             },
             {
