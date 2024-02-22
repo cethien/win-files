@@ -37,8 +37,12 @@
     pkgs.neovim
     pkgs.oh-my-posh
 
+    pkgs.gh
+
     pkgs.direnv
     pkgs.gnumake
+
+    pkgs.lefthook
 
     pkgs.go
     pkgs.wgo
