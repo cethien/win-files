@@ -40,7 +40,6 @@
     pkgs.oh-my-posh
     pkgs.gnumake
 
-    pkgs.gh
     pkgs.ansible
 
     pkgs.go
@@ -55,6 +54,9 @@
     pkgs.bun
     pkgs.jdk8
     pkgs.lua
+
+    pkgs.gh
+    pkgs.lefthook
 
     # pkgs.warp-terminal
     pkgs.gimp
