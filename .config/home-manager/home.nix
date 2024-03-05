@@ -35,29 +35,28 @@
     pkgs.fd
     pkgs.ripgrep
     pkgs.neovim
+    pkgs.zoxide
+    pkgs.fzf
     pkgs.oh-my-posh
-
-    pkgs.gh
-
-    pkgs.direnv
     pkgs.gnumake
 
-    pkgs.lefthook
+    pkgs.gh
+    pkgs.ansible
 
     pkgs.go
     pkgs.wgo
     pkgs.gopls
-    pkgs.delve
     pkgs.go-tools
-
-    pkgs.cobra-cli
-    pkgs.hugo
+    pkgs.goreleaser
     pkgs.go-migrate
 
-    pkgs.bun
+    pkgs.hugo
 
+    pkgs.bun
+    pkgs.jdk8
     pkgs.lua
 
+    # pkgs.warp-terminal
     pkgs.gimp
     pkgs.inkscape
     # pkgs.ocenaudio
@@ -71,6 +70,9 @@
     enableCompletion = true;
 
     shellAliases = {
+      sudo = "sudo ";
+
+      cd = "z";
       ll = "eza -la --icons --group-directories-first --git";
       ls = "eza -a --icons --group-directories-first --git";
       tree = "eza -T --icons";
@@ -79,8 +81,6 @@
       find = "fd";
       vi = "nvim";
       vim = "nvim";
-
-      sudo = "sudo ";
       apt = "nala";
 
       init = ". $HOME/scripts/init.sh";
@@ -101,6 +101,7 @@
 
     initExtra = ''
       eval "$(oh-my-posh init bash --config $POSH_THEMES_PATH/custom/negligible.omp.json)"
+      eval "$(zoxide init bash)"
     '';
   };
 }
