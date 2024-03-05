@@ -95,10 +95,13 @@
       if [ -e "$HOME"/.nix-profile/etc/profile.d/nix.sh ]; then
         . "$HOME"/.nix-profile/etc/profile.d/nix.sh;
       fi
+    '';
 
-      export GOPATH=$HOME/go
-      export GOBIN=$GOPATH/bin
-      export PATH=$PATH:$GOPATH/bin
+    bashrcExtra = ''
+      GOPATH=$HOME/go
+      GOBIN=$GOPATH/bin
+      GOROOT=${pkgs.go}/share/go
+      PATH=$PATH:$GOPATH/bin
     '';
 
     initExtra = ''
