@@ -1,16 +1,20 @@
 #!/bin/bash
 
-SDK=$1
-TEMPLATE=$2
-
-if [ -z "$SDK" ]; then
-    echo "SDK not set"
+if [ $# -eq 0 ] || [ $# -eq 2 ] || [ $# -gt 3 ]; then
+    echo "Illegal number of parameters"
     return 1
 fi
 
-if [ -z "$TEMPLATE" ]; then
-    echo "Template not set"
-    return 1
+if [ $# -eq 1 ]; then
+    mkdir $1 && cd "$_" && git init && touch README.md .gitignore
 fi
 
-. $HOME/scripts/sdk/$1/$2/init.sh $3
+if [ $# -eq 3 ]; then
+    SDK=$1
+    TEMPLATE=$2
+
+    . $HOME/scripts/sdk/$1/$2/init.sh $3
+fi
+
+
+
