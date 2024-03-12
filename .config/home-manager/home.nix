@@ -28,7 +28,6 @@
     pkgs.curl
     pkgs.zip
     pkgs.unzip
-    pkgs.git
     pkgs.wget
     pkgs.bat
     pkgs.eza
@@ -38,7 +37,10 @@
     pkgs.zoxide
     pkgs.fzf
     pkgs.oh-my-posh
+
+    pkgs.git
     pkgs.gnumake
+    pkgs.gh
 
     pkgs.ansible
 
@@ -46,17 +48,16 @@
     pkgs.wgo
     pkgs.gopls
     pkgs.go-tools
-    pkgs.goreleaser
     pkgs.go-migrate
+
+    pkgs.protobuf
+    pkgs.protoc-gen-go
 
     pkgs.hugo
 
     pkgs.bun
     pkgs.jdk8
     pkgs.lua
-
-    pkgs.gh
-    pkgs.lefthook
 
     # pkgs.warp-terminal
     pkgs.gimp
