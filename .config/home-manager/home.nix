@@ -14,7 +14,6 @@
     pkgs.eza
     pkgs.fd
     pkgs.ripgrep
-    pkgs.zoxide
     pkgs.fzf
     pkgs.oh-my-posh
 
@@ -103,8 +102,11 @@
 
     initExtra = ''
       eval "$(oh-my-posh init bash --config $POSH_THEMES_PATH/custom/negligible.omp.json)"
-      eval "$(zoxide init bash)"
     '';
+  };
+
+  programs.zoxide = {
+    enable = true;
   };
 
   programs.neovim = {
