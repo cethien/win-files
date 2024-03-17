@@ -5,21 +5,23 @@
   home.homeDirectory = "/home/cethien";
   home.stateVersion = "23.05"; # dont change
 
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+
   home.packages = [
-    pkgs.curl
-    pkgs.zip
-    pkgs.unzip
-    pkgs.wget
+    pkgs.nil
+
     pkgs.bat
     pkgs.eza
     pkgs.fd
     pkgs.ripgrep
+    pkgs.curl
+    pkgs.zip
+    pkgs.unzip
+    pkgs.wget
     pkgs.fzf
     pkgs.oh-my-posh
-
     pkgs.gnumake
-
-    pkgs.ansible
 
     pkgs.wgo
     pkgs.gopls
@@ -39,26 +41,20 @@
     # pkgs.ocenaudio
   ];
 
-  home.activation = {
-    checkEnvVars = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation.checkEnvVars = lib.hm.dag.entryAfter ["writeBoundary"] ''
       if [ -z "$WSLENV" ] || [ -z "$USERPROFILE" ] || [ -z "$POSH_THEMES_PATH" ]; then
         echo "WSLENV / needed variables from WSLENV could not be loaded. Exiting"
         exit 1
       fi
     '';
+
+  home.sessionVariables = {
+    DIRENV_LOG_FORMAT = "";
   };
 
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
-    shellAliases = {
+  home.shellAliases = {
       sudo = "sudo ";
       apt = "nala";
-
       cd = "z";
       ll = "eza -la --icons --group-directories-first --git";
       ls = "eza -a --icons --group-directories-first --git";
@@ -69,12 +65,6 @@
       vi = "nvim";
       vim = "nvim";
 
-      init = ". $HOME/scripts/init.sh";
-      update = ". $HOME/scripts/update.sh";
-      reload = ". $HOME/.profile";
-
-      sync = "git pull && home-manager switch";
-
       # git
       g = "git";
       gs = "git status";
@@ -82,17 +72,27 @@
       ga = "git add";
       gc = "git commit";
       gcm = "git commit -m";
-      gca = "git commit --amend";
+      gcam = "git commit -am";
       gco = "git checkout";
-      gcb = "git checkout -b";
-      gcp = "git cherry-pick";
+      gcob = "git checkout -b";
       gcl = "git clone";
       gpl = "git pull";
-      gpm = "git pull --merge";
       gps = "git push";
-      gpf = "git push --force";
+      glg = "git log --graph --oneline --decorate";
 
-    };
+      # commands
+      update = "source $HOME/scripts/update.sh";
+      reload = "source $HOME/.profile";
+      init = "source $HOME/scripts/init.sh";
+      sync = "(cd $HOME && git pull && home-manager switch)";
+      clean = "nix-store --gc";
+
+      devenv-up = "docker compose -f $HOME/compose-devenv.yml -p dev-env up -d";
+  };
+
+  programs.bash = {
+    enable = true;
+    enableCompletion = true;
 
     profileExtra = ''
       if [ -e "$HOME"/.nix-profile/etc/profile.d/nix.sh ]; then
@@ -105,9 +105,29 @@
     '';
   };
 
-  programs.zoxide = {
+  programs.password-store = {
     enable = true;
+    settings.PASSWORD_STORE_DIR = "${config.home.homeDirectory}/.password-store";
   };
+
+  programs.git = {
+    enable = true;
+    diff-so-fancy.enable = true;
+
+    userName = "cethien";
+    aliases.ignore = "!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi";
+    extraConfig = {
+      core = {
+        eol = "lf";
+        autocrlf = "input";
+      };
+      init = {
+        defaultBranch = "main";
+      };
+    };
+  };
+
+  programs.zoxide.enable = true;
 
   programs.neovim = {
     enable = true;
@@ -116,13 +136,9 @@
     '';
   };
 
-  programs.git = {
+  programs.direnv = {
     enable = true;
-    userName = "cethien";
-
-    aliases.ignore = "!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi";
-
-    diff-so-fancy.enable = true;
+    config.whitelist.exact = [ "~/" ];
   };
 
   programs.gh = {
