@@ -26,10 +26,7 @@
     pkgs.wgo
     pkgs.gopls
     pkgs.go-tools
-    pkgs.go-migrate
     pkgs.hugo
-    pkgs.protobuf
-    pkgs.protoc-gen-go
 
     pkgs.bun
     pkgs.jdk8
@@ -104,11 +101,6 @@
     initExtra = ''
       eval "$(oh-my-posh init bash --config $POSH_THEMES_PATH/custom/negligible.omp.json)"
     '';
-  };
-
-  programs.password-store = {
-    enable = true;
-    settings.PASSWORD_STORE_DIR = "${config.home.homeDirectory}/.password-store";
   };
 
   programs.git = {
