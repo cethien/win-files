@@ -26,6 +26,7 @@
     pkgs.wgo
     pkgs.gopls
     pkgs.go-tools
+    pkgs.goreleaser
     pkgs.hugo
 
     pkgs.bun
