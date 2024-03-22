@@ -99,6 +99,7 @@
     '';
 
     initExtra = ''
+      export PATH=$GOBIN:$PATH
       eval "$(oh-my-posh init bash --config $POSH_THEMES_PATH/custom/negligible.omp.json)"
     '';
   };
