@@ -30,16 +30,6 @@ services:
     volumes:
       - pgadmin-data:/var/lib/pgadmin
 
-  redis:
-    image: redis:alpine
-    restart: unless-stopped
-    environment:
-      REDIS_PASSWORD: ${REDIS_PASSWORD}
-    ports:
-      - '6379:6379'
-    volumes:
-      - redis-data:/data
-
   mailpit:
     image: axllent/mailpit:latest
     restart: unless-stopped

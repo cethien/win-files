@@ -85,7 +85,7 @@
       sync = "(cd $HOME && git pull && home-manager switch)";
       clean = "nix-store --gc";
 
-      devenv-up = "docker compose -f $HOME/compose-devenv.yml -p dev-env up -d";
+      devenv-up = "docker compose -f $HOME/compose-devenv.yml -p dev-env up --remove-orphans -d";
       devenv-down = "docker compose -f $HOME/compose-devenv.yml -p dev-env down";
   };
 
