@@ -1,16 +1,8 @@
 {
-	"$schema": "./schemas/setup.json",
+	"$schema": "./schemas/setup.schema.json",
 	"actions": [
 		{
-			"winget_packages": [
-				{
-					"id": "Microsoft.PowerToys"
-				},
-				{
-					"id": "GeekUninstaller.GeekUninstaller"
-				}
-			],
-			"exec_script": [
+			"script": [
 				"Remove-Item alias:curl",
 				"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value 0",
 				"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search -Name SearchBoxTaskbarMode -Value 0 -Type DWord -Force",
@@ -22,11 +14,19 @@
 				"Set-ItemProperty -Path HKCU:\\Control Panel\\Accessibility\\StickyKeys -Name Flags -Type String -Value \"506\"",
 				"Set-ItemProperty -Path HKCU:\\Control Panel\\Accessibility\\ToggleKeys -Name Flags -Type String -Value \"58\"",
 				"Set-ItemProperty -Path HKCU:\\Control Panel\\Accessibility\\Keyboard Response -Name Flags -Type String -Value \"122\""
+			],
+			"winget_packages": [
+				{
+					"id": "Microsoft.PowerToys"
+				},
+				{
+					"id": "GeekUninstaller.GeekUninstaller"
+				}
 			]
 		},
 		{
-			"exec_script": [
-				"ssh-keygen -q -b 2048 -t ed25519 -f $env:USERPROFILE/.ssh/id_ed25519 -N '' -q"
+			"script": [
+				"\"Host *\n\tIdentityFile \"K:/id_ed25519\"\" | Out-File -FilePath $env:USERPROFILE/.ssh/config -Encoding utf8 -Force"
 			],
 			"winget_packages": [
 				{
