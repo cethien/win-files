@@ -20,7 +20,10 @@
 					"id": "Microsoft.PowerToys"
 				},
 				{
-					"id": "GeekUninstaller.GeekUninstaller"
+					"id": "Klocman.BulkCrapUninstaller"
+				},
+				{
+					"id": "AntibodySoftware.WizTree"
 				}
 			]
 		},
@@ -141,12 +144,6 @@
 				},
 				{
 					"id": "Iriun.IriunWebcam"
-				},
-				{
-					"id": "Docker.DockerDesktop",
-					"install_flags": [
-						"--interactive"
-					]
 				}
 			]
 		},

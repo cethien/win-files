@@ -5,8 +5,9 @@ param (
     [string[]]$Profiles
 )
 
-$actions = $(Get-Content "$PSScriptRoot/setup.json" | ConvertFrom-Json).actions
-$actions | ForEach-Object {
+$config = Get-Content "$PSScriptRoot/setup.json" | ConvertFrom-Json
+
+$config.actions | ForEach-Object {
     $_.prepare_script | ForEach-Object { Invoke-Expression $_ }
 
     Invoke-Expression $_.script
