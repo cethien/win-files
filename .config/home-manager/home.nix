@@ -80,7 +80,7 @@
 
       # commands
       update = "source $HOME/scripts/update.sh";
-      reload = "source $HOME/.profile";
+      reload = "(cd $HOME && source .profile) && clear";
       init = "source $HOME/scripts/init.sh";
       sync = "(cd $HOME && git pull && home-manager switch)";
       clean = "nix-store --gc";
@@ -97,11 +97,22 @@
       if [ -e "$HOME"/.nix-profile/etc/profile.d/nix.sh ]; then
         . "$HOME"/.nix-profile/etc/profile.d/nix.sh;
       fi
+
+      wsl.exe -u root -e mount -t drvfs K: /mnt/k > /dev/null 2>&1
     '';
 
     initExtra = ''
       export PATH=$GOBIN:$PATH
       eval "$(oh-my-posh init bash --config $POSH_THEMES_PATH/custom/negligible.omp.json)"
+    '';
+  };
+
+  programs.ssh = {
+    enable = true;
+    forwardAgent = true;
+    extraConfig = ''
+      Host *
+        IdentityFile /mnt/k/.ssh/id_ed25519
     '';
   };
 
