@@ -94,11 +94,11 @@
     enableCompletion = true;
 
     profileExtra = ''
+      wsl.exe -u root -e mount -t drvfs K: /mnt/k > /dev/null 2>&1
+
       if [ -e "$HOME"/.nix-profile/etc/profile.d/nix.sh ]; then
         . "$HOME"/.nix-profile/etc/profile.d/nix.sh;
       fi
-
-      wsl.exe -u root -e mount -t drvfs K: /mnt/k > /dev/null 2>&1
     '';
 
     initExtra = ''
@@ -129,6 +129,9 @@
       };
       init = {
         defaultBranch = "main";
+      };
+      advice = {
+        addIgnoredFile = false;
       };
     };
   };
