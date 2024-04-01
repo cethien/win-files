@@ -109,10 +109,13 @@
 
   programs.ssh = {
     enable = true;
+    package = pkgs.openssh;
     forwardAgent = true;
+    addKeysToAgent = "yes";
+
     extraConfig = ''
-      Host *
-        IdentityFile /mnt/k/.ssh/id_ed25519
+    Host *
+      IdentityFile /mnt/k/.ssh/id_ed25519
     '';
   };
 
