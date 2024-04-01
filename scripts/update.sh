@@ -5,4 +5,4 @@ sudo nala update &&
     sudo nala autoremove -y
 
 nix-channel --update
-(cd "$HOME"/.config/home-manager && nix flake uppdate)
+(cd "$HOME"/.config/home-manager && nix flake update)
