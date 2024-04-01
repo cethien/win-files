@@ -29,9 +29,12 @@
 		},
 		{
 			"script": [
-				"\"Host *\n\tIdentityFile \"K:/id_ed25519\"\" | Out-File -FilePath $env:USERPROFILE/.ssh/config -Encoding utf8 -Force"
+				"\"Host *\n\tIdentityFile ForwardAgent yes\n\tAddKeysToAgent yes\" | Out-File -FilePath $env:USERPROFILE/.ssh/config -Encoding utf8 -Force"
 			],
 			"winget_packages": [
+				{
+					"id": "Microsoft.OpenSSH.Beta"
+				},
 				{
 					"id": "chrisant996.Clink"
 				},
