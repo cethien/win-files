@@ -26,12 +26,15 @@
     pkgs.wgo
     pkgs.gopls
     pkgs.go-tools
+    pkgs.delve
     pkgs.goreleaser
     pkgs.hugo
 
     pkgs.bun
     pkgs.jdk8
     pkgs.lua
+
+    pkgs.ansible
 
     # pkgs.warp-terminal
     pkgs.gimp
