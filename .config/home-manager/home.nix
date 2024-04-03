@@ -15,7 +15,7 @@
     pkgs.bat
     pkgs.eza
     pkgs.fd
-    pkgs.rip
+    pkgs.rm-improved
     pkgs.ripgrep
     pkgs.curl
     pkgs.zip
