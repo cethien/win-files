@@ -11,19 +11,25 @@
   home.packages = [
     pkgs.nil
 
+    pkgs.procs
     pkgs.bat
     pkgs.eza
     pkgs.fd
+    pkgs.rip
     pkgs.ripgrep
     pkgs.curl
     pkgs.zip
     pkgs.unzip
     pkgs.wget
     pkgs.fzf
-    pkgs.oh-my-posh
-    pkgs.gnumake
+    pkgs.duf
 
+    pkgs.oh-my-posh
+
+    pkgs.gnumake
     pkgs.wgo
+    pkgs.quicktype
+
     pkgs.gopls
     pkgs.go-tools
     pkgs.delve
@@ -56,6 +62,9 @@
   home.shellAliases = {
       sudo = "sudo ";
       apt = "nala";
+      ps = "proc";
+      rm = "rip";
+      duf = "df";
       cd = "z";
       ll = "eza -la --icons --group-directories-first --git";
       ls = "eza -a --icons --group-directories-first --git";
