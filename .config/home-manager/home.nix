@@ -83,7 +83,7 @@
 
       # commands
       update = "source $HOME/scripts/update.sh";
-      reload = "(cd $HOME && source .profile) && clear";
+      reload = "(cd $HOME && source .profile) && sudo mount -t drvfs K: /mnt/k && clear";
       init = "source $HOME/scripts/init.sh";
       sync = "(cd $HOME && git pull && home-manager switch)";
       clean = "nix-store --gc";
@@ -97,11 +97,11 @@
     enableCompletion = true;
 
     profileExtra = ''
-      wsl.exe -u root -e mount -t drvfs K: /mnt/k > /dev/null 2>&1
-
       if [ -e "$HOME"/.nix-profile/etc/profile.d/nix.sh ]; then
         . "$HOME"/.nix-profile/etc/profile.d/nix.sh;
       fi
+
+      wsl.exe -u root -e mount -t drvfs K: /mnt/k > /dev/null 2>&1
     '';
 
     initExtra = ''
