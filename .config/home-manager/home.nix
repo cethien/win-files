@@ -30,6 +30,8 @@
     pkgs.wgo
     pkgs.quicktype
 
+    pkgs.act
+
     pkgs.gopls
     pkgs.go-tools
     pkgs.delve
@@ -110,7 +112,7 @@
         . "$HOME"/.nix-profile/etc/profile.d/nix.sh;
       fi
 
-      wsl.exe -u root -e mount -t drvfs K: /mnt/k > /dev/null 2>&1
+      sudo mount -t drvfs K: /mnt/k
     '';
 
     initExtra = ''
