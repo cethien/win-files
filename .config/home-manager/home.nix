@@ -15,7 +15,6 @@
     pkgs.bat
     pkgs.eza
     pkgs.fd
-    pkgs.rm-improved
     pkgs.ripgrep
     pkgs.curl
     pkgs.zip
@@ -65,7 +64,6 @@
       sudo = "sudo ";
       apt = "nala";
       ps = "proc";
-      rm = "rip";
       duf = "df";
       cd = "z";
       ll = "eza -la --icons --group-directories-first --git";
