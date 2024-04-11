@@ -76,7 +76,6 @@
       vim = "nvim";
 
       # git
-      g = "git";
       gs = "git status";
       gd = "git diff";
       ga = "git add";
@@ -89,6 +88,9 @@
       gpl = "git pull";
       gps = "git push";
       glg = "git log --graph --oneline --decorate";
+      gwa = "git worktree add";
+      gwl = "git worktree list";
+      gwt = "git worktree prune";
 
       # commands
       update = "source $HOME/scripts/update.sh";
