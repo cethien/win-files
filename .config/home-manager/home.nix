@@ -85,6 +85,8 @@
       gco = "git checkout";
       gcob = "git checkout -b";
       gcl = "git clone";
+      gclb = "git clone --bare";
+      gf = "git fetch";
       gpl = "git pull";
       gps = "git push";
       glg = "git log --graph --oneline --decorate";
