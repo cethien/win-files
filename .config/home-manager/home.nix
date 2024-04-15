@@ -34,6 +34,7 @@
     pkgs.gopls
     pkgs.go-tools
     pkgs.delve
+    pkgs.goose
     pkgs.goreleaser
     pkgs.hugo
 
