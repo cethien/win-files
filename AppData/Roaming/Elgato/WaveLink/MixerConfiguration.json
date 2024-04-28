@@ -29,55 +29,56 @@
                             "com.elgato.mix.local",
                             "com.elgato.mix.stream"
                         ],
-                        "filterConfigID": "52EE02B7-362F-4909-9939-CFC2DCE39682",
-                        "filterSettings": "VkMyIV8DAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjU3MC5WTWpMZ1RlLi4uLk8rZldhckFoY2tJMmJvOGxhOEhSTHQuaUhmVGxhaThGWW80MVk4SFJVVFlUSzNIeE85LkJPUkkwTHgua2JrTVdZellUWnJVRkh2SVdZeVVGY05FVmFrMGlIRFVsWWdVR2F6SUJIdndWY21rbGFWVWxieWsxYXQwaUh5M1JMdC5pSGZUV1pXa0ZZemdWT2hEU0x4VGlIZlRXWkhVVlptZ0ZjOEh4TDJUaUg5dkNUZ0lXWHNVRmNrSTJiOXZDVEFJVVBNQVJaajBpSHZIQkgxRUZhMFVWT2hIQ0x0LmlIdTNDT1BFalRBMERIb1FWT2hEaUhmWFdYclVXWThIQkx0LmlIdTNDT1BFalRBMERIb1FWT2hEQ0xoLmhjZ3dWY2swaUh3M0JMaDdoTzcuVVBSRVRTZmpGWThIaExoLmhjZ3dWY2swaUh2M0JMaDdoTzcuVVBSRVRTZmpGWThIeExoLmhjZ3dWY2swaUh5M0JNM2ZpTDBEQ016YmlNMmJpTXdIaUh1M0NPUEVqVEEwREhvUVZPaFBpSGZYV1hyVVdZOEhCTTEzeE00alNONFRDTXhIeUwxTGlMM0h4Szl2Q1RBSVVQTUFSWmowaUgwSEJIMUVGYTBVVk9oSFNNdjNCTGg3aE83LlVQUkVUU2ZqRlk4SGhNaC5oY2d3VmNrMGlIMDNCTGg3aE83LlVQUkVUU2ZqRlk4SHhNaC5oY2d3VmNrMGlIdy5DTHQuaUh1M0NPUEVqVEEwREhvUVZPaGZpSGZYV1hyVVdZOEhCTHQuaUh1M0NPUEVqVEEwREhvUVZPaGppSGZYV1hyVVdZOEhCTHQuaUh1M0NPdS5VWHhFVmFrUVdZeE1tTzc3aFRSTWlMUElXWXlVRmNGa0ZhazRDLi4uLi4uLi4uLi5mUlVNVFFQSVdaMUVGY2tRVFh6RUYuQURmUDRBV1h5TUcuQUR2Li56QS4uLi4uLi4uLkpVMFBFQWtib1lXWHpVRlFnUVdYPC9JQ29tcG9uZW50PjwvVlNUM1BsdWdpblN0YXRlPgA=",
-                        "pluginCategory": "Dynamics|Stereo",
-                        "pluginDisplayName": "RoughRider3",
-                        "pluginID": "e4022018",
-                        "pluginOriginalName": "RoughRider3",
+                        "filterConfigID": "4515643C-7C27-4026-8857-43E9D2DF27A2",
+                        "filterSettings": "VkMyIZQNAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjI1MjkuVk1qTGd2WUIuLi5PK2ZXYXJBaGNrSTJibzhsYThIUkx0LmlIZlRsYWk4RllvNDFZOEhSVVRZVEszSHhPOS5CT1BFbGJnMFZZelVsYnk0Q09QRWpUQTBESG9RVk9oSFRYdFFGSHcuaFFvd0Zja0lHSEJrR2JnTTJiaC5oY2d3VmNrMGlIdjNCTGg3aE83LlVQUkVUU2ZqRlk4SGhQZzRGWWZEQ0hGa0ZhelVsYmZYamJrRVdjazQxWDRJQkgxRUZhMFVWT2hIQ0x0LmlIdTNDT1BFalRBMERIb1FWT2hIVFh0UUZIdy5oUW93RmNrSUdIR0VWWnRJQkgxRUZhMFVWT2hEaUt2SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqQVJMZlhUWnJRV1l4QVJUMEVGYW9RV2RoLmhjZ3dWY2swaUh2M3hNdy5DTHYuQ0x5ZlNMelhTTjJIeU1oN2hPNy5VUFJFVFNmakZZOEhoUGc0RllmRENIRmtGYXpVbGJmUFVkdlVsSGZYV1hyVVdZOEhCTHQuaUh1M0NPUEVqVEEwREhvUVZPaEhUWHRRRkh3LmhRb3dGY2tJR0hWazFib0lGYWtJQkgxRUZhMFVWT2hEaUt2SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqQWhMZlhUWnJRV1l4QWhQNEFXWHlNbUhmWFdYclVXWThIQkx0LmlIdTNDT1BFalRBMERIb1FWT2hIVFh0UUZIeC5oUW93RmNrSUdIRklXWXdVV1l0TVZkaC5oY2d3VmNrMGlId1BTTnQuaUh1M0NPUEVqVEEwREhvUVZPaEhUWHRRRkh4LmhRb3dGY2tJR0hHRVZadElCSDFFRmEwVVZPaERpSzFYU040alNONFR5TXZmQ00xVGlNaDdoTzcuVVBSRVRTZmpGWThIaFBnNEZZZkhDSEZrRmF6VWxiZkRVY2d3Vlp6a21IZlhXWHJVV1k4SGhMdExTTjRqU040ZlNNMWpDTTNmU015SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqQWhMZlhUWnJRV1l4QUJVNEFXWWguaGNnd1ZjazBpSHgzQkxoN2hPNy5VUFJFVFNmakZZOEhoUGc0RllmSENIRmtGYXpVbGJmWFVaeWtsWHJVbEhmWFdYclVXWThIUkx0LmlIdTNDT1BFalRBMERIb1FWT2hIVFh0UUZIeS5oUW93RmNrSUdIQmtHYmdNMmJoLmhjZ3dWY2swaUh2M0JMaDdoTzcuVVBSRVRTZmpGWThIaFBnNEZZZkxDSEZrRmF6VWxiZlhqYmtFV2NrNDFYNElCSDFFRmEwVVZPaEhDTnZmaUt2SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqQXhMZlhUWnJRV1l4QXhRZ2tsYWguaGNnd1ZjazBpSHczeE0wSHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqQXhMZlhUWnJRV1l4QVJUMEVGYW9RV2RoLmhjZ3dWY2swaUh3M3hNdy5DTHYuQ0x5ZlNMelhTTjJMaUh1M0NPUEVqVEEwREhvUVZPaEhUWHRRRkh5LmhRb3dGY2tJR0hUa0dia0lCSDFFRmEwVVZPaEhpS3ZIeEs5dkNUQUlVUE1BUlpqMGlIQkVsYWpBeExmWFRaclFXWXhBaFVvTVdaaHdWWWguaGNnd1ZjazBpSHczQkxoN2hPNy5VUFJFVFNmakZZOEhoUGc0RllmUENIRmtGYXpVbGJmSFRkdkUxYnlJQkgxRUZhMFVWT2guaUt2SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqQUJNZlhUWnJRV1l4QWhReFVWYjBVbGFpa21IZlhXWHJVV1k4SFJMeUhpS3ZIeEs5dkNUQUlVUE1BUlpqMGlIQkVsYWpBQk1mWFRaclFXWXhBeFFna2xhaC5oY2d3VmNrMGlIdjNoTTBqU040alNOMVhpTXhEeUw0ZlNOaDdoTzcuVVBSRVRTZmpGWThIaFBnNEZZZlBDSEZrRmF6VWxiZkRVY2d3Vlp6a21IZlhXWHJVV1k4SEJMdGJTTHYuQ0x2LnlMM0RDTTFqeU14YmlIdTNDT1BFalRBMERIb1FWT2hIVFh0UUZIei5oUW93RmNrSUdIVGtHYmtJQkgxRUZhMFVWT2hIaUt2SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqQUJNZlhUWnJRV1l4QWhVb01XWmh3VlloLmhjZ3dWY2swaUh3M0JMaDdoTzcuVVBSRVRTZmpGWThIaFBnNEZZZlRDSEZrRmF6VWxiZkhUZHZFMWJ5SUJIMUVGYTBVVk9oLmlLdkh4Szl2Q1RBSVVQTUFSWmowaUhCRWxhakFSTWZYVFpyUVdZeEFoUXhVVmIwVWxhaWttSGZYV1hyVVdZOEh4TXdUQ050LmlIdTNDT1BFalRBMERIb1FWT2hIVFh0UUZIMC5oUW93RmNrSUdIR0VWWnRJQkgxRUZhMFVWT2guaUswTFNONGpTTjRYU0wzVHlMdkh5TXlIeEs5dkNUQUlVUE1BUlpqMGlIQkVsYWpBUk1mWFRaclFXWXhBUlQwRUZhb1FXZGguaGNnd1ZjazBpSHYzQk12alNONGpTTjRYQ014THlNeER5TGg3aE83LlVQUkVUU2ZqRlk4SGhQZzRGWWZUQ0hGa0ZhelVsYmZQVWR2VWxIZlhXWHJVV1k4SGhMdC5pSHUzQ09QRWpUQTBESG9RVk9oSFRYdFFGSDAuaFFvd0Zja0lHSFZrMWJvSUZha0lCSDFFRmEwVVZPaERpS3ZIeEs5dkNUQUlVUE1BUlpqMGlIQkVsYWpBaE1mWFRaclFXWXhBaFA0QVdYeU1tSGZYV1hyVVdZOEhCTHQuaUh1M0NPUEVqVEEwREhvUVZPaEhUWHRRRkgxLmhRb3dGY2tJR0hGSVdZd1VXWXRNVmRoLmhjZ3dWY2swaUh4LmlLdkh4Szl2Q1RBSVVQTUFSWmowaUhCRWxhakFoTWZYVFpyUVdZeEF4UWdrbGFoLmhjZ3dWY2swaUh3M0JMaDdoTzcuVVBSRVRTZmpGWThIaFBnNEZZZlhDSEZrRmF6VWxiZkRVY2d3Vlp6a21IZlhXWHJVV1k4SEJMdGJTTHYuQ0x2LnlMM0RDTTFqeU14YmlIdTNDT1BFalRBMERIb1FWT2hIVFh0UUZIMS5oUW93RmNrSUdIVGtHYmtJQkgxRUZhMFVWT2hIaUt2SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqQWhNZlhUWnJRV1l4QWhVb01XWmh3VlloLmhjZ3dWY2swaUh2M0JMaDdoTzcuVVBSRVRTZmpGWThIaFBnNEZZZmJDSEZrRmF6VWxiZkhUZHZFMWJ5SUJIMUVGYTBVVk9oLmlLdkh4Szl2Q1RBSVVQTUFSWmowaUhCRWxhakF4TWZYVFpyUVdZeEFoUXhVVmIwVWxhaWttSGZYV1hyVVdZOEhoTHYzQkxoN2hPNy5VUFJFVFNmakZZOEhoUGc0RllmYkNIRmtGYXpVbGJmYlRYbzRsSGZYV1hyVVdZOEhSTHQuaUh1M0NPUEVqVEEwREhvUVZPaEhUWHRRRkgyLmhRb3dGY2tJR0hRVVdYcmtGYzRJQkgxRUZhMFVWT2guaUsyRENMdi5DTHZMQ053UGlNNGJpTDJIeEs5dkNUQUlVUE1BUlpqMGlIQkVsYWpBeE1mWFRaclFXWXhBQlU0QVdZaC5oY2d3VmNrMGlIeDNCTGg3aE83LlVQUkVUU2ZqRlk4SGhQZzRGWWZiQ0hGa0ZhelVsYmZYVVp5a2xYclVsSGZYV1hyVVdZOEhCTHQuaUh1M0NPUEVqVEEwREhvUVZPaEhUWHRRRkgzLmhRb3dGY2tJR0hCa0diZ00yYmguaGNnd1ZjazBpSHYzQkxoN2hPNy5VUFJFVFNmakZZOEhoUGc0RllmZkNIRmtGYXpVbGJmWGpia0VXY2s0MVg0SUJIMUVGYTBVVk9oSENMdi5DTHQuaUh1M0NPUEVqVEEwREhvUVZPaEhUWHRRRkgzLmhRb3dGY2tJR0hHRVZadElCSDFFRmEwVVZPaERpS3ZIeEs5dkNUQUlVUE1BUlpqMGlIQkVsYWpBQk5mWFRaclFXWXhBUlQwRUZhb1FXZGguaGNnd1ZjazBpSHYzeE13LkNMdi5DTHlmU0x6WFNOMkh5TWg3aE83LlVQUkVUU2ZqRlk4SGhQZzRGWWZmQ0hGa0ZhelVsYmZQVWR2VWxIZlhXWHJVV1k4SEJNdC5pSHUzQ09QRWpUQTBESG9RVk9oSFRYdFFGSDMuaFFvd0Zja0lHSFZrMWJvSUZha0lCSDFFRmEwVVZPaERpS3ZIeEs5dnlLUEVsYmcwVll6VWxieTRDLi4uLi4uLi4uLi5mUlVNVFFQSVdaMUVGY2tRVFh6RUYuQURmUDRBV1h5TUcuQUR2Li56QS4uLi4uLi4uLkpVMFBFQWtib1lXWHpVRlFnUVdYPC9JQ29tcG9uZW50PjwvVlNUM1BsdWdpblN0YXRlPgA=",
+                        "pluginCategory": "Fx",
+                        "pluginDisplayName": "Elgato EQ",
+                        "pluginID": "e9514180",
+                        "pluginOriginalName": "Elgato EQ",
                         "pluginURL": "",
-                        "pluginVendor": "Audio Damage, Inc."
+                        "pluginVendor": "Elgato"
                     },
                     {
                         "activeMixerIDs": [
                             "com.elgato.mix.local",
                             "com.elgato.mix.stream"
                         ],
-                        "filterConfigID": "0DA285E4-3E73-4E90-BB04-941B4CA10AC9",
-                        "filterSettings": "VkMyIXwAAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjE2Li4uLmYrLi4uLjlDLi4uLi4uLi4uLi48L0lDb21wb25lbnQ+PC9WU1QzUGx1Z2luU3RhdGU+AA==",
-                        "pluginCategory": "Dynamics",
-                        "pluginDisplayName": "LoudMax",
-                        "pluginID": "9e4ed9f9",
-                        "pluginOriginalName": "LoudMax",
+                        "filterConfigID": "16C20D3C-5D89-4CBE-ADB6-B451853E5E1B",
+                        "filterSettings": "VkMyIckCAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjQ1Ny5WTWpMZ1BYLi4uLk8rZldhckFoY2tJMmJvOGxhOEhSTHQuaUhmVGxhaThGWW80MVk4SFJVVFlUSzNIeE85LkJPaThWYXZJV1l5TTJheEFVWHhFVmF5NENPUEVqVEEwREhvUVZPaERGY3pFMVhxSUJIMUVGYTBVVk9oSENMdC5DTHYuQ0wyWGlMNExTTnpUeUxoN2hPNy5VUFJFVFNmakZZOEhSWDBRMmFzRTFaa1VHYmguaGNnd1ZjazBpSHczQkxoN2hPNy5VUFJFVFNmakZZOEhoWDRBV1h5TW1IZlhXWHJVV1k4SEJMdC5pSHUzQ09QRWpUQTBESG9RVk9oYlZYbzRsSGZYV1hyVVdZOEhSTHQuaUh1M0NPUEVqVEEwREhvUVZPaEhXWHprMWFoLmhjZ3dWY2swaUh6M0JMaDdoTzcuVVBSRVRTZmpGWThIaGJrd1ZZZ01XWWguaGNnd1ZjazBpSHdQU050alNONGpDTnpiQ013SFNMdmppSHUzQ09QRWpUQTBESG9RVk9oUEdaeFUxYm44RmFqSUJIMUVGYTBVVk9oelJMdzNSTTMuQ0x2RENOeURDTDBQaU00SHhLOXZTWWprRmN1STJUa1FHY280MVl5QXhibjhWY3JRRlN1RUZZVFVHY3VJV1pnd1ZPaC5pSHUzQ091TDFhc0FtYmtNMmJ1SUdUZ0lXWHNNbU8uLi4uLi4uLi4uLi5KVTBQRUFrYm9ZV1h6VUZRZ1FXWC5EUC5Ca0diZ00yYi5EUC5DLlBHLi4uLi4uLi4ublRVQ1VEVHhrbGNnUVdZREVGY2dBPC9JQ29tcG9uZW50PjwvVlNUM1BsdWdpblN0YXRlPgA=",
+                        "pluginCategory": "Fx",
+                        "pluginDisplayName": "Elgato Compressor",
+                        "pluginID": "e9546b7c",
+                        "pluginOriginalName": "Elgato Compressor",
                         "pluginURL": "",
-                        "pluginVendor": "Thomas Mundt"
+                        "pluginVendor": "Elgato"
                     }
                 ],
                 "identifier": "ROOT#UNNAMED_DEVICE#0000#{6994AD04-93EF-11D0-A3CC-00A0C9223196}\\RTXWAVE13",
                 "mutedMixerIDs": [
-                    "com.elgato.mix.stream",
                     "com.elgato.mix.local"
                 ],
                 "name": "Mikrofon (NVIDIA Broadcast)",
                 "nodeType": 1,
                 "userProvidedName": "Mikrofon (NVIDIA Broadcast)",
                 "volumes": {
-                    "com.elgato.mix.microphoneFX": 1.0
+                    "com.elgato.mix.microphoneFX": 1.0,
+                    "com.elgato.mix.stream": 0.85
                 }
             },
             {
                 "color": "#FF6C3E",
                 "identifier": "PCM_OUT_01_V_08_SD6",
                 "mutedMixerIDs": [
+                    "com.elgato.mix.stream",
                     "com.elgato.mix.microphoneFX"
                 ],
                 "name": "SFX",
                 "nodeType": 2,
                 "userProvidedName": "SFX / Music",
                 "volumes": {
-                    "com.elgato.mix.local": 0.5,
+                    "com.elgato.mix.local": 0.55,
                     "com.elgato.mix.microphoneFX": 1.0,
-                    "com.elgato.mix.stream": 0.0
+                    "com.elgato.mix.stream": 1.0
                 }
             },
             {
@@ -89,9 +90,9 @@
                 "name": "Wave Link Game",
                 "nodeType": 2,
                 "volumes": {
-                    "com.elgato.mix.local": 0.3,
+                    "com.elgato.mix.local": 0.5,
                     "com.elgato.mix.microphoneFX": 1.0,
-                    "com.elgato.mix.stream": 0.6
+                    "com.elgato.mix.stream": 0.73
                 }
             },
             {
@@ -117,14 +118,14 @@
                             "com.elgato.mix.local",
                             "com.elgato.mix.stream"
                         ],
-                        "filterConfigID": "52C9F302-F4D4-4376-B8D9-2B7A9B53E925",
-                        "filterSettings": "VkMyIXwAAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjE2Li4uLmYrLi4uLjlDLi4uLi4uLi4uLi48L0lDb21wb25lbnQ+PC9WU1QzUGx1Z2luU3RhdGU+AA==",
-                        "pluginCategory": "Dynamics",
-                        "pluginDisplayName": "LoudMax",
-                        "pluginID": "9e4ed9f9",
-                        "pluginOriginalName": "LoudMax",
+                        "filterConfigID": "2363F926-D814-41B8-BECF-8BF2E2452BF9",
+                        "filterSettings": "VkMyIckCAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjQ1Ny5WTWpMZ1BYLi4uLk8rZldhckFoY2tJMmJvOGxhOEhSTHQuaUhmVGxhaThGWW80MVk4SFJVVFlUSzNIeE85LkJPaThWYXZJV1l5TTJheEFVWHhFVmF5NENPUEVqVEEwREhvUVZPaERGY3pFMVhxSUJIMUVGYTBVVk9oSENMdC5DTHYuQ0wyWGlMNExTTnpUeUxoN2hPNy5VUFJFVFNmakZZOEhSWDBRMmFzRTFaa1VHYmguaGNnd1ZjazBpSHczQkxoN2hPNy5VUFJFVFNmakZZOEhoWDRBV1h5TW1IZlhXWHJVV1k4SEJMdC5pSHUzQ09QRWpUQTBESG9RVk9oYlZYbzRsSGZYV1hyVVdZOEhSTHQuaUh1M0NPUEVqVEEwREhvUVZPaEhXWHprMWFoLmhjZ3dWY2swaUh6M0JMaDdoTzcuVVBSRVRTZmpGWThIaGJrd1ZZZ01XWWguaGNnd1ZjazBpSHdQU050alNONGpDTnpiQ013SFNMdmppSHUzQ09QRWpUQTBESG9RVk9oUEdaeFUxYm44RmFqSUJIMUVGYTBVVk9oelJMdzNSTTMuQ0x2RENOeURDTDBQaU00SHhLOXZTWWprRmN1STJUa1FHY280MVl5QXhibjhWY3JRRlN1RUZZVFVHY3VJV1pnd1ZPaC5pSHUzQ091TDFhc0FtYmtNMmJ1SUdUZ0lXWHNNbU8uLi4uLi4uLi4uLi5KVTBQRUFrYm9ZV1h6VUZRZ1FXWC5EUC5Ca0diZ00yYi5EUC5DLlBHLi4uLi4uLi4ublRVQ1VEVHhrbGNnUVdZREVGY2dBPC9JQ29tcG9uZW50PjwvVlNUM1BsdWdpblN0YXRlPgA=",
+                        "pluginCategory": "Fx",
+                        "pluginDisplayName": "Elgato Compressor",
+                        "pluginID": "e9546b7c",
+                        "pluginOriginalName": "Elgato Compressor",
                         "pluginURL": "",
-                        "pluginVendor": "Thomas Mundt"
+                        "pluginVendor": "Elgato"
                     }
                 ],
                 "identifier": "PCM_OUT_01_V_06_SD5",
@@ -144,36 +145,36 @@
                 "identifier": "PCM_OUT_01_V_02_SD3",
                 "mutedMixerIDs": [
                     "com.elgato.mix.microphoneFX",
-                    "com.elgato.mix.stream"
+                    "com.elgato.mix.stream",
+                    "com.elgato.mix.local"
                 ],
                 "name": "Wave Link Music",
                 "nodeType": 2,
                 "userProvidedName": "OBS Music",
                 "volumes": {
-                    "com.elgato.mix.local": 0.52,
+                    "com.elgato.mix.local": 1.0,
                     "com.elgato.mix.microphoneFX": 1.0,
-                    "com.elgato.mix.stream": 0.0
+                    "com.elgato.mix.stream": 0.82
                 }
             },
             {
                 "color": "#23DE63",
                 "identifier": "PCM_OUT_01_V_12_SD8",
                 "mutedMixerIDs": [
-                    "com.elgato.mix.microphoneFX",
-                    "com.elgato.mix.stream"
+                    "com.elgato.mix.microphoneFX"
                 ],
                 "name": "Wave Link Aux 1",
                 "nodeType": 2,
                 "userProvidedName": "OBS Monitor",
                 "volumes": {
-                    "com.elgato.mix.local": 0.07,
+                    "com.elgato.mix.local": 0.7,
                     "com.elgato.mix.microphoneFX": 1.0
                 }
             }
         ],
         "outputs": [
             {
-                "identifier": "BTHENUM#{0000110B-0000-1000-8000-00805F9B34FB}_LOCALMFG&005D#8&1DA27C2A&0&AC122FC80AF2_C00000000#{6994AD04-93EF-11D0-A3CC-00A0C9223196}\\SRC@@SystemDefaultDevice@@",
+                "identifier": "BTHENUM#{0000110B-0000-1000-8000-00805F9B34FB}_LOCALMFG&005D#8&3340203&0&AC122FC80AF2_C00000000#{6994AD04-93EF-11D0-A3CC-00A0C9223196}\\SRC@@SystemDefaultDevice@@",
                 "mixerID": "com.elgato.mix.local",
                 "muted": false,
                 "name": "Kopfhörer (Soundcore Life Q30)",
@@ -189,7 +190,7 @@
                 "name": "No Additional Output Device",
                 "nodeType": 2,
                 "systemDefaultDevice": false,
-                "terminalType": 1,
+                "terminalType": 4,
                 "volume": 1.0
             },
             {

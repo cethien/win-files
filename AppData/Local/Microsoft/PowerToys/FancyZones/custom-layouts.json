@@ -1,116 +1,80 @@
 {
   "custom-layouts": [
     {
-      "uuid": "{2099A604-90A2-4D15-A5E6-B00B3AF9A56C}",
-      "name": "Autism",
-      "type": "grid",
+      "uuid": "{551DE089-C590-4C5A-9EEA-CC32819F6845}",
+      "name": "1920x1080 Autism",
+      "type": "canvas",
       "info": {
-        "rows": 3,
-        "columns": 3,
-        "rows-percentage": [
-          1317,
-          7357,
-          1326
+        "ref-width": 3440,
+        "ref-height": 1392,
+        "zones": [
+          {
+            "X": 8,
+            "Y": 6,
+            "width": 3422,
+            "height": 1378
+          },
+          {
+            "X": 569,
+            "Y": 35,
+            "width": 2293,
+            "height": 971
+          }
         ],
-        "columns-percentage": [
-          1818,
-          6364,
-          1818
-        ],
-        "cell-child-map": [
-          [
-            0,
-            1,
-            4
-          ],
-          [
-            0,
-            2,
-            4
-          ],
-          [
-            0,
-            3,
-            4
-          ]
-        ],
-        "show-spacing": true,
-        "spacing": 16,
-        "sensitivity-radius": 20
+        "sensitivity-radius": 0
       }
     },
     {
-      "uuid": "{CB1CA899-92AA-4984-8418-045E09A5DC57}",
-      "name": "Ultrawide Autism",
-      "type": "grid",
+      "uuid": "{90AA0D96-F1E1-4692-A067-BF7481C9FB07}",
+      "name": "3440x1440 Autism",
+      "type": "canvas",
       "info": {
-        "rows": 4,
-        "columns": 3,
-        "rows-percentage": [
-          1394,
-          3606,
-          3606,
-          1394
+        "ref-width": 3440,
+        "ref-height": 1392,
+        "zones": [
+          {
+            "X": 0,
+            "Y": 0,
+            "width": 3440,
+            "height": 1392
+          },
+          {
+            "X": 877,
+            "Y": 31,
+            "width": 1690,
+            "height": 1090
+          },
+          {
+            "X": 2577,
+            "Y": 10,
+            "width": 853,
+            "height": 676
+          },
+          {
+            "X": 2577,
+            "Y": 706,
+            "width": 853,
+            "height": 676
+          },
+          {
+            "X": 10,
+            "Y": 10,
+            "width": 857,
+            "height": 676
+          },
+          {
+            "X": 10,
+            "Y": 706,
+            "width": 857,
+            "height": 676
+          },
+          {
+            "X": 1099,
+            "Y": 28,
+            "width": 1240,
+            "height": 735
+          }
         ],
-        "columns-percentage": [
-          2496,
-          5007,
-          2497
-        ],
-        "cell-child-map": [
-          [
-            0,
-            2,
-            5
-          ],
-          [
-            0,
-            3,
-            5
-          ],
-          [
-            1,
-            3,
-            6
-          ],
-          [
-            1,
-            4,
-            6
-          ]
-        ],
-        "show-spacing": true,
-        "spacing": 16,
-        "sensitivity-radius": 20
-      }
-    },
-    {
-      "uuid": "{3364E77B-1751-4E2C-8146-10A2FAB4ED0D}",
-      "name": "Grid",
-      "type": "grid",
-      "info": {
-        "rows": 2,
-        "columns": 2,
-        "rows-percentage": [
-          5010,
-          4990
-        ],
-        "columns-percentage": [
-          5000,
-          5000
-        ],
-        "cell-child-map": [
-          [
-            0,
-            2
-          ],
-          [
-            1,
-            3
-          ]
-        ],
-        "show-spacing": true,
-        "spacing": 16,
         "sensitivity-radius": 20
       }
     }
