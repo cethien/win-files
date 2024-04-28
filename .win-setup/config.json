@@ -23,6 +23,9 @@
 					"id": "Klocman.BulkCrapUninstaller"
 				},
 				{
+					"id": "GeekUninstaller.GeekUninstaller"
+				},
+				{
 					"id": "AntibodySoftware.WizTree"
 				}
 			]
@@ -72,6 +75,9 @@
 				{
 					"id": "VivaldiTechnologies.Vivaldi",
 					"exclude_from_updatefile": true
+				},
+				{
+					"id": "eMClientInc.eMClient"
 				},
 				{
 					"id": "Spotify.Spotify",
@@ -125,6 +131,9 @@
 					"id": "Google.Drive"
 				},
 				{
+					"id": "KeePassXCTeam.KeePassXC"
+				},
+				{
 					"id": "Rclone.Rclone"
 				},
 				{
@@ -156,9 +165,13 @@
 			],
 			"prepare_script": [
 				"[Environment]::SetEnvironmentVariable(\"WSLENV\", $env:WSLENV + \":USERprofile/p:POSH_THEMES_PATH/p\", \"USER\")",
-				"wsl --install Ubuntu"
+				"curl -fsLO https://github.com/nix-community/NixOS-WSL/releases/latest/download/nixos-wsl.tar.gz $HOME\\nixos-wsl.tar.gz",
+				"wsl --import NixOS $HOME\\NixOS\\ $HOME\\nixos-wsl.tar.gz --version 2"
 			],
 			"winget_packages": [
+				{
+					"id": "Oven-sh.Bun"
+				},
 				{
 					"id": "Docker.DockerDesktop",
 					"install_flags": [
@@ -175,6 +188,9 @@
 				"gaming"
 			],
 			"winget_packages": [
+				{
+					"id": "NexusMods.Vortex"
+				},
 				{
 					"id": "Valve.Steam",
 					"exclude_from_updatefile": true
