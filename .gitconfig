@@ -1,10 +1,12 @@
+[core]
+	eol = lf
+	autocrlf = input
 [user]
 	name = cethien
 	email = borislaw.sotnikow@gmx.de
 [init]
 	defaultBranch = main
-[core]
-	eol = lf
-	autocrlf = input
+[pull]
+	rebase = true
 [alias]
 	ignore = "!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
