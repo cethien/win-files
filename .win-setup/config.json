@@ -163,15 +163,21 @@
 			"profiles": [
 				"dev"
 			],
-			"prepare_script": [
-				"[Environment]::SetEnvironmentVariable(\"WSLENV\", $env:WSLENV + \":USERprofile/p:POSH_THEMES_PATH/p\", \"USER\")",
-				"curl -fsLO https://github.com/nix-community/NixOS-WSL/releases/latest/download/nixos-wsl.tar.gz $HOME\\nixos-wsl.tar.gz",
-				"wsl --import NixOS $HOME\\NixOS\\ $HOME\\nixos-wsl.tar.gz --version 2"
-			],
 			"winget_packages": [
 				{
 					"id": "Oven-sh.Bun"
-				},
+				}
+			]
+		},
+		{
+			"profiles": [
+				"dev"
+			],
+			"prepare_script": [
+				"[Environment]::SetEnvironmentVariable(\"WSLENV\", $env:WSLENV + \":USERprofile/p:POSH_THEMES_PATH/p\", \"USER\")",
+				"wsl --update"
+			],
+			"winget_packages": [
 				{
 					"id": "Docker.DockerDesktop",
 					"install_flags": [
@@ -197,9 +203,8 @@
 				}
 			],
 			"post_install_script": [
-				"Start-Process steam://install/1085660",
-				"Start-Process steam://install/1118310",
-				"Start-Process steam://install/699130"
+				"# install Destiny 2",
+				"Start-Process steam://install/1085660"
 			]
 		}
 	]
