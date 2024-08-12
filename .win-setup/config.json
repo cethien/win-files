@@ -114,8 +114,8 @@
 				}
 			],
 			"post_install_script": [
-				"oh-my-posh font install CodeNewRoman --user",
-				"oh-my-posh font install FiraCode --user"
+				"oh-my-posh font install CodeNewRoman",
+				"oh-my-posh font install FiraCode"
 			]
 		},
 		{
