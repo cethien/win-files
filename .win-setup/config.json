@@ -4,23 +4,20 @@
 		{
 			"script": [
 				"Remove-Item alias:curl",
-				"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value 0",
-				"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search -Name SearchBoxTaskbarMode -Value 0 -Type DWord -Force",
-				"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Feeds -Name ShellFeedsTaskbarOpenOnHover -Value 0 -Type DWord -Force",
-				"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced -Name Hidden -Value 1 -Type DWord -Force",
-				"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced -Name HideIcons -Value 1 -Type DWord -Force",
-				"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced -Name OnboardUnpinCortana -Value 1 -Type DWord -Force",
-				"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced -Name ShowCortanaButton -Value 0 -Type DWord -Force",
-				"Set-ItemProperty -Path HKCU:\\Control Panel\\Accessibility\\StickyKeys -Name Flags -Type String -Value \"506\"",
-				"Set-ItemProperty -Path HKCU:\\Control Panel\\Accessibility\\ToggleKeys -Name Flags -Type String -Value \"58\"",
-				"Set-ItemProperty -Path HKCU:\\Control Panel\\Accessibility\\Keyboard Response -Name Flags -Type String -Value \"122\""
+				"Set-ItemProperty -Path \"HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\" -Name AppsUseLightTheme -Value 0",
+				"Set-ItemProperty -Path \"HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" -Name SearchBoxTaskbarMode -Value 0 -Type DWord -Force",
+				"Set-ItemProperty -Path \"HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Feeds\" -Name ShellFeedsTaskbarOpenOnHover -Value 0 -Type DWord -Force",
+				"Set-ItemProperty -Path \"HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" -Name Hidden -Value 1 -Type DWord -Force",
+				"Set-ItemProperty -Path \"HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" -Name HideIcons -Value 1 -Type DWord -Force",
+				"Set-ItemProperty -Path \"HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" -Name OnboardUnpinCortana -Value 1 -Type DWord -Force",
+				"Set-ItemProperty -Path \"HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" -Name ShowCortanaButton -Value 0 -Type DWord -Force",
+				"Set-ItemProperty -Path \"HKCU:\\Control Panel\\Accessibility\\StickyKeys\" -Name Flags -Type String -Value \"506\"",
+				"Set-ItemProperty -Path \"HKCU:\\Control Panel\\Accessibility\\ToggleKeys\" -Name Flags -Type String -Value \"58\"",
+				"Set-ItemProperty -Path \"HKCU:\\Control Panel\\Accessibility\\Keyboard Response\" -Name Flags -Type String -Value \"122\""
 			],
 			"winget_packages": [
 				{
 					"id": "Microsoft.PowerToys"
-				},
-				{
-					"id": "Klocman.BulkCrapUninstaller"
 				},
 				{
 					"id": "GeekUninstaller.GeekUninstaller"
@@ -42,16 +39,7 @@
 					"id": "chrisant996.Clink"
 				},
 				{
-					"id": "Microsoft.PowerShell"
-				},
-				{
 					"id": "M2Team.NanaZip"
-				},
-				{
-					"id": "Git.Git",
-					"install_flags": [
-						"--interactive"
-					]
 				},
 				{
 					"id": "Neovim.Neovim"
@@ -73,7 +61,7 @@
 		{
 			"winget_packages": [
 				{
-					"id": "VivaldiTechnologies.Vivaldi",
+					"id": "Vivaldi.Vivaldi",
 					"exclude_from_updatefile": true
 				},
 				{
@@ -92,6 +80,15 @@
 					"install_flags": [
 						"--interactive"
 					]
+				},
+				{
+					"id": "JGraph.Draw"
+				},
+				{
+					"id": "dotPDN.PaintDotNet"
+				},
+				{
+					"id": "Inkscape.Inkscape"
 				},
 				{
 					"id": "GIMP.GIMP"
@@ -166,6 +163,9 @@
 			"winget_packages": [
 				{
 					"id": "Oven-sh.Bun"
+				},
+				{
+					"id": "DBeaver.DBeaver"
 				}
 			]
 		},
@@ -174,7 +174,7 @@
 				"dev"
 			],
 			"prepare_script": [
-				"[Environment]::SetEnvironmentVariable(\"WSLENV\", $env:WSLENV + \":USERprofile/p:POSH_THEMES_PATH/p\", \"USER\")",
+				"[Environment]::SetEnvironmentVariable(\"WSLENV\", $env:WSLENV + \":USERPROFILE/p:POSH_THEMES_PATH/p\", \"USER\")",
 				"wsl --update"
 			],
 			"winget_packages": [
@@ -195,16 +195,9 @@
 			],
 			"winget_packages": [
 				{
-					"id": "NexusMods.Vortex"
-				},
-				{
 					"id": "Valve.Steam",
 					"exclude_from_updatefile": true
 				}
-			],
-			"post_install_script": [
-				"# install Destiny 2",
-				"Start-Process steam://install/1085660"
 			]
 		}
 	]
