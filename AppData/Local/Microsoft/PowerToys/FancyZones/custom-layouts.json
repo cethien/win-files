@@ -5,20 +5,26 @@
       "name": "1920x1080 Autism",
       "type": "canvas",
       "info": {
-        "ref-width": 3440,
-        "ref-height": 1392,
+        "ref-width": 1920,
+        "ref-height": 1032,
         "zones": [
           {
-            "X": 8,
-            "Y": 6,
-            "width": 3422,
-            "height": 1378
+            "X": 4,
+            "Y": 4,
+            "width": 1909,
+            "height": 1021
           },
           {
-            "X": 569,
-            "Y": 35,
-            "width": 2293,
-            "height": 971
+            "X": 317,
+            "Y": 25,
+            "width": 1279,
+            "height": 600
+          },
+          {
+            "X": 317,
+            "Y": 414,
+            "width": 1279,
+            "height": 600
           }
         ],
         "sensitivity-radius": 0
@@ -40,9 +46,9 @@
           },
           {
             "X": 877,
-            "Y": 31,
+            "Y": 10,
             "width": 1690,
-            "height": 1090
+            "height": 1372
           },
           {
             "X": 2577,
@@ -70,9 +76,15 @@
           },
           {
             "X": 1099,
-            "Y": 28,
+            "Y": 10,
             "width": 1240,
-            "height": 735
+            "height": 676
+          },
+          {
+            "X": 1099,
+            "Y": 706,
+            "width": 1240,
+            "height": 676
           }
         ],
         "sensitivity-radius": 20
