@@ -3,16 +3,6 @@ alias:
     value: nvim
   - name: vim
     value: nvim
-  - name: cat
-    value: 'bat -p'
-  - name: find
-    value: fd
-  - name: ls
-    value: 'eza -a --icons --group-directories-first --git'
-  - name: ll
-    value: 'eza -la --icons --group-directories-first --git'
-  - name: tree
-    value: 'eza -T --icons'
 
   - name: zip
     if: eq .OS "windows"
@@ -31,10 +21,6 @@ alias:
     if: eq .Shell "pwsh"
     value: . {{ .Home }}/scripts/update.ps1
 
-  - name: backup-folders
-    if: eq .Shell "pwsh"
-    value: . {{ .Home }}/scripts/backup-folders.ps1 -Folders
-
   - name: install
     if: eq .Shell "pwsh"
     value: . {{ .Home }}/scripts/install.ps1
@@ -43,10 +29,6 @@ alias:
   - name: ignore
     type: git
     value: '!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi'
-
-  - name: gh-new
-    if: eq .OS "linux"
-    value: gh repo create $1 --private --source . --push
 
 env:
   - name: POSH_THEME
