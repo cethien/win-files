@@ -1,5 +1,5 @@
 {
-	"$schema": "https://raw.githubusercontent.com/cethien/win-setup/main/schemas/config.schema.json",
+	"$schema": "https://raw.githubusercontent.com/cethien/setup/refs/heads/win/schemas/config.schema.json",
 	"actions": [
 		{
 			"script": [
