@@ -16,7 +16,7 @@
                             "com.elgato.mix.stream"
                         ],
                         "filterConfigID": "2B226511-2372-4817-82D2-818FD69D6684",
-                        "filterSettings": "VkMyIRcBAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJRWRpdENvbnRyb2xsZXI+MTI0Li4uLi5mUHdOTS5ELi4uLi4uLi5MLkEuLi4uLi4uLkNQLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uNysuLi4uLi4uLi4rTy4uLi4uLi4uUC5ELi4uLi4uLi5JLkEuLi4uLi4uLi4uLi4uLi4uLi5ILkQuLi4uLi4uLlQuQS4uLi4uLi5uQVAuLi4uLi48L0lFZGl0Q29udHJvbGxlcj48L1ZTVDNQbHVnaW5TdGF0ZT4A",
+                        "filterSettings": "VkMyIRcBAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJRWRpdENvbnRyb2xsZXI+MTI0Li4uLi5mUHdOTS5ELi4uLi4uLi5MLkEuLi4uLi4uLkNQLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uNysuLi4uLi4uLi4rTy4uLi4uLi4uUC5ELi4uLi4uLi5JLkEuLi4uLi4uLi4uLi4uLi4uLi5ILkQuLi4uLi4uLlQuQS4uLi4uLi5uQVBBLi4uLi48L0lFZGl0Q29udHJvbGxlcj48L1ZTVDNQbHVnaW5TdGF0ZT4A",
                         "pluginCategory": "Tools",
                         "pluginDisplayName": "Lisp",
                         "pluginID": "f8028c1e",
@@ -76,7 +76,7 @@
                 "nodeType": 2,
                 "userProvidedName": "SFX / Music",
                 "volumes": {
-                    "com.elgato.mix.local": 0.55,
+                    "com.elgato.mix.local": 0.2,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 1.0
                 }
@@ -90,7 +90,7 @@
                 "name": "Wave Link Game",
                 "nodeType": 2,
                 "volumes": {
-                    "com.elgato.mix.local": 0.5,
+                    "com.elgato.mix.local": 0.45,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.73
                 }

@@ -1,57 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <audioRoutingSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <AudioRouting AppExeName="C:\Program Files\WindowsApps\Microsoft.ZuneMusic_11.2309.6.0_x64__8wekyb3d8bbwe" WaveLinkChannel="Music" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Palworld\Pal\Binaries\Win64\Palworld-Win64-Shipping.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\bin\bg3.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\MusicBee\MusicBee.exe" WaveLinkChannel="Music" />
-  <AudioRouting AppExeName="C:\Users\boris\AppData\Local\Vivaldi\Application\vivaldi.exe" WaveLinkChannel="Browser" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Core Keeper\CoreKeeper.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Ghost Watchers\Ghost Watchers.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\System Shock Remake\SystemShock\Binaries\Win64\SystemReShock-Win64-Shipping.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Destiny 2\destiny2.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Halls of Torment\HallsOfTorment.exe" WaveLinkChannel="Game" />
   <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Vampire Survivors\VampireSurvivors.exe" WaveLinkChannel="Game" />
   <AudioRouting AppExeName="C:\Users\boris\AppData\Roaming\Spotify\Spotify.exe" WaveLinkChannel="SFX" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Headbangers Rhythm Royale\Headbangers.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\The First Descendant\M1\Binaries\Win64\M1-Win64-Shipping.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Kathy Rain Directors Cut\KathyRainDirectorsCut.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files\NVIDIA Corporation\NVIDIA Broadcast\NvVirtualCamera\NVIDIA Broadcast.exe" WaveLinkChannel="VoiceChat" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\AdGuard\Adguard.exe" WaveLinkChannel="System" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Space Marine 2\client_pc\root\bin\pc\Warhammer 40000 Space Marine 2 - Retail.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Enshrouded\enshrouded.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Brotato\Brotato.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Death Must Die\Death Must Die.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files\AdoptOpenJDK\jdk-17.0.0.18-openj9\bin\javaw.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Supermarket Together\Supermarket Together.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Remnant2\Remnant2\Binaries\Win64\Remnant2-Win64-Shipping.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" WaveLinkChannel="Browser" />
-  <AudioRouting AppExeName="C:\Program Files\Google\Chrome\Application\chrome.exe" WaveLinkChannel="Browser" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Helldivers 2\bin\helldivers2.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.18.2822.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe" WaveLinkChannel="System" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Once Human\ONCE_HUMAN.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files\VideoLAN\VLC\vlc.exe" WaveLinkChannel="SFX" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\The Finals\Discovery\Binaries\Win64\Discovery.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Users\boris\AppData\Local\youtube_music_desktop_app\app-2.0.1\youtube-music-desktop-app.exe" WaveLinkChannel="Music" />
-  <AudioRouting AppExeName="C:\Program Files\BellSoft\LibericaJDK-21\bin\javaw.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\No Man's Sky\Binaries\NMS.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Users\boris\Downloads\That's not my neighbor.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Users\boris\AppData\Local\Discord\app-1.0.9023\Discord.exe" WaveLinkChannel="System" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Content Warning\Content Warning.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Throne and Liberty\TL\Binaries\Win64\TL.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Shadows of Doubt\Shadows of Doubt.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin\XR_3DA.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Noita\noita.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Fallout New Vegas\FalloutNV.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\For The King\FTK.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files\WindowsApps\Microsoft.ZuneMusic_11.2310.8.0_x64__8wekyb3d8bbwe" WaveLinkChannel="SFX" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\For The King II\For The King II.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Users\boris\AppData\Roaming\itch\apps\thats-not-my-neighbor\That's not my neighbor.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\bin\bg3_dx11.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Users\boris\apps\soundux\soundux-0.2.7-windows-portable.exe" WaveLinkChannel="SFX" />
-  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\BattleBit Remastered\BattleBit.exe" WaveLinkChannel="Game" />
-  <AudioRouting AppExeName="C:\Program Files\LGHUB\lghub_agent.exe" WaveLinkChannel="System" />
+  <AudioRouting AppExeName="C:\Users\boris\AppData\Local\Vivaldi\Application\vivaldi.exe" WaveLinkChannel="Browser" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\UNLOVED\Unloved\Binaries\Win32\Unloved-Win32-Shipping.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops II\t6sp.exe" WaveLinkChannel="Game" />
   <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\WWZ\en_us\client\bin\pc\wwzRetail.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Leaf Blower Revolution\game.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files\NVIDIA Corporation\NVIDIA Broadcast\NvVirtualCamera\NVIDIA Broadcast.exe" WaveLinkChannel="VoiceChat" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\The First Descendant\M1\Binaries\Win64\M1-Win64-Shipping.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Core Keeper\CoreKeeper.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Space Marine 2\client_pc\root\bin\pc\Warhammer 40000 Space Marine 2 - Retail.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Rusty's Retirement\Rusty's Retirement.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files\BellSoft\LibericaJDK-21\bin\javaw.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Once Human\ONCE_HUMAN.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Legends of Idleon\LegendsOfIdleon.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops II\t6zm.exe" WaveLinkChannel="Game" />
+  <AudioRouting AppExeName="C:\Program Files (x86)\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin\XR_3DA.exe" WaveLinkChannel="Game" />
 </audioRoutingSettings>
