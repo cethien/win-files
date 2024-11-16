@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/cethien/aliae/refs/heads/main/resources/aliae.schema.json
+
 alias:
   - name: vi
     value: nvim
