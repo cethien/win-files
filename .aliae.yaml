@@ -6,6 +6,9 @@ alias:
   - name: vim
     value: nvim
 
+  - name: touch
+    value: New-Item -ItemType File -Path
+
   - name: zip
     if: eq .OS "windows"
     value: nanazipc
@@ -30,11 +33,11 @@ alias:
   # git
   - name: ignore
     type: git
-    value: '!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi'
+    value: "!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
 
 env:
   - name: POSH_THEME
-    value: '{{ env "POSH_THEMES_PATH" }}/custom/negligible.omp.json'
+    value: '{{ env "POSH_THEMES_PATH" }}/catppuccin_mocha.omp.json'
 
 script:
   - value: |
