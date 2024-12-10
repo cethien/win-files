@@ -1,6 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/cethien/aliae/refs/heads/main/resources/aliae.schema.json
 
 alias:
+  - name: ll
+    value: ls
+    if: eq .OS "windows"
+
   - name: vi
     value: nvim
   - name: vim
@@ -33,7 +37,7 @@ alias:
   # git
   - name: ignore
     type: git
-    value: "!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
+    value: '!gi() { curl -fsSL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi'
 
 env:
   - name: POSH_THEME
