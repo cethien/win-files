@@ -1,17 +1,39 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/cethien/aliae/refs/heads/main/resources/aliae.schema.json
+# yaml-language-server: $schema=https://aliae.dev/schema.json
 
 alias:
+  - name: ls
+    value: eza -1a --icons --group-directories-first --git
+
   - name: ll
-    value: ls
-    if: eq .OS "windows"
+    value: eza -la --icons --group-directories-first --git
+
+  - name: tree
+    value: eza -T --icons
+    
+  - name: cat
+    value: bat -p
+
+  - name: grep
+    value: rg
+
+  - name: find
+    value: fd
+    
+  - name: ff
+    value: fd --type f
+
+  - name: ffd
+    value: fd --type d
 
   - name: vi
     value: nvim
+  
   - name: vim
     value: nvim
 
   - name: touch
     value: New-Item -ItemType File -Path
+    if: eq .Shell "pwsh"
 
   - name: zip
     if: eq .OS "windows"
@@ -41,13 +63,15 @@ alias:
 
 env:
   - name: POSH_THEME
-    value: '{{ env "POSH_THEMES_PATH" }}/catppuccin_mocha.omp.json'
+    value: '{{ .Home }}/.omp/cethien.omp.json'
 
 script:
   - value: |
       load(io.popen('oh-my-posh init {{ .Shell }} --config %POSH_THEME%'):read("*a"))()
     if: match .Shell "cmd"
-  - value: |
+  - value: |  
+      Remove-Item Alias:cat -ErrorAction SilentlyContinue
+      Remove-Item Alias:ls -ErrorAction SilentlyContinue
       oh-my-posh init {{ .Shell }} --config $env:POSH_THEME | Invoke-Expression
     if: match .Shell "pwsh"
   - value: |

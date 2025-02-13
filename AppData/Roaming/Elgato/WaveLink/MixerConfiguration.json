@@ -14,8 +14,7 @@
                             "com.elgato.mix.local",
                             "com.elgato.mix.stream"
                         ],
-                        "filterConfigID": "43265762-31F3-4A0C-B017-1CA5F5988535",
-                        "filterSettings": "VkMyIaMBAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjIzNy5WTWpMZ1RMLi4uLk8rZldhckFoY2tJMmJvOGxhOEhSTHQuaUhmVGxhaThGWW80MVk4SFJVVFlUSzNIeE85LkJPUjRqU1Y4VlppVUZUZ0lXWHNNbU83LlVQUkVUU2ZqRlk4SGhVQVFESFJVRmFrRTFia0lCSDFFRmEwVVZPaEhTTXYzQkxoN2hPNy5VUFJFVFNmakZZOEhoVUFRREhUZ2xia01HWnV3RlloLmhjZ3dWY2swaUh2M0JOempTTjRqU04xUGlMeWJpTHdMU0xoN2hPNy5VUFJFVFNmakZZOEhoWDRBV1h5TW1IZlhXWHJVV1k4SEJMdC5pSHUzQ091SGtTTlkwYW9NVllQRWxiZzAxYjkuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLkpVMFBFQWtib1lXWHpVRlFnUVdYPC9JQ29tcG9uZW50PjwvVlNUM1BsdWdpblN0YXRlPgA=",
+                        "filterConfigID": "D6A967C3-FCA1-43ED-8DD5-66D26BFD0F91",
                         "pluginCategory": "Fx",
                         "pluginDisplayName": "Elgato Noise Removal",
                         "pluginID": "e954837c",
@@ -28,8 +27,7 @@
                             "com.elgato.mix.local",
                             "com.elgato.mix.stream"
                         ],
-                        "filterConfigID": "EABD7F0C-0236-465F-80E8-123FB8A89741",
-                        "filterSettings": "VkMyIfsDAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjY4Ny5WTWpMZ25sLi4uLk8rZldhckFoY2tJMmJvOGxhOEhSTHQuaUhmVGxhaThGWW80MVk4SFJVVFlUSzNIeE85LkJPU1FXWHpVbE83LlVYeEVWYWtRV1l4TW1PNy5VUFJFVFNmakZZOEhSUHpRV1hpc2xIZlhXWHJVV1k4SFJMdjNCTHYuQ0x2LlNOMExpTTJQeUx4SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqOGpha1lqYmtFV2NrNDFYNElCSDFFRmEwVVZPaEhTTXYuaUt2SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqOGpha0VVY2d3Vlp6a21IZlhXWHJVV1k4SGhMdC5pSHUzQ09QRWpUQTBESG9RVk9oSFRYdFExU3RVbFRnUVdadUlCSDFFRmEwVVZPaFBpS3ZIeEs5dkNUQUlVUE1BUlpqMGlIQkVsYWo4amFrUUVaeFUxYm44RmFqSUJIMUVGYTBVVk9oekJOdjNCTGg3aE83LlVQUkVUU2ZqRlk4SGhQZzRGWVRjMmFGSVdZd1VXWXRNVmRoLmhjZ3dWY2swaUgzLkNMdjNCTGg3aE83LlVQUkVUU2ZqRlk4SGhQZzRGWVRjMmFRVVdYcmtGYzRJQkgxRUZhMFVWT2hIaUt2SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqUTBjdUlVWHprMWFoLmhjZ3dWY2swaUh6M0JMaDdoTzcuVVBSRVRTZmpGWThIaFBnNEZZVGMyYVRnbGJrTUdadXdGWWguaGNnd1ZjazBpSHNmQ0x0LmlIdTNDT1BFalRBMERIb1FWT2hIVVlyVVZYeVVsSGZYV1hyVVdZOEhSTHYuaUt2SHhLOXZDVEFJVVBNQVJaajBpSFNnMWEwd0ZZTDhWWGpRVWN6OGxib0VGYWguaGNnd1ZjazBpSHczQkxoN2hPNy5VUFJFVFNmakZZOEhCVTBRMmF4a1ZYclFFWnhVMWJuOEZhaklCSDFFRmEwVVZPaHpCTnYzQkxoN2hPNzdCVGdJV1hzVUZja0kyYjl2U1Fqa0ZjdUlHSHlrbGRrMEJkOEhoTXpmaUhmTFdaNVVWSzQwaUh6YlNNaDdoTzc3eFR6RUZjazRDLi4uLi4uLi4uLi5mUlVNVFFQSVdaMUVGY2tRVFh6RUYuQURmUDRBV1h5TUcuQUR2Li56QS4uLi4uLi4uLkpVMFBFQWtib1lXWHpVRlFnUVdYPC9JQ29tcG9uZW50PjwvVlNUM1BsdWdpblN0YXRlPgA=",
+                        "filterConfigID": "560853D8-7208-4887-9030-52463CAB1FB3",
                         "pluginCategory": "Fx",
                         "pluginDisplayName": "Elgato De-Esser",
                         "pluginID": "e953ef1a",
@@ -38,12 +36,18 @@
                         "pluginVendor": "Elgato"
                     },
                     {
-                        "activeMixerIDs": [
-                            "com.elgato.mix.local",
-                            "com.elgato.mix.stream"
-                        ],
-                        "filterConfigID": "33360DC5-B61D-4F9B-943E-AB0D24C0FD3F",
-                        "filterSettings": "VkMyIbUCAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjQ0Mi5WTWpMZ1RXLi4uLk8rZldhckFoY2tJMmJvOGxhOEhSTHQuaUhmVGxhaThGWW80MVk4SFJVVFlUSzNIeE85LkJPaThWYXZJV1l5TTJheEFVWHhFVmF5NENPUEVqVEEwREhvUVZPaERGY3pFMVhxSUJIMUVGYTBVVk9oSENMdC5DTHYuQ0wyWGlMNExTTnpUeUxoN2hPNy5VUFJFVFNmakZZOEhSWDBRMmFzRTFaa1VHYmguaGNnd1ZjazBpSHczQkxoN2hPNy5VUFJFVFNmakZZOEhoWDRBV1h5TW1IZlhXWHJVV1k4SEJMdC5pSHUzQ09QRWpUQTBESG9RVk9oYlZYbzRsSGZYV1hyVVdZOEhSTHQuaUh1M0NPUEVqVEEwREhvUVZPaEhXWHprMWFoLmhjZ3dWY2swaUh6M0JMaDdoTzcuVVBSRVRTZmpGWThIaGJrd1ZZZ01XWWguaGNnd1ZjazBpSHdQU050alNONGpDTnpiQ013SFNMdmppSHUzQ09QRWpUQTBESG9RVk9oUEdaeFUxYm44RmFqSUJIMUVGYTBVVk9oLmlLdkh4Szl2U1lqa0ZjdUkyVGtRR2NvNDFZeUF4Ym44VmNyUUZTdUVGWVRVR2N1SVdaZ3dWT2guaUh1M0NPdUwxYXNBbWJrTTJidUlHVGdJV1hzTW1PLi4uLi4uLi4uLi4uSlUwUEVBa2JvWVdYelVGUWdRV1guRFAuQmtHYmdNMmIuRFAuQy5QRy4uLi4uLi4uLm5UVUNVRFR4a2xjZ1FXWURFRmNnQTwvSUNvbXBvbmVudD48L1ZTVDNQbHVnaW5TdGF0ZT4A",
+                        "activeMixerIDs": [],
+                        "filterConfigID": "7ACF97B7-0512-424A-8CCE-BC570065C5EC",
+                        "pluginCategory": "Fx",
+                        "pluginDisplayName": "Elgato EQ",
+                        "pluginID": "e9514180",
+                        "pluginOriginalName": "Elgato EQ",
+                        "pluginURL": "",
+                        "pluginVendor": "Elgato"
+                    },
+                    {
+                        "activeMixerIDs": [],
+                        "filterConfigID": "50F5C526-9E19-4610-9168-F303ED679577",
                         "pluginCategory": "Fx",
                         "pluginDisplayName": "Elgato Compressor",
                         "pluginID": "e9546b7c",
@@ -61,8 +65,7 @@
                                     "com.elgato.mix.local",
                                     "com.elgato.mix.stream"
                                 ],
-                                "filterConfigID": "43265762-31F3-4A0C-B017-1CA5F5988535",
-                                "filterSettings": "VkMyIaMBAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjIzNy5WTWpMZ1RMLi4uLk8rZldhckFoY2tJMmJvOGxhOEhSTHQuaUhmVGxhaThGWW80MVk4SFJVVFlUSzNIeE85LkJPUjRqU1Y4VlppVUZUZ0lXWHNNbU83LlVQUkVUU2ZqRlk4SGhVQVFESFJVRmFrRTFia0lCSDFFRmEwVVZPaEhTTXYzQkxoN2hPNy5VUFJFVFNmakZZOEhoVUFRREhUZ2xia01HWnV3RlloLmhjZ3dWY2swaUh2M0JOempTTjRqU04xUGlMeWJpTHdMU0xoN2hPNy5VUFJFVFNmakZZOEhoWDRBV1h5TW1IZlhXWHJVV1k4SEJMdC5pSHUzQ091SGtTTlkwYW9NVllQRWxiZzAxYjkuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLkpVMFBFQWtib1lXWHpVRlFnUVdYPC9JQ29tcG9uZW50PjwvVlNUM1BsdWdpblN0YXRlPgA=",
+                                "filterConfigID": "D6A967C3-FCA1-43ED-8DD5-66D26BFD0F91",
                                 "pluginCategory": "Fx",
                                 "pluginDisplayName": "Elgato Noise Removal",
                                 "pluginID": "e954837c",
@@ -75,8 +78,7 @@
                                     "com.elgato.mix.local",
                                     "com.elgato.mix.stream"
                                 ],
-                                "filterConfigID": "EABD7F0C-0236-465F-80E8-123FB8A89741",
-                                "filterSettings": "VkMyIfsDAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjY4Ny5WTWpMZ25sLi4uLk8rZldhckFoY2tJMmJvOGxhOEhSTHQuaUhmVGxhaThGWW80MVk4SFJVVFlUSzNIeE85LkJPU1FXWHpVbE83LlVYeEVWYWtRV1l4TW1PNy5VUFJFVFNmakZZOEhSUHpRV1hpc2xIZlhXWHJVV1k4SFJMdjNCTHYuQ0x2LlNOMExpTTJQeUx4SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqOGpha1lqYmtFV2NrNDFYNElCSDFFRmEwVVZPaEhTTXYuaUt2SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqOGpha0VVY2d3Vlp6a21IZlhXWHJVV1k4SGhMdC5pSHUzQ09QRWpUQTBESG9RVk9oSFRYdFExU3RVbFRnUVdadUlCSDFFRmEwVVZPaFBpS3ZIeEs5dkNUQUlVUE1BUlpqMGlIQkVsYWo4amFrUUVaeFUxYm44RmFqSUJIMUVGYTBVVk9oekJOdjNCTGg3aE83LlVQUkVUU2ZqRlk4SGhQZzRGWVRjMmFGSVdZd1VXWXRNVmRoLmhjZ3dWY2swaUgzLkNMdjNCTGg3aE83LlVQUkVUU2ZqRlk4SGhQZzRGWVRjMmFRVVdYcmtGYzRJQkgxRUZhMFVWT2hIaUt2SHhLOXZDVEFJVVBNQVJaajBpSEJFbGFqUTBjdUlVWHprMWFoLmhjZ3dWY2swaUh6M0JMaDdoTzcuVVBSRVRTZmpGWThIaFBnNEZZVGMyYVRnbGJrTUdadXdGWWguaGNnd1ZjazBpSHNmQ0x0LmlIdTNDT1BFalRBMERIb1FWT2hIVVlyVVZYeVVsSGZYV1hyVVdZOEhSTHYuaUt2SHhLOXZDVEFJVVBNQVJaajBpSFNnMWEwd0ZZTDhWWGpRVWN6OGxib0VGYWguaGNnd1ZjazBpSHczQkxoN2hPNy5VUFJFVFNmakZZOEhCVTBRMmF4a1ZYclFFWnhVMWJuOEZhaklCSDFFRmEwVVZPaHpCTnYzQkxoN2hPNzdCVGdJV1hzVUZja0kyYjl2U1Fqa0ZjdUlHSHlrbGRrMEJkOEhoTXpmaUhmTFdaNVVWSzQwaUh6YlNNaDdoTzc3eFR6RUZjazRDLi4uLi4uLi4uLi5mUlVNVFFQSVdaMUVGY2tRVFh6RUYuQURmUDRBV1h5TUcuQUR2Li56QS4uLi4uLi4uLkpVMFBFQWtib1lXWHpVRlFnUVdYPC9JQ29tcG9uZW50PjwvVlNUM1BsdWdpblN0YXRlPgA=",
+                                "filterConfigID": "560853D8-7208-4887-9030-52463CAB1FB3",
                                 "pluginCategory": "Fx",
                                 "pluginDisplayName": "Elgato De-Esser",
                                 "pluginID": "e953ef1a",
@@ -85,12 +87,18 @@
                                 "pluginVendor": "Elgato"
                             },
                             {
-                                "activeMixerIDs": [
-                                    "com.elgato.mix.local",
-                                    "com.elgato.mix.stream"
-                                ],
-                                "filterConfigID": "33360DC5-B61D-4F9B-943E-AB0D24C0FD3F",
-                                "filterSettings": "VkMyIbUCAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjQ0Mi5WTWpMZ1RXLi4uLk8rZldhckFoY2tJMmJvOGxhOEhSTHQuaUhmVGxhaThGWW80MVk4SFJVVFlUSzNIeE85LkJPaThWYXZJV1l5TTJheEFVWHhFVmF5NENPUEVqVEEwREhvUVZPaERGY3pFMVhxSUJIMUVGYTBVVk9oSENMdC5DTHYuQ0wyWGlMNExTTnpUeUxoN2hPNy5VUFJFVFNmakZZOEhSWDBRMmFzRTFaa1VHYmguaGNnd1ZjazBpSHczQkxoN2hPNy5VUFJFVFNmakZZOEhoWDRBV1h5TW1IZlhXWHJVV1k4SEJMdC5pSHUzQ09QRWpUQTBESG9RVk9oYlZYbzRsSGZYV1hyVVdZOEhSTHQuaUh1M0NPUEVqVEEwREhvUVZPaEhXWHprMWFoLmhjZ3dWY2swaUh6M0JMaDdoTzcuVVBSRVRTZmpGWThIaGJrd1ZZZ01XWWguaGNnd1ZjazBpSHdQU050alNONGpDTnpiQ013SFNMdmppSHUzQ09QRWpUQTBESG9RVk9oUEdaeFUxYm44RmFqSUJIMUVGYTBVVk9oLmlLdkh4Szl2U1lqa0ZjdUkyVGtRR2NvNDFZeUF4Ym44VmNyUUZTdUVGWVRVR2N1SVdaZ3dWT2guaUh1M0NPdUwxYXNBbWJrTTJidUlHVGdJV1hzTW1PLi4uLi4uLi4uLi4uSlUwUEVBa2JvWVdYelVGUWdRV1guRFAuQmtHYmdNMmIuRFAuQy5QRy4uLi4uLi4uLm5UVUNVRFR4a2xjZ1FXWURFRmNnQTwvSUNvbXBvbmVudD48L1ZTVDNQbHVnaW5TdGF0ZT4A",
+                                "activeMixerIDs": [],
+                                "filterConfigID": "7ACF97B7-0512-424A-8CCE-BC570065C5EC",
+                                "pluginCategory": "Fx",
+                                "pluginDisplayName": "Elgato EQ",
+                                "pluginID": "e9514180",
+                                "pluginOriginalName": "Elgato EQ",
+                                "pluginURL": "",
+                                "pluginVendor": "Elgato"
+                            },
+                            {
+                                "activeMixerIDs": [],
+                                "filterConfigID": "50F5C526-9E19-4610-9168-F303ED679577",
                                 "pluginCategory": "Fx",
                                 "pluginDisplayName": "Elgato Compressor",
                                 "pluginID": "e9546b7c",
@@ -129,7 +137,7 @@
                 "identifier": "Wave Link SFX",
                 "inputs": [
                     {
-                        "identifier": "C:\\Users\\cethien\\AppData\\Roaming\\Spotify\\Spotify.exe|14584",
+                        "identifier": "C:\\Users\\cethien\\AppData\\Roaming\\Spotify\\Spotify.exe|15896",
                         "isDesktopApp": true,
                         "mutedMixerIDs": [
                             "com.elgato.mix.stream",
@@ -163,7 +171,7 @@
                 "identifier": "Wave Link Game",
                 "inputs": [
                     {
-                        "identifier": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Destiny 2\\destiny2.exe|4264",
+                        "identifier": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Destiny 2\\destiny2.exe|5632",
                         "isDesktopApp": true,
                         "mutedMixerIDs": [
                             "com.elgato.mix.microphoneFX"
@@ -172,7 +180,52 @@
                         "nodeType": 3,
                         "smallAppIconPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Destiny 2\\destiny2.exe",
                         "volumes": {
-                            "com.elgato.mix.local": 0.55,
+                            "com.elgato.mix.local": 0.35,
+                            "com.elgato.mix.microphoneFX": 1.0,
+                            "com.elgato.mix.stream": 0.73
+                        }
+                    },
+                    {
+                        "identifier": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RoboQuest\\RoboQuest\\Binaries\\Win64\\RoboQuest-Win64-Shipping.exe|3784",
+                        "isDesktopApp": true,
+                        "mutedMixerIDs": [
+                            "com.elgato.mix.microphoneFX"
+                        ],
+                        "name": "RoboQuest  ",
+                        "nodeType": 3,
+                        "smallAppIconPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RoboQuest\\RoboQuest\\Binaries\\Win64\\RoboQuest-Win64-Shipping.exe",
+                        "volumes": {
+                            "com.elgato.mix.local": 0.35,
+                            "com.elgato.mix.microphoneFX": 1.0,
+                            "com.elgato.mix.stream": 0.73
+                        }
+                    },
+                    {
+                        "identifier": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Leaf Blower Revolution\\game.exe|19400",
+                        "isDesktopApp": true,
+                        "mutedMixerIDs": [
+                            "com.elgato.mix.microphoneFX"
+                        ],
+                        "name": "Leaf Blower Revolution",
+                        "nodeType": 3,
+                        "smallAppIconPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Leaf Blower Revolution\\game.exe",
+                        "volumes": {
+                            "com.elgato.mix.local": 0.35,
+                            "com.elgato.mix.microphoneFX": 1.0,
+                            "com.elgato.mix.stream": 0.73
+                        }
+                    },
+                    {
+                        "identifier": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\WWZ\\en_us\\client\\bin\\pc\\wwzRetail.exe|10224",
+                        "isDesktopApp": true,
+                        "mutedMixerIDs": [
+                            "com.elgato.mix.microphoneFX"
+                        ],
+                        "name": "WWZ",
+                        "nodeType": 3,
+                        "smallAppIconPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\WWZ\\en_us\\client\\bin\\pc\\wwzRetail.exe",
+                        "volumes": {
+                            "com.elgato.mix.local": 0.35,
                             "com.elgato.mix.microphoneFX": 1.0,
                             "com.elgato.mix.stream": 0.73
                         }
@@ -186,7 +239,7 @@
                 "nodeType": 5,
                 "userProvidedName": "Game",
                 "volumes": {
-                    "com.elgato.mix.local": 0.55,
+                    "com.elgato.mix.local": 0.35,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.73
                 }
@@ -195,7 +248,7 @@
                 "identifier": "Wave Link Browser",
                 "inputs": [
                     {
-                        "identifier": "C:\\Program Files\\Mozilla Firefox\\firefox.exe|12208",
+                        "identifier": "C:\\Program Files\\Mozilla Firefox\\firefox.exe|14536",
                         "isDesktopApp": true,
                         "mutedMixerIDs": [
                             "com.elgato.mix.microphoneFX",
@@ -205,7 +258,7 @@
                         "nodeType": 3,
                         "smallAppIconPath": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
                         "volumes": {
-                            "com.elgato.mix.local": 0.7,
+                            "com.elgato.mix.local": 0.75,
                             "com.elgato.mix.microphoneFX": 1.0,
                             "com.elgato.mix.stream": 0.7
                         }
@@ -220,7 +273,7 @@
                 "nodeType": 5,
                 "userProvidedName": "Browser",
                 "volumes": {
-                    "com.elgato.mix.local": 0.7,
+                    "com.elgato.mix.local": 0.75,
                     "com.elgato.mix.microphoneFX": 1.0,
                     "com.elgato.mix.stream": 0.7
                 }
@@ -229,14 +282,14 @@
                 "identifier": "Wave Link Voice Chat",
                 "inputs": [
                     {
-                        "identifier": "C:\\Users\\cethien\\AppData\\Local\\Discord\\app-1.0.9181\\Discord.exe|18468",
+                        "identifier": "C:\\Users\\cethien\\AppData\\Local\\Discord\\app-1.0.9182\\Discord.exe|13548",
                         "isDesktopApp": true,
                         "mutedMixerIDs": [
                             "com.elgato.mix.microphoneFX"
                         ],
                         "name": "Discord",
                         "nodeType": 3,
-                        "smallAppIconPath": "C:\\Users\\cethien\\AppData\\Local\\Discord\\app-1.0.9181\\Discord.exe",
+                        "smallAppIconPath": "C:\\Users\\cethien\\AppData\\Local\\Discord\\app-1.0.9182\\Discord.exe",
                         "volumes": {
                             "com.elgato.mix.local": 1.0,
                             "com.elgato.mix.microphoneFX": 1.0,
@@ -294,7 +347,7 @@
                 "identifier": "BTHENUM#{0000110B-0000-1000-8000-00805F9B34FB}_LOCALMFG&005D#8&3340203&0&AC122FC80AF2_C00000000#{6994AD04-93EF-11D0-A3CC-00A0C9223196}\\SRC@@SystemDefaultDevice@@",
                 "mixerID": "com.elgato.mix.local",
                 "muted": false,
-                "name": "Kopfhörer (Soundcore Life Q30)",
+                "name": "Headphones (Soundcore Life Q30 Stereo)",
                 "nodeType": 1,
                 "systemDefaultDevice": true,
                 "terminalType": 1,
